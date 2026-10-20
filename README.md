@@ -23,7 +23,10 @@ npm run build    # outputs to dist/
 
 ## Deploy (Cloudflare Pages)
 
-- Build command: `npm run build` · Output directory: `dist`
+Connected via Git: every push to `main` deploys to production; other branches get preview URLs.
+
+- Framework preset: Astro · Build command: `npm run build` · Output directory: `dist`
+- Node version comes from `.node-version` (Astro needs ≥ 22.22)
 - Environment variables for the lead form (`functions/api/lead.js`):
   - `RESEND_API_KEY`
   - `LEAD_TO_EMAIL` — where leads go (comma-separated for several)
