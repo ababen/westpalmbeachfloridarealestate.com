@@ -8,7 +8,7 @@ export const site = {
     'Buy or sell a home in West Palm Beach, Florida. Local guidance on neighborhoods from El Cid to Northwood, home valuations, and property search.',
   agent: {
     name: 'Alexander Babenchuk',
-    title: 'Licensed Real Estate Sales Associate',
+    title: 'REALTOR®',
     license: 'FL License #SL3596634',
     licenseUrl:
       'https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=DDFABB0C721DCA8BCD909FDE963713A5',
