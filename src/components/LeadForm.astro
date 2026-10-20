@@ -1,0 +1,194 @@
+---
+import { neighborhoods } from '../data/neighborhoods';
+
+type Kind = 'contact' | 'buy' | 'sell' | 'search';
+
+interface Props {
+  kind?: Kind;
+  submitLabel?: string;
+  /** Neighborhood name to preselect in the area dropdown. */
+  area?: string;
+}
+
+const { kind = 'contact', submitLabel = 'Send Message', area } = Astro.props;
+const id = `lead-${kind}`;
+---
+
+<form class="lead-form" method="post" action="/api/lead" data-lead-form>
+  <input type="hidden" name="kind" value={kind} />
+  <!-- Honeypot: hidden from people, filled in by bots. -->
+  <div class="hp" aria-hidden="true">
+    <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+  </div>
+
+  <div class="row">
+    <label for={`${id}-name`}>
+      Name
+      <input id={`${id}-name`} name="name" type="text" autocomplete="name" required />
+    </label>
+    <label for={`${id}-phone`}>
+      Phone
+      <input id={`${id}-phone`} name="phone" type="tel" autocomplete="tel" />
+    </label>
+  </div>
+
+  <label for={`${id}-email`}>
+    Email
+    <input id={`${id}-email`} name="email" type="email" autocomplete="email" required />
+  </label>
+
+  {
+    kind === 'sell' && (
+      <label for={`${id}-address`}>
+        Property address
+        <input id={`${id}-address`} name="address" type="text" autocomplete="street-address" required />
+      </label>
+    )
+  }
+
+  {
+    (kind === 'buy' || kind === 'search') && (
+      <div class="row">
+        <label for={`${id}-area`}>
+          Preferred area
+          <select id={`${id}-area`} name="area">
+            <option value="">Anywhere in West Palm Beach</option>
+            {neighborhoods.map((n) => (
+              <option selected={n.name === area}>{n.name}</option>
+            ))}
+          </select>
+        </label>
+        <label for={`${id}-budget`}>
+          Budget
+          <select id={`${id}-budget`} name="budget">
+            <option value="">Not sure yet</option>
+            <option>Under $500K</option>
+            <option>$500K – $1M</option>
+            <option>$1M – $2.5M</option>
+            <option>$2.5M – $5M</option>
+            <option>$5M+</option>
+          </select>
+        </label>
+      </div>
+    )
+  }
+
+  {
+    kind === 'sell' && (
+      <label for={`${id}-timeline`}>
+        When are you thinking of selling?
+        <select id={`${id}-timeline`} name="timeline">
+          <option>Just curious about my home’s value</option>
+          <option>Within 3 months</option>
+          <option>3–6 months</option>
+          <option>6–12 months</option>
+        </select>
+      </label>
+    )
+  }
+
+  <label for={`${id}-message`}>
+    {kind === 'sell' ? 'Anything we should know? (upgrades, condition, etc.)' : 'How can we help?'}
+    <textarea id={`${id}-message`} name="message" rows="4"></textarea>
+  </label>
+
+  <button class="btn btn--primary" type="submit">{submitLabel}</button>
+  <p class="fine">By submitting, you agree to be contacted about your real estate needs. We never sell your information.</p>
+  <p class="status" role="status" aria-live="polite"></p>
+</form>
+
+<script>
+  document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) => {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const status = form.querySelector<HTMLElement>('.status')!;
+      const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      status.dataset.state = '';
+
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+        if (!res.ok) throw new Error(await res.text());
+        form.reset();
+        status.dataset.state = 'ok';
+        status.textContent = 'Thank you! We’ll be in touch shortly.';
+      } catch {
+        status.dataset.state = 'error';
+        status.textContent = 'Something went wrong. Please call or email us directly.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .lead-form {
+    display: grid;
+    gap: 1rem;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1rem;
+  }
+  label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  input,
+  select,
+  textarea {
+    width: 100%;
+    font: 400 1rem/1.4 var(--font-body);
+    color: var(--ink);
+    padding: 0.8rem 0.9rem;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--white);
+  }
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 2px solid var(--sea);
+    outline-offset: 0;
+    border-color: var(--sea);
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    justify-self: start;
+  }
+  button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  .fine {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .status {
+    margin: 0;
+    font-weight: 600;
+  }
+  .status[data-state='ok'] {
+    color: var(--palm);
+  }
+  .status[data-state='error'] {
+    color: #b3412b;
+  }
+  .hp {
+    position: absolute;
+    left: -9999px;
+  }
+</style>

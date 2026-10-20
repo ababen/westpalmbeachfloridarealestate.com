@@ -1,0 +1,281 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroArt from '../components/HeroArt.astro';
+import NeighborhoodCard from '../components/NeighborhoodCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { neighborhoods } from '../data/neighborhoods';
+
+const propertyTypes = [
+  { label: 'Waterfront Homes', q: 'waterfront', icon: 'M3 17c3-2 6-2 9 0s6 2 9 0M3 21c3-2 6-2 9 0s6 2 9 0M6 13V7l6-4 6 4v6' },
+  { label: 'Luxury Condos', q: 'condo', icon: 'M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M3 21h18' },
+  { label: 'Historic Homes', q: 'historic', icon: 'M3 21h18M5 21V10l7-6 7 6v11M10 21v-6h4v6' },
+  { label: 'Golf Communities', q: 'golf', icon: 'M12 18V3l7 3-7 3M5 21c2-2 5-3 7-3s5 1 7 3' },
+];
+
+const reasons = [
+  {
+    title: 'No state income tax',
+    text: 'Florida has no personal state income tax, one reason West Palm Beach attracts relocating professionals and retirees.',
+  },
+  {
+    title: 'Connected by air and rail',
+    text: 'Palm Beach International Airport is minutes from downtown, and Brightline links the city to Fort Lauderdale, Miami, and Orlando.',
+  },
+  {
+    title: 'Waterfront lifestyle',
+    text: 'The Intracoastal Waterway, Lake Worth Lagoon, and nearby Atlantic beaches make boating and outdoor living part of everyday life.',
+  },
+  {
+    title: 'Culture & dining',
+    text: 'From the Norton Museum of Art and the Kravis Center to Clematis Street and Rosemary Square, there’s always something happening.',
+  },
+];
+---
+
+<Base>
+  <section class="hero">
+    <HeroArt />
+    <div class="container hero__inner">
+      <span class="eyebrow">West Palm Beach, Florida</span>
+      <h1>Find your place in the Palm Beaches.</h1>
+      <p class="hero__lede">
+        Local expertise for buying and selling homes in West Palm Beach — from historic El Cid and Flamingo Park to
+        downtown waterfront condos.
+      </p>
+
+      <form class="search" action="/listings" method="get" role="search">
+        <label>
+          <span class="visually-hidden">Neighborhood</span>
+          <select name="area">
+            <option value="">All neighborhoods</option>
+            {neighborhoods.map((n) => <option value={n.slug}>{n.name}</option>)}
+          </select>
+        </label>
+        <label>
+          <span class="visually-hidden">Property type</span>
+          <select name="type">
+            <option value="">Any property type</option>
+            <option value="single-family">Single-family home</option>
+            <option value="condo">Condo / Townhome</option>
+            <option value="waterfront">Waterfront</option>
+            <option value="land">Land</option>
+          </select>
+        </label>
+        <label>
+          <span class="visually-hidden">Max price</span>
+          <select name="max">
+            <option value="">Any price</option>
+            <option value="500000">Up to $500K</option>
+            <option value="1000000">Up to $1M</option>
+            <option value="2500000">Up to $2.5M</option>
+            <option value="5000000">Up to $5M</option>
+          </select>
+        </label>
+        <button class="btn btn--primary" type="submit">Search Homes</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <div class="types">
+        {
+          propertyTypes.map((t) => (
+            <a class="type" href={`/listings?type=${t.q}`}>
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d={t.icon} />
+              </svg>
+              <span>{t.label}</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Neighborhood Guides</span>
+        <h2>Every street has a story.</h2>
+        <p class="lede">
+          West Palm Beach is a city of distinct neighborhoods. Explore what makes each one special before you start
+          touring.
+        </p>
+      </div>
+      <div class="grid grid--3">
+        {neighborhoods.slice(0, 6).map((n) => <NeighborhoodCard n={n} />)}
+      </div>
+      <p class="more"><a class="btn btn--dark" href="/neighborhoods">View all neighborhoods</a></p>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container grid grid--2">
+      <div class="split-card split-card--buy">
+        <span class="eyebrow">Buying</span>
+        <h2>Buy with a local advantage.</h2>
+        <p>
+          Get early access to new listings, honest advice on flood zones, HOAs, and insurance, and a negotiator who
+          knows what homes on your street really sell for.
+        </p>
+        <a class="btn btn--dark" href="/buy">Start your home search</a>
+      </div>
+      <div class="split-card split-card--sell">
+        <span class="eyebrow">Selling</span>
+        <h2>What’s your home worth?</h2>
+        <p>
+          Get a free, no-obligation market analysis based on recent comparable sales — not an automated estimate — plus
+          a plan to sell for top dollar.
+        </p>
+        <a class="btn btn--primary" href="/sell">Get your home value</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why West Palm Beach</span>
+        <h2>Big-city amenities, small-town warmth.</h2>
+      </div>
+      <div class="grid reasons">
+        {
+          reasons.map((r) => (
+            <div class="reason">
+              <h3>{r.title}</h3>
+              <p>{r.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    min-height: min(88vh, 760px);
+    display: flex;
+    align-items: center;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(15 42 61 / 0.75) 0%, rgb(15 42 61 / 0.15) 70%);
+  }
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    padding-block: 96px 120px;
+  }
+  .hero h1 {
+    max-width: 14ch;
+  }
+  .hero__lede {
+    font-size: 1.2rem;
+    max-width: 36rem;
+    color: rgb(255 255 255 / 0.88);
+    margin-bottom: 2rem;
+  }
+  .search {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 0.5rem;
+    background: var(--white);
+    padding: 0.5rem;
+    border-radius: 999px;
+    max-width: 860px;
+    box-shadow: var(--shadow);
+  }
+  .search select {
+    width: 100%;
+    font: 500 1rem var(--font-body);
+    color: var(--ink);
+    border: 0;
+    background: transparent;
+    padding: 0.85rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  .search label + label select {
+    border-left: 1px solid var(--line);
+    border-radius: 0;
+  }
+  @media (max-width: 760px) {
+    .search {
+      grid-template-columns: 1fr;
+      border-radius: var(--radius);
+    }
+    .search label + label select {
+      border-left: 0;
+      border-top: 1px solid var(--line);
+    }
+  }
+
+  .types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+    gap: 1rem;
+  }
+  .type {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--ink);
+    font-weight: 600;
+    transition: border-color 0.2s;
+  }
+  .type svg {
+    color: var(--sea);
+    flex: none;
+  }
+  .type:hover {
+    border-color: var(--sea);
+  }
+  .section:has(.types) {
+    padding-block: 40px;
+  }
+
+  .more {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  .split-card {
+    border-radius: calc(var(--radius) * 1.5);
+    padding: clamp(2rem, 4vw, 3rem);
+    height: 100%;
+  }
+  .split-card--buy {
+    background: var(--sand);
+  }
+  .split-card--sell {
+    background: var(--sand-deep);
+  }
+  .split-card p {
+    color: var(--ink-soft);
+    margin-bottom: 1.75rem;
+  }
+
+  .reasons {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+  .reason {
+    border-top: 2px solid var(--coral);
+    padding-top: 1.25rem;
+  }
+  .reason p {
+    color: rgb(247 241 232 / 0.75);
+  }
+</style>

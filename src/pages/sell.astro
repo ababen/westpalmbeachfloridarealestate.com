@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const services = [
+  {
+    title: 'Accurate pricing',
+    text: 'A hand-prepared comparative market analysis using recent sales on your street — not an online guess.',
+  },
+  {
+    title: 'Professional marketing',
+    text: 'Photography, video, drone, floor plans, and targeted digital campaigns that reach local and out-of-state buyers.',
+  },
+  {
+    title: 'Preparation guidance',
+    text: 'Advice on repairs, staging, and updates that actually pay off — and which ones to skip.',
+  },
+  {
+    title: 'Skilled negotiation',
+    text: 'We manage offers, inspections, and appraisal to protect your price and your timeline.',
+  },
+];
+---
+
+<Base
+  title="Sell Your Home & Free Home Valuation"
+  description="Find out what your West Palm Beach home is worth with a free comparative market analysis and a custom selling plan."
+>
+  <section class="page-hero">
+    <div class="container grid grid--2">
+      <div>
+        <span class="eyebrow">Sellers</span>
+        <h1>What’s your West Palm Beach home worth?</h1>
+        <p class="lede">
+          Request a free, no-obligation home valuation. You’ll receive a detailed market analysis based on real
+          comparable sales and current competition in your neighborhood.
+        </p>
+        <ul class="check-list">
+          <li>Personalized analysis — not an automated estimate</li>
+          <li>Delivered within one business day</li>
+          <li>No pressure, no obligation</li>
+        </ul>
+      </div>
+      <div class="card form-card">
+        <LeadForm kind="sell" submitLabel="Get My Home Value" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our approach</span>
+        <h2>A plan to sell for top dollar</h2>
+      </div>
+      <div class="grid services">
+        {
+          services.map((s) => (
+            <div class="card">
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand heading="Thinking about selling?" text="Let’s talk timing, pricing, and what your home needs — even if you’re a year away." />
+</Base>
+
+<style>
+  .page-hero .check-list li {
+    color: var(--sand);
+  }
+  .form-card {
+    color: var(--ink);
+  }
+  .services {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  }
+  .services .card p {
+    color: var(--ink-soft);
+    margin: 0;
+  }
+</style>

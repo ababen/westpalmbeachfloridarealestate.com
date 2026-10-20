@@ -1,0 +1,30 @@
+---
+import Base from '../../layouts/Base.astro';
+import NeighborhoodCard from '../../components/NeighborhoodCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { neighborhoods } from '../../data/neighborhoods';
+---
+
+<Base
+  title="West Palm Beach Neighborhood Guides"
+  description="Explore West Palm Beach neighborhoods — Downtown, El Cid, Flamingo Park, Old Northwood, SoSo, Grandview Heights, Ibis, and more."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Neighborhoods</span>
+      <h1>Find the neighborhood that fits you</h1>
+      <p class="lede">
+        From 1920s historic districts to waterfront high-rises and gated golf communities, West Palm Beach offers a
+        remarkable range of places to call home.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid--3">
+      {neighborhoods.map((n) => <NeighborhoodCard n={n} />)}
+    </div>
+  </section>
+
+  <CtaBand heading="Not sure where to start?" text="Tell us how you want to live and we’ll suggest neighborhoods worth touring." />
+</Base>

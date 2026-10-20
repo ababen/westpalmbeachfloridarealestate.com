@@ -1,0 +1,246 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
+
+:root {
+  --ink: #0f2a3d;
+  --ink-soft: #3d5566;
+  --sand: #f7f1e8;
+  --sand-deep: #ede2d1;
+  --white: #ffffff;
+  --sea: #0f6f8f;
+  --sea-deep: #0b5470;
+  --coral: #e0735a;
+  --palm: #2f6b4f;
+  --line: #e3d9ca;
+
+  --font-display: 'Fraunces Variable', Georgia, serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, sans-serif;
+
+  --radius: 14px;
+  --shadow: 0 10px 30px -12px rgb(15 42 61 / 0.25);
+  --max: 1180px;
+  --gutter: clamp(16px, 4vw, 32px);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--sand);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--sea);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5.5vw, 4.25rem);
+}
+h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+}
+h3 {
+  font-size: 1.35rem;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: clamp(56px, 9vw, 112px);
+}
+
+.section--white {
+  background: var(--white);
+}
+
+.section--ink {
+  background: var(--ink);
+  color: var(--sand);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 0.75rem;
+}
+
+.lede {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+  max-width: 42rem;
+}
+
+.section--ink .lede {
+  color: rgb(247 241 232 / 0.8);
+}
+
+.section-head {
+  max-width: 44rem;
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font: 600 1rem/1 var(--font-body);
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: var(--coral);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background: #c95f47;
+}
+
+.btn--dark {
+  background: var(--ink);
+  color: var(--white);
+}
+.btn--dark:hover {
+  background: #1b3f57;
+}
+
+.btn--ghost {
+  border-color: currentColor;
+  color: inherit;
+  background: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+}
+
+.grid--2 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.check-list li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+.check-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 1rem;
+  height: 1rem;
+  background: var(--palm);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 8.5l3.2 3L13 4.5'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+.section--ink .check-list li::before {
+  background: var(--coral);
+}
+
+.page-hero {
+  background: linear-gradient(160deg, var(--ink) 0%, var(--sea-deep) 100%);
+  color: var(--sand);
+  padding-block: clamp(64px, 10vw, 120px) clamp(48px, 7vw, 80px);
+}
+.page-hero .lede {
+  color: rgb(247 241 232 / 0.85);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .btn {
+    transition: none;
+  }
+}

@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site } from '../config/site';
+---
+
+<Base
+  title="Search West Palm Beach Homes for Sale"
+  description="Search homes, condos, and waterfront properties for sale in West Palm Beach, Florida."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Property Search</span>
+      <h1>West Palm Beach homes for sale</h1>
+      <p class="lede">Browse single-family homes, condos, and waterfront properties across every neighborhood.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {
+        site.idxEmbedUrl ? (
+          <iframe class="idx" src={site.idxEmbedUrl} title="Property search" loading="lazy" />
+        ) : (
+          <div class="grid grid--2">
+            <div>
+              <h2>Tell us what you’re looking for.</h2>
+              <p class="lede">
+                Share your wish list and we’ll send matching listings — including homes that are coming soon and
+                haven’t hit the major portals yet.
+              </p>
+              <ul class="check-list">
+                <li>Personalized listing alerts the moment homes hit the market</li>
+                <li>Off-market and coming-soon opportunities</li>
+                <li>Recent sale prices so you know what’s a fair offer</li>
+                <li>Flood zone, insurance, and HOA details up front</li>
+              </ul>
+            </div>
+            <div class="card">
+              <LeadForm kind="search" submitLabel="Send Me Listings" />
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </section>
+</Base>
+
+<style>
+  .idx {
+    width: 100%;
+    min-height: 80vh;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--white);
+  }
+</style>

@@ -1,0 +1,155 @@
+---
+import { site, nav, telHref } from '../config/site';
+import { neighborhoods } from '../data/neighborhoods';
+import Logo from './Logo.astro';
+
+const year = new Date().getFullYear();
+const socials = Object.entries(site.social).filter(([, href]) => href);
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <a href="/" class="footer__brand">
+        <Logo size={44} />
+        <span>{site.name}</span>
+      </a>
+      <p class="footer__muted">
+        {site.agent.name}, {site.agent.title}<br />
+        {site.agent.license}<br />
+        {site.brokerage.name}<br />
+        {site.brokerage.address}
+      </p>
+      <p>
+        <a href={telHref}>{site.phone}</a><br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+      {
+        socials.length > 0 && (
+          <p class="footer__social">
+            {socials.map(([name, href]) => (
+              <a href={href} rel="noopener" target="_blank">
+                {name[0].toUpperCase() + name.slice(1)}
+              </a>
+            ))}
+          </p>
+        )
+      }
+    </div>
+
+    <div>
+      <h2 class="footer__heading">Explore</h2>
+      <ul>
+        {
+          nav.map((item) => (
+            <li>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))
+        }
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="footer__heading">Neighborhoods</h2>
+      <ul>
+        {
+          neighborhoods.map((n) => (
+            <li>
+              <a href={`/neighborhoods/${n.slug}`}>{n.name}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__legal">
+    <p class="eho">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor">
+        <path d="M12 2 1 10h3v11h16V10h3zm4 14H8v-2h8zm0-4H8v-2h8z" />
+      </svg>
+      Equal Housing Opportunity. We are committed to compliance with all federal, state, and local fair housing laws.
+    </p>
+    <p>
+      Information deemed reliable but not guaranteed. Listing information is provided by participating brokers and
+      should be independently verified.
+    </p>
+    <p>
+      © {year} {site.name}. All rights reserved. · <a href="/privacy">Privacy Policy</a>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--ink);
+    color: rgb(247 241 232 / 0.85);
+    padding-block: 64px 32px;
+    font-size: 0.95rem;
+  }
+  .footer a {
+    color: var(--sand);
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .footer__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  .footer__muted {
+    color: rgb(247 241 232 / 0.65);
+  }
+  .footer__heading {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral);
+    font-weight: 600;
+  }
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer li {
+    margin-bottom: 0.45rem;
+  }
+  .footer__social {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer__legal {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(247 241 232 / 0.15);
+    font-size: 0.82rem;
+    color: rgb(247 241 232 / 0.6);
+  }
+  .eho {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .eho svg {
+    flex: none;
+  }
+  @media (max-width: 760px) {
+    .footer__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
