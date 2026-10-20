@@ -1,0 +1,90 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { site } from '../config/site';
+
+const values = [
+  { title: 'Local first', text: 'We live, work, and play in West Palm Beach. We know which streets flood, which blocks are changing, and where the best coffee is.' },
+  { title: 'Straight talk', text: 'Honest pricing advice and clear answers — even when it isn’t what you hoped to hear.' },
+  { title: 'Always reachable', text: 'Calls and texts returned the same day. Real estate moves fast here, and so do we.' },
+];
+---
+
+<Base title="About" description={`Meet ${site.agent.name}, your West Palm Beach real estate advisor with ${site.brokerage.name}.`}>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">About</span>
+      <h1>Your neighbor in West Palm Beach real estate</h1>
+      <p class="lede">Guiding buyers and sellers through one of Florida’s most dynamic markets.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid--2">
+      <div class="portrait">
+        {
+          site.agent.photo ? (
+            <img src={site.agent.photo} alt={site.agent.name} width="560" height="680" />
+          ) : (
+            <div class="portrait__placeholder" aria-hidden="true">
+              <span>Agent photo</span>
+            </div>
+          )
+        }
+      </div>
+      <div>
+        <h2>{site.agent.name}</h2>
+        <p class="meta">{site.agent.title} · {site.brokerage.name} · {site.agent.license}</p>
+        <!-- TODO: replace with your own bio. -->
+        <p>
+          Write a short, personal bio here: how long you’ve lived in the Palm Beaches, what you love about the city,
+          the neighborhoods you know best, and what clients can expect when working with you.
+        </p>
+        <p>
+          Mention any specialties — historic homes, waterfront property, condos, relocation, or first-time buyers —
+          and any designations or community involvement.
+        </p>
+        <a class="btn btn--dark" href="/contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container grid grid--3">
+      {
+        values.map((v) => (
+          <div>
+            <h3>{v.title}</h3>
+            <p>{v.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .portrait img,
+  .portrait__placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: calc(var(--radius) * 1.5);
+  }
+  .portrait__placeholder {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(160deg, var(--sand-deep), #d9c7ad);
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .meta {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+  .grid--3 p {
+    color: var(--ink-soft);
+  }
+</style>

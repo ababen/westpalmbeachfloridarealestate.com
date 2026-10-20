@@ -1,0 +1,116 @@
+---
+import Base from '../../layouts/Base.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import NeighborhoodCard from '../../components/NeighborhoodCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { neighborhoods, type Neighborhood } from '../../data/neighborhoods';
+
+export function getStaticPaths() {
+  return neighborhoods.map((n) => ({ params: { slug: n.slug }, props: { n } }));
+}
+
+const { n } = Astro.props as { n: Neighborhood };
+const others = neighborhoods.filter((o) => o.slug !== n.slug).slice(0, 3);
+const [from, to] = n.palette;
+---
+
+<Base
+  title={`${n.name} Homes for Sale & Neighborhood Guide`}
+  description={n.summary}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Neighborhoods', item: `${Astro.site}neighborhoods` },
+        { '@type': 'ListItem', position: 2, name: n.name },
+      ],
+    },
+  ]}
+>
+  <section class="page-hero hood-hero" style={`--from:${from};--to:${to}`}>
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="/neighborhoods">Neighborhoods</a> / {n.name}</nav>
+      <h1>{n.name}</h1>
+      <p class="lede">{n.tagline}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid--2">
+      <article>
+        <p class="lede">{n.summary}</p>
+        {n.body.map((p) => <p>{p}</p>)}
+
+        <h2 class="sub">Home styles</h2>
+        <ul class="tags">{n.homeStyles.map((s) => <li>{s}</li>)}</ul>
+
+        <h2 class="sub">Highlights</h2>
+        <ul class="check-list">{n.highlights.map((h) => <li>{h}</li>)}</ul>
+
+        <p class="best"><strong>Best for:</strong> {n.bestFor}</p>
+      </article>
+
+      <aside class="card sticky">
+        <h3>Homes in {n.name}</h3>
+        <p>Get new listings and recent sale prices for {n.name} sent straight to your inbox.</p>
+        <LeadForm kind="buy" submitLabel="Send Me Listings" area={n.name} />
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container">
+      <h2>Explore nearby neighborhoods</h2>
+      <div class="grid grid--3">{others.map((o) => <NeighborhoodCard n={o} />)}</div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .hood-hero {
+    background: linear-gradient(135deg, var(--ink) 10%, var(--from) 70%, var(--to) 130%);
+  }
+  .crumbs {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: rgb(247 241 232 / 0.75);
+  }
+  .crumbs a {
+    color: inherit;
+  }
+  .sub {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tags li {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.92rem;
+  }
+  .best {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--sand-deep);
+    border-radius: 10px;
+  }
+  .sticky {
+    position: sticky;
+    top: 100px;
+  }
+  .section--white h2 {
+    margin-bottom: 1.5rem;
+  }
+</style>

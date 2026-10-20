@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const steps = [
+  {
+    title: 'Consultation',
+    text: 'We talk through your goals, timeline, must-haves, and the neighborhoods that fit your lifestyle.',
+  },
+  {
+    title: 'Get pre-approved',
+    text: 'We connect you with trusted local lenders so your offer is strong when the right home appears.',
+  },
+  {
+    title: 'Tour homes',
+    text: 'In-person and virtual tours, with honest notes on condition, flood zones, roof age, and insurance costs.',
+  },
+  {
+    title: 'Make a winning offer',
+    text: 'We price your offer using recent comparable sales and negotiate terms that protect you.',
+  },
+  {
+    title: 'Inspections & closing',
+    text: 'We coordinate inspections, wind mitigation, appraisal, and title so closing day is smooth.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'What should I know about flood zones and insurance?',
+    a: 'Insurance can be a major part of ownership costs in South Florida. Before you make an offer, we help you check the property’s flood zone, roof age, and wind-mitigation features so you can get insurance quotes early.',
+  },
+  {
+    q: 'Do I need a buyer’s agent agreement?',
+    a: 'Yes. Under current industry rules, buyers sign a written agreement with their agent before touring homes. We’ll walk you through exactly what it covers and how compensation works — no surprises.',
+  },
+  {
+    q: 'What is homestead exemption?',
+    a: 'If the home is your primary residence, Florida’s homestead exemption can reduce your taxable value and caps annual increases in assessed value. You apply with the Palm Beach County Property Appraiser after you close.',
+  },
+  {
+    q: 'Can you help me buy remotely?',
+    a: 'Absolutely. Many of our clients are relocating from out of state. We offer live video tours, digital document signing, and remote closings.',
+  },
+];
+---
+
+<Base
+  title="Buying a Home in West Palm Beach"
+  description="Your guide to buying a home in West Palm Beach, FL — local expertise on neighborhoods, insurance, flood zones, and winning offers."
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
+  ]}
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Buyers</span>
+      <h1>Buying a home in West Palm Beach</h1>
+      <p class="lede">
+        A clear, step-by-step process and a local advocate who knows the neighborhoods, the market, and the details
+        that matter in South Florida.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From first tour to keys in hand</h2>
+      </div>
+      <ol class="steps">
+        {
+          steps.map((s) => (
+            <li class="card">
+              <h3>{s.title}</h3>
+              <p>{s.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--white">
+    <div class="container grid grid--2">
+      <div>
+        <span class="eyebrow">Buyer FAQ</span>
+        <h2>Questions we hear often</h2>
+        {
+          faqs.map((f) => (
+            <details class="faq">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))
+        }
+      </div>
+      <div class="card">
+        <h3>Start your search</h3>
+        <p>Tell us about the home you’re dreaming of and we’ll send a curated list.</p>
+        <LeadForm kind="buy" submitLabel="Get Started" />
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Base>
+
+<style>
+  .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1rem;
+    counter-reset: step;
+  }
+  .steps li {
+    counter-increment: step;
+  }
+  .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--coral);
+    margin-bottom: 0.5rem;
+  }
+  .steps p {
+    color: var(--ink-soft);
+    font-size: 0.97rem;
+    margin: 0;
+  }
+  .faq {
+    border-bottom: 1px solid var(--line);
+    padding-block: 1rem;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.05rem;
+  }
+  .faq p {
+    margin: 0.75rem 0 0;
+    color: var(--ink-soft);
+  }
+</style>

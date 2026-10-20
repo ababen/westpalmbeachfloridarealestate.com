@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { site, telHref } from '../config/site';
+---
+
+<Base title="Contact" description="Contact us about buying or selling a home in West Palm Beach, Florida.">
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Let’s talk about your move</h1>
+      <p class="lede">Questions about a home, a neighborhood, or the market? Reach out — we typically reply within a few hours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid--2">
+      <div class="card">
+        <LeadForm kind="contact" />
+      </div>
+      <div class="info">
+        <h2>Reach us directly</h2>
+        <dl>
+          <dt>Phone</dt>
+          <dd><a href={telHref}>{site.phone}</a></dd>
+          <dt>Email</dt>
+          <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
+          <dt>Office</dt>
+          <dd>{site.brokerage.name}<br />{site.brokerage.address}</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  dl {
+    margin: 0;
+  }
+  dt {
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral);
+    font-weight: 600;
+    margin-top: 1.5rem;
+  }
+  dd {
+    margin: 0.25rem 0 0;
+    font-size: 1.15rem;
+  }
+  dd a {
+    color: var(--ink);
+  }
+</style>

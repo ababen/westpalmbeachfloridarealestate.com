@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../config/site';
+---
+
+<Base title="Privacy Policy" description={`Privacy policy for ${site.name}.`}>
+  <section class="page-hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <!-- TODO: have this reviewed for your business before launch. -->
+      <p>
+        When you submit a form on this website, we collect the information you provide — such as your name, email,
+        phone number, and details about your real estate goals — so we can respond to your request.
+      </p>
+      <h2>How we use your information</h2>
+      <p>
+        We use your information only to contact you about your inquiry and to provide real estate services. We do not
+        sell your personal information.
+      </p>
+      <h2>Communications</h2>
+      <p>
+        You can ask us to stop contacting you at any time by replying to any message or emailing
+        <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+      <h2>Contact</h2>
+      <p>Questions about this policy? Email <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .prose {
+    max-width: 46rem;
+  }
+  .prose h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+</style>
