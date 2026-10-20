@@ -23,6 +23,11 @@ export async function onRequestPost({ request, env }) {
       ? Response.json({ ok }, { status })
       : Response.redirect(new URL(ok ? '/thank-you' : '/contact', request.url), 303);
 
+  if (!env.RESEND_API_KEY || !env.LEAD_TO_EMAIL || !env.LEAD_FROM_EMAIL) {
+    console.error('Lead form is not configured: set RESEND_API_KEY, LEAD_TO_EMAIL, and LEAD_FROM_EMAIL');
+    return reply(false, 503);
+  }
+
   const form = await request.formData();
 
   // Honeypot filled in: pretend success so bots move on.

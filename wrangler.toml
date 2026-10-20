@@ -1,0 +1,14 @@
+name = "westpalmbeachfloridarealestate"
+main = "worker/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+routes = [
+  { pattern = "westpalmbeachfloridarealestate.com", custom_domain = true },
+  { pattern = "www.westpalmbeachfloridarealestate.com", custom_domain = true },
+]
+
+# Lead form email settings (see functions/api/lead.js):
+#   npx wrangler secret put RESEND_API_KEY
+#   npx wrangler secret put LEAD_TO_EMAIL
+#   npx wrangler secret put LEAD_FROM_EMAIL

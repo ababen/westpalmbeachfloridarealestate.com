@@ -1,7 +1,7 @@
 # westpalmbeachfloridarealestate.com
 
-Static real estate website built with [Astro](https://astro.build). Lead forms are handled by a
-Cloudflare Pages Function that emails submissions through [Resend](https://resend.com).
+Real estate website built with [Astro](https://astro.build) and served by a Cloudflare Worker.
+Lead forms email submissions through [Resend](https://resend.com).
 
 ## Develop
 
@@ -21,16 +21,24 @@ npm run build    # outputs to dist/
 4. **Photography** — neighborhood cards use illustrated placeholders; swap in real photos when ready.
 5. **Privacy policy** — review `src/pages/privacy.astro`.
 
-## Deploy (Cloudflare Pages)
+## Deploy (Cloudflare Worker)
 
-Connected via Git: every push to `main` deploys to production; other branches get preview URLs.
+The site runs as a Cloudflare Worker that serves the built pages (bundled into the script by
+`scripts/embed-assets.mjs`) and handles `/api/lead`. Custom domains are set in `wrangler.toml`.
 
-- Framework preset: Astro · Build command: `npm run build` · Output directory: `dist`
-- Node version comes from `.node-version` (Astro needs ≥ 22.22)
-- Environment variables for the lead form (`functions/api/lead.js`):
-  - `RESEND_API_KEY`
-  - `LEAD_TO_EMAIL` — where leads go (comma-separated for several)
-  - `LEAD_FROM_EMAIL` — a sender on a domain verified in Resend
+```sh
+npm run deploy   # astro build → embed dist/ → wrangler deploy
+```
+
+Lead form settings (set once as Worker secrets):
+
+```sh
+npx wrangler secret put RESEND_API_KEY
+npx wrangler secret put LEAD_TO_EMAIL     # where leads go (comma-separated for several)
+npx wrangler secret put LEAD_FROM_EMAIL   # a sender on a domain verified in Resend
+```
+
+Until these are set, forms show an error asking visitors to call or email.
 
 ## Structure
 
@@ -39,5 +47,6 @@ src/config/site.ts         business details, nav
 src/data/neighborhoods.ts  neighborhood guide content (add a neighborhood here → new page)
 src/pages/                 routes (home, buy, sell, listings, neighborhoods, about, contact)
 src/components/            header, footer, lead form, cards
-functions/api/lead.js      form handler (Cloudflare Pages Function)
+functions/api/lead.js      form handler
+worker/index.js            Worker: serves pages, routes /api/lead
 ```
