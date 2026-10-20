@@ -10,7 +10,10 @@ const values = [
 ];
 ---
 
-<Base title="About" description={`Meet ${site.agent.name}, your West Palm Beach real estate advisor with ${site.brokerage.name}.`}>
+<Base
+  title={`About ${site.agent.name}`}
+  description={`${site.agent.name} is a West Palm Beach REALTOR® with ${site.brokerage.name}, with experience in residential, commercial, and new construction real estate.`}
+>
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow">About</span>
@@ -34,15 +37,28 @@ const values = [
       </div>
       <div>
         <h2>{site.agent.name}</h2>
-        <p class="meta">{site.agent.title} · {site.brokerage.name} · {site.agent.license}</p>
-        <!-- TODO: replace with your own bio. -->
-        <p>
-          Write a short, personal bio here: how long you’ve lived in the Palm Beaches, what you love about the city,
-          the neighborhoods you know best, and what clients can expect when working with you.
+        <p class="meta">
+          {site.agent.title} · {site.brokerage.name} · <a href={site.agent.licenseUrl} rel="noopener" target="_blank">{site.agent.license}</a>
+        </p>
+        <img class="broker-logo" src={site.brokerage.logo} alt={site.brokerage.name} width="200" height="48" />
+        <p class="bio-lede">
+          I’ve worked in real estate from almost every angle — and that’s exactly what I bring to the table for my
+          clients.
         </p>
         <p>
-          Mention any specialties — historic homes, waterfront property, condos, relocation, or first-time buyers —
-          and any designations or community involvement.
+          My experience spans residential and commercial property: buying, selling, and managing new construction
+          projects from the ground up. I know what goes into a property long before it hits the market, and I know
+          what it takes to get a deal to the closing table.
+        </p>
+        <p>
+          Here in West Palm Beach, I’ve served as CMO and COO of New Path Title and as CEO of James Brown Law. Leading a
+          title company and a law firm gave me an inside view of contracts, closings, and the details that can make or
+          break a transaction. My clients benefit from that perspective at every step.
+        </p>
+        <p>
+          After my time with Compass, I’m now proud to represent buyers and sellers with LoKation Real Estate. What
+          clients value most is how I negotiate: I prepare thoroughly, know the numbers cold, and fight for the best
+          possible price and terms — whether you’re buying your first condo or selling a waterfront estate.
         </p>
         <a class="btn btn--dark" href="/contact">Get in touch</a>
       </div>
@@ -83,6 +99,19 @@ const values = [
   .meta {
     color: var(--ink-soft);
     font-size: 0.95rem;
+  }
+  .meta a {
+    color: inherit;
+  }
+  .bio-lede {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    line-height: 1.4;
+  }
+  .broker-logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: 1.5rem;
   }
   .grid--3 p {
     color: var(--ink-soft);

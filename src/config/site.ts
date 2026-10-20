@@ -1,5 +1,5 @@
-// Central business details. Everything marked TODO must be filled in before launch —
-// Florida advertising rules (Rule 61J2-10.025) require the brokerage name on all ads.
+// Central business details. Florida advertising rules (Rule 61J2-10.025) require the
+// brokerage's licensed name on all ads; it appears in the footer of every page.
 export const site = {
   name: 'West Palm Beach Florida Real Estate',
   shortName: 'WPB Real Estate',
@@ -7,17 +7,22 @@ export const site = {
   description:
     'Buy or sell a home in West Palm Beach, Florida. Local guidance on neighborhoods from El Cid to Northwood, home valuations, and property search.',
   agent: {
-    name: 'Your Name', // TODO
-    title: 'REALTOR®', // TODO
-    license: 'FL License #SL0000000', // TODO
+    name: 'Alexander Babenchuk',
+    title: 'REALTOR®',
+    license: 'FL License #SL3596634',
+    licenseUrl:
+      'https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=DDFABB0C721DCA8BCD909FDE963713A5',
     photo: '', // TODO: e.g. '/images/agent.jpg'
   },
   brokerage: {
-    name: 'Your Brokerage', // TODO
-    address: '000 Clematis St, West Palm Beach, FL 33401', // TODO
+    name: 'LoKation® Real Estate',
+    legalName: 'K Company Realty LLC dba LoKation',
+    logo: '/images/lokation-logo.svg',
+    logoLight: '/images/lokation-logo-light.svg',
+    address: '',
   },
-  phone: '(561) 000-0000', // TODO
-  email: 'hello@westpalmbeachfloridarealestate.com', // TODO
+  phone: '(561) 317-8424',
+  email: 'hello@westpalmbeachfloridarealestate.com',
   // Paste your IDX/MLS search embed URL (e.g. from iHomefinder, IDX Broker, Showcase IDX).
   // While empty, the listings page shows a "tell us what you're looking for" form instead.
   idxEmbedUrl: '',
