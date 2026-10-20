@@ -13,8 +13,8 @@ npm run build    # outputs to dist/
 
 ## Before launch
 
-1. **Business details** — fill in every `TODO` in `src/config/site.ts` (agent name, license,
-   brokerage, phone, email). Florida requires the brokerage name on all advertising.
+1. **Business details** live in `src/config/site.ts` (agent, license, brokerage). Florida requires the
+   brokerage's licensed name on all advertising; it's in the footer of every page.
 2. **About page bio & photo** — `src/pages/about.astro`; put the photo in `public/images/`.
 3. **Property search** — set `idxEmbedUrl` in `src/config/site.ts` to your IDX provider's embed URL.
    Until then, `/listings` shows a "send me listings" form.
