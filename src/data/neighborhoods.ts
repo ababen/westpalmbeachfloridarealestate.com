@@ -173,4 +173,64 @@ export const neighborhoods: Neighborhood[] = [
     bestFor: 'Value-minded buyers and commuters',
     palette: ['#3b4f8f', '#9fb3e8'],
   },
+  {
+    slug: 'south-flagler',
+    name: 'South Flagler',
+    tagline: 'Intracoastal towers between downtown and Southern Boulevard',
+    summary:
+      'The waterfront stretch of South Flagler Drive south of downtown, home to established condo towers and several of the city’s newest luxury high-rises.',
+    body: [
+      'South of Okeechobee Boulevard, Flagler Drive follows the Lake Worth Lagoon past a line of condominium towers with views across the Intracoastal to Palm Beach Island. The corridor runs through the Mango Promenade and Central Park areas and alongside the El Cid historic district, with the Flagler Drive waterfront path running its length.',
+      'Buildings here range from 1970s towers such as Trianon and the Rapallo pair to recent and upcoming projects, including The Bristol, La Clara, Forté on Flagler, South Flagler House and Edgeworth. The Norton Museum of Art sits a block inland, and downtown is a short drive or bike ride north.',
+    ],
+    homeStyles: ['Waterfront condominium towers', 'New-construction luxury residences', '1970s and 1980s high-rises', 'Boutique low-rise condos'],
+    highlights: [
+      'Intracoastal and Palm Beach Island views',
+      'Flagler Drive waterfront path',
+      'Near the Norton Museum of Art',
+      'Close to downtown and the bridges to Palm Beach',
+    ],
+    bestFor: 'Buyers seeking a waterfront condo close to downtown',
+    palette: ['#14506b', '#8fd3d9'],
+  },
+  {
+    slug: 'north-flagler',
+    name: 'North Flagler & Northwood Harbor',
+    tagline: 'A waterfront corridor in the middle of a building boom',
+    summary:
+      'North Flagler Drive from the edge of downtown to Northwood Harbor and Northwood Shores, where established condos sit beside a wave of new luxury towers.',
+    body: [
+      'North of downtown, Flagler Drive runs along the Intracoastal past Currie Park and on toward Northwood Harbor and Northwood Shores. Long-standing condominiums such as Waterview Towers, The Slade, Flagler Pointe, Portofino, Placido Mar and The Palm Beach House line the corridor, many with Intracoastal frontage, docks or water views.',
+      'The area has become one of West Palm Beach’s busiest development corridors. Recent and planned towers include Alba Palm Beach, completed in 2026, plus Olara, Shorecrest and The Ritz-Carlton Residences under construction and projects such as Rosewood Residences and The Residences at Mandarin Oriental in planning. Northwood Village’s shops and restaurants are nearby.',
+    ],
+    homeStyles: ['Waterfront condominium towers', 'New-construction branded residences', 'Mid-century high-rises', 'Low-rise waterfront condos with docks'],
+    highlights: [
+      'Intracoastal frontage along North Flagler Drive',
+      'Currie Park on the waterfront',
+      'Close to Northwood Village dining and galleries',
+      'Several major towers under construction or planned',
+    ],
+    bestFor: 'Buyers interested in waterfront new construction or established towers north of downtown',
+    palette: ['#1f5f73', '#a8dcc8'],
+  },
+  {
+    slug: 'lands-of-the-president',
+    name: 'Lands of the President',
+    tagline: 'Gated high-rise towers on Presidential Way',
+    summary:
+      'A gated community of condominium towers in the north end of the city, bordered by Lake Mangonia and the Banyan Cay golf course.',
+    body: [
+      'Lands of the President is a gated complex of high-rise condominium towers along Presidential Way, with 24-hour manned security. Lake Mangonia forms much of its eastern edge, and the towers are set around the Jack Nicklaus-designed golf course at the Banyan Cay resort (club use requires a separate membership).',
+      'The towers include Washington, Lincoln and Jefferson, built in 1972, and Envoy, completed in 1984. Downtown West Palm Beach and Clematis Street are a few miles away.',
+    ],
+    homeStyles: ['Gated high-rise condominiums', '1970s and 1980s towers'],
+    highlights: [
+      'Gated community with 24-hour security',
+      'Borders Lake Mangonia',
+      'Golf course views at Banyan Cay',
+      'A few miles from downtown',
+    ],
+    bestFor: 'Buyers seeking a gated high-rise community away from the downtown core',
+    palette: ['#3a5a40', '#b9d6a3'],
+  },
 ];
