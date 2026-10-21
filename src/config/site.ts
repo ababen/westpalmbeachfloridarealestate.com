@@ -28,6 +28,8 @@ export const site = {
   // Paste your IDX/MLS search embed URL (e.g. from iHomefinder, IDX Broker, Showcase IDX).
   // While empty, the listings page shows a "tell us what you're looking for" form instead.
   idxEmbedUrl: '',
+  // Google Analytics 4 measurement ID.
+  gaId: 'G-LHGSP4Y2FY',
   social: {
     instagram: '',
     facebook: '',
