@@ -1,3 +1,5 @@
+import images from './neighborhoodImages.json';
+
 export interface Neighborhood {
   slug: string;
   name: string;
@@ -234,3 +236,8 @@ export const neighborhoods: Neighborhood[] = [
     palette: ['#3a5a40', '#b9d6a3'],
   },
 ];
+
+export type NeighborhoodImage = { src: string; width: number; height: number; credit: string; license: string };
+/** AI illustration for a neighborhood (scripts/add-neighborhood-image.mjs), if one exists. */
+export const neighborhoodImage = (slug: string): NeighborhoodImage | undefined => (images as Record<string, NeighborhoodImage>)[slug];
+export const illustrationCredit = (img: NeighborhoodImage) => `Illustration (${img.credit}), not a photograph`;
