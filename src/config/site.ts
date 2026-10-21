@@ -30,6 +30,8 @@ export const site = {
   idxEmbedUrl: 'https://link.flexmls.com/1z80v7evrh7o,15',
   // Google Analytics 4 measurement ID.
   gaId: 'G-LHGSP4Y2FY',
+  // Cloudflare Turnstile site key for the lead forms (public). The secret is the TURNSTILE_SECRET Worker secret.
+  turnstileSiteKey: '0x4AAAAAAFesKaEe_ur8uKYV',
   social: {
     instagram: '',
     facebook: '',
