@@ -20,6 +20,10 @@ import { site } from '../config/site';
     site.idxEmbedUrl && (
       <section class="section section--search">
         <div class="container">
+          <p class="idx-tip">
+            <strong>Tip:</strong> type <em>West Palm Beach</em>, a neighborhood, or an address into the Location box,
+            then press <em>View Results</em>.
+          </p>
           <iframe class="idx" src={site.idxEmbedUrl} title="West Palm Beach MLS property search" />
         </div>
       </section>
@@ -51,6 +55,10 @@ import { site } from '../config/site';
 <style>
   .section--search {
     padding-block: 32px;
+  }
+  .idx-tip {
+    margin: 0 0 0.9rem;
+    color: var(--ink-soft);
   }
   .idx {
     display: block;
