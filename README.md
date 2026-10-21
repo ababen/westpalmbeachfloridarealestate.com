@@ -40,6 +40,18 @@ npx wrangler secret put LEAD_FROM_EMAIL   # a sender on a domain verified in Res
 
 Until these are set, forms show an error asking visitors to call or email.
 
+## Condo building guide
+
+`/condos` and `/condos/[slug]` are generated from `src/data/buildings.json`. Every fact there needs a
+source URL, and fields where sources conflict stay `null`. The full research workflow is in
+`.claude/skills/condo-research/SKILL.md`.
+
+```sh
+npm run condos:check                                  # validate the data (also runs on build)
+node scripts/condos/apply-updates.mjs updates.json    # apply researched changes
+node scripts/condos/geocode.mjs                       # add map coordinates for new buildings
+```
+
 ## Structure
 
 ```

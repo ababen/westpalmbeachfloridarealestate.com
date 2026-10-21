@@ -2,12 +2,36 @@
 import Base from '../../layouts/Base.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
+import { buildings, buildingAreas, areaSlug, isNewConstruction } from '../../data/buildings';
+
+const filters = [
+  { key: 'all', label: 'All buildings' },
+  { key: 'waterfront', label: 'Waterfront' },
+  { key: 'new', label: 'New construction' },
+  { key: 'resale', label: 'Completed' },
+];
+const count = (key: string) =>
+  buildings.filter((b) =>
+    key === 'waterfront' ? b.waterfront : key === 'new' ? isNewConstruction(b) : key === 'resale' ? !isNewConstruction(b) : true,
+  ).length;
 ---
 
 <Base
   title="West Palm Beach Condo Buildings Guide"
-  description={`Explore ${buildings.length} condo buildings in West Palm Beach — downtown high-rises, Flagler Drive waterfront towers, and new construction — with building facts and amenities.`}
+  description={`Explore ${buildings.length} condo buildings in West Palm Beach — downtown high-rises, Flagler Drive waterfront towers, and new construction — with building facts, amenities, and maps.`}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'West Palm Beach condo buildings',
+      itemListElement: buildings.map((b, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name: b.name,
+        url: `${Astro.site}condos/${b.slug}`,
+      })),
+    },
+  ]}
 >
   <section class="page-hero">
     <div class="container">
@@ -19,20 +43,35 @@ import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
       </p>
       <nav class="jump" aria-label="Areas">
         {buildingAreas.map((area) => <a href={`#${areaSlug(area)}`}>{area}</a>)}
+        <a href="#compare">Compare all</a>
       </nav>
     </div>
   </section>
 
+  <div class="filters-bar">
+    <div class="container filters" role="group" aria-label="Filter buildings">
+      {
+        filters.map((f, i) => (
+          <button type="button" data-filter={f.key} aria-pressed={i === 0 ? 'true' : 'false'}>
+            {f.label} <span>{count(f.key)}</span>
+          </button>
+        ))
+      }
+    </div>
+  </div>
+
   {
     buildingAreas.map((area, i) => (
-      <section id={areaSlug(area)} class:list={['section', { 'section--white': i % 2 === 1 }]}>
+      <section id={areaSlug(area)} class:list={['section', 'area', { 'section--white': i % 2 === 1 }]}>
         <div class="container">
           <h2>{area}</h2>
           <div class="grid grid--3">
             {buildings
               .filter((b) => b.area === area)
               .map((b) => (
-                <BuildingCard b={b} />
+                <div class="cell" data-waterfront={b.waterfront ? '1' : '0'} data-new={isNewConstruction(b) ? '1' : '0'}>
+                  <BuildingCard b={b} />
+                </div>
               ))}
           </div>
         </div>
@@ -40,8 +79,42 @@ import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
     ))
   }
 
-  <section class="section">
+  <section id="compare" class="section section--white">
     <div class="container">
+      <h2>Compare all buildings</h2>
+      <p class="hint">Select a column heading to sort.</p>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th scope="col"><button type="button" data-sort="0">Building</button></th>
+              <th scope="col"><button type="button" data-sort="1">Area</button></th>
+              <th scope="col"><button type="button" data-sort="2" data-num>Year</button></th>
+              <th scope="col"><button type="button" data-sort="3" data-num>Floors</button></th>
+              <th scope="col"><button type="button" data-sort="4" data-num>Residences</button></th>
+              <th scope="col"><button type="button" data-sort="5">Waterfront</button></th>
+              <th scope="col"><button type="button" data-sort="6">Status</button></th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              buildings.map((b) => (
+                <tr data-waterfront={b.waterfront ? '1' : '0'} data-new={isNewConstruction(b) ? '1' : '0'}>
+                  <th scope="row">
+                    <a href={`/condos/${b.slug}`}>{b.name}</a>
+                  </th>
+                  <td>{b.area}</td>
+                  <td data-v={b.yearBuilt ?? ''}>{b.yearBuilt ?? '—'}</td>
+                  <td data-v={b.floors ?? ''}>{b.floors ?? '—'}</td>
+                  <td data-v={b.units ?? ''}>{b.units ?? '—'}</td>
+                  <td>{b.waterfront ? 'Yes' : '—'}</td>
+                  <td>{b.status}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
       <p class="note">
         Building details are compiled from public sources and may change. Verify all information independently.
         Listing availability and pricing are not shown here — ask for current units for sale in any building.
@@ -51,6 +124,53 @@ import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
 
   <CtaBand heading="Looking for a specific building?" text="Tell me which building you’re interested in and I’ll send current listings and recent sale prices." />
 </Base>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const matches = (el: HTMLElement, key: string) =>
+    key === 'all' ||
+    (key === 'waterfront' && el.dataset.waterfront === '1') ||
+    (key === 'new' && el.dataset.new === '1') ||
+    (key === 'resale' && el.dataset.new === '0');
+
+  buttons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.filter!;
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      document.querySelectorAll<HTMLElement>('.cell, .compare tbody tr').forEach((el) => {
+        el.hidden = !matches(el, key);
+      });
+      document.querySelectorAll<HTMLElement>('section.area').forEach((s) => {
+        s.hidden = !s.querySelector('.cell:not([hidden])');
+      });
+    }),
+  );
+
+  const tbody = document.querySelector<HTMLTableSectionElement>('.compare tbody')!;
+  document.querySelectorAll<HTMLButtonElement>('[data-sort]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const col = Number(btn.dataset.sort);
+      const numeric = btn.hasAttribute('data-num');
+      const asc = btn.dataset.dir !== 'asc';
+      document.querySelectorAll<HTMLButtonElement>('[data-sort]').forEach((b) => delete b.dataset.dir);
+      btn.dataset.dir = asc ? 'asc' : 'desc';
+      const value = (row: HTMLTableRowElement) => {
+        const cell = row.children[col] as HTMLElement;
+        return numeric ? cell.dataset.v || '' : cell.textContent!.trim();
+      };
+      const rows = [...tbody.rows].sort((a, b) => {
+        const [x, y] = [value(a), value(b)];
+        if (numeric) {
+          if (!x) return 1; // blanks last
+          if (!y) return -1;
+          return asc ? Number(x) - Number(y) : Number(y) - Number(x);
+        }
+        return asc ? x.localeCompare(y) : y.localeCompare(x);
+      });
+      tbody.append(...rows);
+    });
+  });
+</script>
 
 <style>
   .jump {
@@ -70,16 +190,116 @@ import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
   .jump a:hover {
     background: rgb(247 241 232 / 0.12);
   }
+  .filters-bar {
+    position: sticky;
+    top: 76px;
+    z-index: 20;
+    background: rgb(247 241 232 / 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .filters {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-block: 0.75rem;
+  }
+  .filters button {
+    flex: none;
+    font: 600 0.92rem var(--font-body);
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .filters button span {
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-left: 0.2rem;
+  }
+  .filters button[aria-pressed='true'] {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--white);
+  }
+  .filters button[aria-pressed='true'] span {
+    color: rgb(255 255 255 / 0.7);
+  }
+  .cell {
+    display: flex;
+    flex-direction: column;
+  }
+  .cell > :global(a) {
+    flex: 1;
+  }
+  [hidden] {
+    display: none !important;
+  }
   section[id] {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 140px;
   }
   .section h2 {
     margin-bottom: 1.5rem;
+  }
+  .hint {
+    color: var(--ink-soft);
+    margin-top: -0.75rem;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+  .compare {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+  .compare th,
+  .compare td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    white-space: nowrap;
+  }
+  .compare tbody th {
+    font-weight: 600;
+    white-space: normal;
+  }
+  .compare tbody tr:nth-child(even) {
+    background: var(--sand);
+  }
+  .compare thead th {
+    background: var(--ink);
+  }
+  .compare thead button {
+    all: unset;
+    cursor: pointer;
+    color: var(--sand);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .compare thead button[data-dir='asc']::after {
+    content: ' ▲';
+  }
+  .compare thead button[data-dir='desc']::after {
+    content: ' ▼';
+  }
+  .compare thead button:focus-visible {
+    outline: 2px solid var(--coral);
+  }
+  .compare a {
+    color: var(--ink);
   }
   .note {
     font-size: 0.9rem;
     color: var(--ink-soft);
     max-width: 46rem;
-    margin: 0;
+    margin: 1.5rem 0 0;
   }
 </style>
