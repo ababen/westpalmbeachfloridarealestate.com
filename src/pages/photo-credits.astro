@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+import { buildings, photoCredit } from '../data/buildings';
+
+const credited = buildings.filter((b) => b.photo);
+---
+
+<Base title="Photo Credits" description="Credits and licenses for the building photos used on this site.">
+  <section class="page-hero">
+    <div class="container">
+      <h1>Photo Credits</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <p>
+        Building photos on this site are used under free licenses or with the owner's permission, and are credited
+        wherever they appear. To have a photo removed or its credit corrected, email
+        <a href="mailto:hello@westpalmbeachfloridarealestate.com">hello@westpalmbeachfloridarealestate.com</a>.
+      </p>
+      {
+        credited.length ? (
+          <ul>
+            {credited.map((b) => (
+              <li>
+                <a href={`/condos/${b.slug}`}>{b.name}</a>: <a href={b.photo!.sourceUrl} rel="noopener" target="_blank">{photoCredit(b.photo!)}</a>
+                {b.photo!.licenseUrl && (
+                  <>
+                    {' '}
+                    (<a href={b.photo!.licenseUrl} rel="noopener license" target="_blank">license terms</a>)
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No photos yet.</p>
+        )
+      }
+      <p>Map data © OpenStreetMap contributors. Street View imagery © Google.</p>
+    </div>
+  </section>
+</Base>

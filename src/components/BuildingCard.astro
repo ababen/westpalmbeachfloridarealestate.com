@@ -1,5 +1,5 @@
 ---
-import type { Building } from '../data/buildings';
+import { photoCredit, type Building } from '../data/buildings';
 
 interface Props {
   b: Building;
@@ -17,6 +17,14 @@ const facts = [
 
 <a class="bcard" href={`/condos/${b.slug}`}>
   <div class="bcard__art" aria-hidden="true">
+    {
+      b.photo && (
+        <>
+          <img src={b.photo.src} width={b.photo.width} height={b.photo.height} alt="" loading="lazy" decoding="async" />
+          <span class="bcard__credit">{photoCredit(b.photo)}</span>
+        </>
+      )
+    }
     <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMax slice">
       <circle cx="320" cy="50" r="26" fill="rgb(255 255 255 / 0.3)"></circle>
       <rect x="150" y={170 - towerHeight} width="70" height={towerHeight} rx="3" fill="rgb(15 42 61 / 0.55)"></rect>
@@ -60,7 +68,30 @@ const facts = [
     width: 100%;
     height: 100%;
   }
+  .bcard__art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .bcard__credit {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    max-width: 100%;
+    padding: 0.15rem 0.45rem;
+    font-size: 0.65rem;
+    color: var(--white);
+    background: rgb(11 31 45 / 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .bcard__badge {
+    z-index: 2;
     position: absolute;
     top: 12px;
     left: 12px;

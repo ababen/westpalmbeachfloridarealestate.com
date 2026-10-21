@@ -1,5 +1,5 @@
 ---
-import type { Building } from '../data/buildings';
+import { photoCredit, type Building } from '../data/buildings';
 
 interface Props {
   items: Building[];
@@ -48,6 +48,17 @@ const art = (b: Building) => {
             data-active={i === 0 ? '' : undefined}
           >
             <a class="slide__link" href={`/condos/${b.slug}`} tabindex={i === 0 ? undefined : -1}>
+            {b.photo && (
+              <img
+                src={b.photo.src}
+                width={b.photo.width}
+                height={b.photo.height}
+                alt=""
+                decoding="async"
+                loading={i === 0 ? 'eager' : 'lazy'}
+                fetchpriority={i === 0 ? 'high' : undefined}
+              />
+            )}
             <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
               <defs>
                 <linearGradient id={`sky-${b.slug}`} x1="0" y1="0" x2="0" y2="1">
@@ -80,6 +91,7 @@ const art = (b: Building) => {
               <span class="caption__name">{b.name}</span>
               {facts(b) && <span class="caption__facts">{facts(b)}</span>}
               <span class="caption__cta">View building →</span>
+              {b.photo && <span class="caption__credit">{photoCredit(b.photo)}</span>}
             </span>
             </a>
           </div>
@@ -112,6 +124,8 @@ const art = (b: Building) => {
         else s.setAttribute('aria-hidden', 'true');
         s.querySelector('a')!.tabIndex = on ? 0 : -1;
       });
+      // Start loading the next slide's photo before it's shown.
+      slides[(current + 1) % slides.length].querySelector('img')?.setAttribute('loading', 'eager');
       dots.forEach((d, n) => (n === current ? d.setAttribute('aria-current', 'true') : d.removeAttribute('aria-current')));
     };
 
@@ -177,6 +191,20 @@ const art = (b: Building) => {
     height: 100%;
     color: var(--white);
     text-decoration: none;
+  }
+  .slide img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .caption__credit {
+    font-size: 0.7rem;
+    color: rgb(255 255 255 / 0.75);
+  }
+  .slide img + svg {
+    display: none;
   }
   .slide svg {
     width: 100%;
