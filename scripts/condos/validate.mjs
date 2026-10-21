@@ -60,7 +60,7 @@ for (const b of buildings) {
     if (!/^\/images\/condos\/[a-z0-9-]+\.webp$/.test(p.src ?? '')) err(b, 'photo.src must be /images/condos/<slug>.webp');
     else if (!existsSync(new URL(`../../public${p.src}`, import.meta.url))) err(b, `photo file missing: public${p.src}`);
     if (!p.credit || !p.license || !/^https?:\/\//.test(p.sourceUrl ?? '')) err(b, 'photo needs credit, license and sourceUrl');
-    if (!/^(CC0|Public domain|CC BY(-SA)? [\d.]+|Permission)/i.test(p.license ?? '')) err(b, `photo license "${p.license}" is not a free licence or recorded permission`);
+    if (!/^(CC0|Public domain|CC BY(-SA)? [\d.]+|Permission|Rendering$)/i.test(p.license ?? '')) err(b, `photo license "${p.license}" is not a free licence or recorded permission`);
     if (!Number.isInteger(p.width) || !Number.isInteger(p.height)) err(b, 'photo needs integer width and height');
   }
 

@@ -40,7 +40,17 @@
   "sqftRange": "1,927–6,461",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Assigned underground garage parking, valet and guest parking",
-  "description": "The Plaza of the Palm Beaches is a pair of 32-story towers at 525 S Flagler Drive, on the Intracoastal Waterway in downtown West Palm Beach, with Intracoastal, ocean and city views. Armour Guider Development Corporation developed the towers to a design by Schwab & Twitty Architects, and they opened in October 1985. The Bank of New York foreclosed in January 1986, and Donald Trump bought the property that July and renamed it Trump Plaza; in 2021 residents voted to restore the name The Plaza. Amenities include a heated pool, spa, sauna, tennis, a fitness center and a community room, with concierge service and 24-hour security."
+  "description": "The Plaza of the Palm Beaches is a pair of 32-story towers at 525 S Flagler Drive, on the Intracoastal Waterway in downtown West Palm Beach, with Intracoastal, ocean and city views. Armour Guider Development Corporation developed the towers to a design by Schwab & Twitty Architects, and they opened in October 1985. The Bank of New York foreclosed in January 1986, and Donald Trump bought the property that July and renamed it Trump Plaza; in 2021 residents voted to restore the name The Plaza. Amenities include a heated pool, spa, sauna, tennis, a fitness center and a community room, with concierge service and 24-hour security.",
+  "photo": {
+   "src": "/images/condos/plaza-of-the-palm-beaches.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Plaza of the Palm Beaches",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "esplanade-grande",
@@ -79,7 +89,17 @@
   "sqftRange": "1,900–3,000",
   "petPolicy": "Pets allowed with restrictions (number and size limits)",
   "parking": "Assigned underground garage parking with private elevators; valet",
-  "description": "Esplanade Grande is a 15-story building with 63 residences, about four per floor, on the west side of N Flagler Drive directly above the Meyer Amphitheatre, within walking distance of Clematis Street. East-facing residences look over the Intracoastal Waterway toward Palm Beach Island and the Atlantic Ocean. Residences run from about 1,900 to 3,000 square feet, and some original buyers combined adjacent units into homes of about 6,000 square feet. Amenities include a heated rooftop pool and spa, a rooftop garden, a clubroom, a fitness center, a 24-hour concierge and valet parking."
+  "description": "Esplanade Grande is a 15-story building with 63 residences, about four per floor, on the west side of N Flagler Drive directly above the Meyer Amphitheatre, within walking distance of Clematis Street. East-facing residences look over the Intracoastal Waterway toward Palm Beach Island and the Atlantic Ocean. Residences run from about 1,900 to 3,000 square feet, and some original buyers combined adjacent units into homes of about 6,000 square feet. Amenities include a heated rooftop pool and spa, a rooftop garden, a clubroom, a fitness center, a 24-hour concierge and valet parking.",
+  "photo": {
+   "src": "/images/condos/esplanade-grande.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Esplanade Grande",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "101-lofts",
@@ -110,7 +130,17 @@
   "petPolicy": "Pets allowed",
   "parking": "Covered, assigned garage parking",
   "rentalPolicy": "Leasing limited to two tenants per year",
-  "description": "101 Lofts is a five-story building at the east end of Clematis Street, across Flagler Drive from the Waterfront Green and the Intracoastal Waterway, overlooking the Clematis Street fountains. Completed in 2002 in a coastal Mediterranean style, it has commercial space on the first two floors and 60 original loft residences on floors three to five, some since combined. The building has a keypad/card-access lobby with a door attendant and no pool or clubhouse."
+  "description": "101 Lofts is a five-story building at the east end of Clematis Street, across Flagler Drive from the Waterfront Green and the Intracoastal Waterway, overlooking the Clematis Street fountains. Completed in 2002 in a coastal Mediterranean style, it has commercial space on the first two floors and 60 original loft residences on floors three to five, some since combined. The building has a keypad/card-access lobby with a door attendant and no pool or clubhouse.",
+  "photo": {
+   "src": "/images/condos/101-lofts.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of 101 Lofts",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "strand",
@@ -149,7 +179,17 @@
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Assigned underground garage parking",
   "rentalPolicy": "Leasing limited to two leases per year",
-  "description": "The Strand is a 15-story, 275-residence building at 255 Evernia Street, on the block between Evernia and Datura streets in downtown West Palm Beach. American Land Housing Group developed it as a mixed-use rental project with about 13,728 square feet of ground-floor shops, designed by Dorsky Hodgson + Partners, and it opened in 2002. In 2005 it sold to Margolias Realty Group, a condominium conversion firm, and it now operates as a condominium. Upper east-facing floors have Intracoastal and distant ocean views, and amenities include a heated rooftop pool and hot tub, a fitness center, a billiards room and a lobby attendant."
+  "description": "The Strand is a 15-story, 275-residence building at 255 Evernia Street, on the block between Evernia and Datura streets in downtown West Palm Beach. American Land Housing Group developed it as a mixed-use rental project with about 13,728 square feet of ground-floor shops, designed by Dorsky Hodgson + Partners, and it opened in 2002. In 2005 it sold to Margolias Realty Group, a condominium conversion firm, and it now operates as a condominium. Upper east-facing floors have Intracoastal and distant ocean views, and amenities include a heated rooftop pool and hot tub, a fitness center, a billiards room and a lobby attendant.",
+  "photo": {
+   "src": "/images/condos/strand.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Strand",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "610-clematis",
@@ -188,7 +228,17 @@
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Assigned underground garage parking for residents and guests",
   "rentalPolicy": "Minimum 1-month lease term",
-  "description": "610 Clematis is an eight-story, low-rise courtyard building at Clematis Street and Rosemary Avenue in downtown West Palm Beach, completed in 2006. Residences surround a central courtyard with a heated infinity pool, sundeck, spa and zen garden, and the building also has a fitness center, steam room, saunas and bike storage. Security includes a full-time lobby attendant and a camera system with overnight guards."
+  "description": "610 Clematis is an eight-story, low-rise courtyard building at Clematis Street and Rosemary Avenue in downtown West Palm Beach, completed in 2006. Residences surround a central courtyard with a heated infinity pool, sundeck, spa and zen garden, and the building also has a fitness center, steam room, saunas and bike storage. Security includes a full-time lobby attendant and a camera system with overnight guards.",
+  "photo": {
+   "src": "/images/condos/610-clematis.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of 610 Clematis",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "city-palms",
@@ -230,7 +280,17 @@
   "sqftRange": "650–1,469",
   "parking": "Underground assigned garage parking with valet",
   "rentalPolicy": "Minimum one-month lease term",
-  "description": "City Palms is a 10-story building by The Newgard Group at 480 Hibiscus Street in downtown West Palm Beach, between One City Plaza and Two City Plaza and a few blocks from Clematis Street. A sixth-floor amenity pavilion has two sundecks, a heated 70-foot pool, a raised hot tub and a covered outdoor bar and lounge. Other amenities include a fitness center, a club lounge with billiards, a business center and library, and a 24-hour front desk with concierge and valet."
+  "description": "City Palms is a 10-story building by The Newgard Group at 480 Hibiscus Street in downtown West Palm Beach, between One City Plaza and Two City Plaza and a few blocks from Clematis Street. A sixth-floor amenity pavilion has two sundecks, a heated 70-foot pool, a raised hot tub and a covered outdoor bar and lounge. Other amenities include a fitness center, a club lounge with billiards, a business center and library, and a 24-hour front desk with concierge and valet.",
+  "photo": {
+   "src": "/images/condos/city-palms.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of City Palms",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "prado",
@@ -267,7 +327,17 @@
   "sqftRange": "752–1,513",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Assigned garage parking with valet",
-  "description": "The Prado is an eight-story building with 304 residences at 600 S Dixie Highway in downtown West Palm Beach, near Rosemary Square (formerly CityPlace), completed in 2006. Residences have private balconies with sliding glass doors and open living and dining areas. Amenities include a heated lap pool with outdoor cabanas, a spa, a fitness center, a sauna, a business center and a clubroom, with 24-hour security, an attended lobby and concierge service."
+  "description": "The Prado is an eight-story building with 304 residences at 600 S Dixie Highway in downtown West Palm Beach, near Rosemary Square (formerly CityPlace), completed in 2006. Residences have private balconies with sliding glass doors and open living and dining areas. Amenities include a heated lap pool with outdoor cabanas, a spa, a fitness center, a sauna, a business center and a clubroom, with 24-hour security, an attended lobby and concierge service.",
+  "photo": {
+   "src": "/images/condos/prado.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Prado",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "metropolitan",
@@ -305,7 +375,17 @@
   "sqftRange": "807–1,407",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Assigned underground garage parking",
-  "description": "The Metropolitan is an eight-story building with 149 residences at 403 S Sapodilla Avenue in downtown West Palm Beach, near Rosemary Square and about a block from Clematis Street. Its lobby has marble and Venetian-influenced finishes, and the building has a courtyard, a clubhouse with fitness and business centers, and a heated rooftop pool deck with a spa. Some penthouses and high-floor units have Intracoastal views, and the building has a 24-hour front desk and electronic security."
+  "description": "The Metropolitan is an eight-story building with 149 residences at 403 S Sapodilla Avenue in downtown West Palm Beach, near Rosemary Square and about a block from Clematis Street. Its lobby has marble and Venetian-influenced finishes, and the building has a courtyard, a clubhouse with fitness and business centers, and a heated rooftop pool deck with a spa. Some penthouses and high-floor units have Intracoastal views, and the building has a 24-hour front desk and electronic security.",
+  "photo": {
+   "src": "/images/condos/metropolitan.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Metropolitan",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "two-city-plaza",
@@ -344,7 +424,17 @@
   "sqftRange": "786–3,752",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Covered, assigned garage parking (about 650 spaces) with valet",
-  "description": "Two City Plaza is a 21-story building by Kolter at 701 S Olive Avenue in downtown West Palm Beach, completed in August 2008 and connected to the Rosemary Square (formerly CityPlace) district, about two blocks from the Intracoastal Waterway. Its 467 residences include 108 penthouse-level residences and 19 live-work units, and the building has an internal parking structure of about 650 spaces. A rooftop amenity deck of about 70,000 square feet includes a heated pool, saunas and an outdoor movie theater, and the building also has a fitness center, zen gardens and a 24-hour concierge."
+  "description": "Two City Plaza is a 21-story building by Kolter at 701 S Olive Avenue in downtown West Palm Beach, completed in August 2008 and connected to the Rosemary Square (formerly CityPlace) district, about two blocks from the Intracoastal Waterway. Its 467 residences include 108 penthouse-level residences and 19 live-work units, and the building has an internal parking structure of about 650 spaces. A rooftop amenity deck of about 70,000 square feet includes a heated pool, saunas and an outdoor movie theater, and the building also has a fitness center, zen gardens and a 24-hour concierge.",
+  "photo": {
+   "src": "/images/condos/two-city-plaza.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Two City Plaza",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "one-city-plaza",
@@ -385,7 +475,17 @@
   "sqftRange": "800–2,600",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Controlled underground garage with assigned spaces and valet",
-  "description": "One City Plaza is a 16-story courtyard-style building by Kolter at 801 S Olive Avenue in downtown West Palm Beach, near Okeechobee Boulevard and the Rosemary Square district. It combines traditional condominium residences with loft-style units. Amenities include a heated rooftop pool with sundeck, a rooftop garden, a fitness center, a sauna and a clubroom, with valet, concierge and 24-hour security."
+  "description": "One City Plaza is a 16-story courtyard-style building by Kolter at 801 S Olive Avenue in downtown West Palm Beach, near Okeechobee Boulevard and the Rosemary Square district. It combines traditional condominium residences with loft-style units. Amenities include a heated rooftop pool with sundeck, a rooftop garden, a fitness center, a sauna and a clubroom, with valet, concierge and 24-hour security.",
+  "photo": {
+   "src": "/images/condos/one-city-plaza.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of One City Plaza",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "cityplace-south-tower",
@@ -424,7 +524,17 @@
   "lng": -80.056493,
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Adjoining garage with assigned spaces and valet",
-  "description": "CityPlace South Tower is a 20-story building developed by The Related Group at 550 Okeechobee Boulevard, at the southern edge of the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Designed by Miami-based Roger Fry & Associates Architects and built by Moss & Associates, it opened in 2008 with 380 tower units, 40 villas and about 9,333 square feet of ground-floor commercial space. An adjoining parking garage has a 22,940-square-foot recreation deck with a pool and spa. The surrounding CityPlace district was master-planned in 1993 by Duany Plater-Zyberk & Co."
+  "description": "CityPlace South Tower is a 20-story building developed by The Related Group at 550 Okeechobee Boulevard, at the southern edge of the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Designed by Miami-based Roger Fry & Associates Architects and built by Moss & Associates, it opened in 2008 with 380 tower units, 40 villas and about 9,333 square feet of ground-floor commercial space. An adjoining parking garage has a 22,940-square-foot recreation deck with a pool and spa. The surrounding CityPlace district was master-planned in 1993 by Duany Plater-Zyberk & Co.",
+  "photo": {
+   "src": "/images/condos/cityplace-south-tower.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of CityPlace South Tower",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "tower-condominium-at-cityplace",
@@ -461,7 +571,17 @@
   "sqftRange": "706–1,040",
   "petPolicy": "Pets allowed",
   "parking": "Assigned, covered garage parking",
-  "description": "The Tower Condominium at CityPlace is a 12-story building at 651 Okeechobee Boulevard, within the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Residences are one- and two-bedroom units of about 706 to 1,040 square feet. Building amenities include a heated pool, a spa, an exercise room and a business center."
+  "description": "The Tower Condominium at CityPlace is a 12-story building at 651 Okeechobee Boulevard, within the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Residences are one- and two-bedroom units of about 706 to 1,040 square feet. Building amenities include a heated pool, a spa, an exercise room and a business center.",
+  "photo": {
+   "src": "/images/condos/tower-condominium-at-cityplace.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Tower Condominium at CityPlace",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "courtyards-in-cityplace",
@@ -498,7 +618,17 @@
   "sqftRange": "756–1,140",
   "petPolicy": "Pets allowed",
   "parking": "Assigned, covered garage parking",
-  "description": "Courtyards in CityPlace is a set of five-story buildings at 630, 720 and 780 S Sapodilla Avenue, near Hibiscus Street, within the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Most residences are one- and two-bedroom units of about 756 to 1,140 square feet, plus a small number of three-bedroom units. Amenities include a heated pool, a spa, an exercise room, a clubroom, a business center and bike storage."
+  "description": "Courtyards in CityPlace is a set of five-story buildings at 630, 720 and 780 S Sapodilla Avenue, near Hibiscus Street, within the CityPlace district (now Rosemary Square) in downtown West Palm Beach. Most residences are one- and two-bedroom units of about 756 to 1,140 square feet, plus a small number of three-bedroom units. Amenities include a heated pool, a spa, an exercise room, a clubroom, a business center and bike storage.",
+  "photo": {
+   "src": "/images/condos/courtyards-in-cityplace.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Courtyards in CityPlace",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "mr-c-residences-west-palm-beach",
@@ -640,7 +770,17 @@
   "bedrooms": "2–4",
   "sqftRange": "1,700–2,600+",
   "parking": "Underground assigned garage parking with valet",
-  "description": "Waterview Towers is a high-rise with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security."
+  "description": "Waterview Towers is a high-rise with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security.",
+  "photo": {
+   "src": "/images/condos/waterview-towers.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Waterview Towers",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "slade",
@@ -680,7 +820,17 @@
   "sqftRange": "760–1,680",
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Underground garage with 24-hour valet",
-  "description": "The Slade is a 200-residence condominium completed in 2005 at 1551 N Flagler Drive, about 1.2 miles north of Clematis Street, with units looking out over the Intracoastal Waterway toward the Atlantic. The building was designed by Arquitectonica. Amenities include a marble lobby, 24-hour concierge and valet, two heated pools (one of them indoors), a sunset deck, a fitness center with steam rooms and saunas, a business center and a private dog park. Clematis Street and The Square are about a 15-minute walk away."
+  "description": "The Slade is a 200-residence condominium completed in 2005 at 1551 N Flagler Drive, about 1.2 miles north of Clematis Street, with units looking out over the Intracoastal Waterway toward the Atlantic. The building was designed by Arquitectonica. Amenities include a marble lobby, 24-hour concierge and valet, two heated pools (one of them indoors), a sunset deck, a fitness center with steam rooms and saunas, a business center and a private dog park. Clematis Street and The Square are about a 15-minute walk away.",
+  "photo": {
+   "src": "/images/condos/slade.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Slade",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "flagler-pointe",
@@ -716,7 +866,17 @@
   "bedrooms": "1–3",
   "sqftRange": "662–1,575",
   "parking": "Covered, assigned garage parking",
-  "description": "Flagler Pointe is a waterfront condominium community of about 400 residences at 1801 N Flagler Drive, about 1.5 miles from The Square and Clematis Street, with the bridge to Palm Beach island a short drive away. It is laid out as a nine-floor U-shaped building plus two three-story courtyard buildings. Amenities include an Olympic-size heated pool with sundeck and hot tub, a fountained garden, a putting green, a fitness center with saunas, and a clubhouse with a media room, business center and game room. Concierge and security are staffed 24 hours a day."
+  "description": "Flagler Pointe is a waterfront condominium community of about 400 residences at 1801 N Flagler Drive, about 1.5 miles from The Square and Clematis Street, with the bridge to Palm Beach island a short drive away. It is laid out as a nine-floor U-shaped building plus two three-story courtyard buildings. Amenities include an Olympic-size heated pool with sundeck and hot tub, a fountained garden, a putting green, a fitness center with saunas, and a clubhouse with a media room, business center and game room. Concierge and security are staffed 24 hours a day.",
+  "photo": {
+   "src": "/images/condos/flagler-pointe.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Flagler Pointe",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "portofino",
@@ -753,7 +913,17 @@
   "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
   "parking": "Underground assigned parking",
   "rentalPolicy": "Maximum of one lease per year",
-  "description": "Portofino is a ten-story, 126-residence condominium built in 1969 on the east side of Flagler Drive in the Northwood area, directly on the Intracoastal Waterway. It is sometimes called Portofino North to tell it apart from Portofino South. Amenities include a heated pool facing the Intracoastal, a clubhouse, a spa, a sauna, a fitness center, a library and a game room. A full-time door attendant and 24/7 security staff the building."
+  "description": "Portofino is a ten-story, 126-residence condominium built in 1969 on the east side of Flagler Drive in the Northwood area, directly on the Intracoastal Waterway. It is sometimes called Portofino North to tell it apart from Portofino South. Amenities include a heated pool facing the Intracoastal, a clubhouse, a spa, a sauna, a fitness center, a library and a game room. A full-time door attendant and 24/7 security staff the building.",
+  "photo": {
+   "src": "/images/condos/portofino.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Portofino",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "flagler-landing",
@@ -789,7 +959,17 @@
   "bedrooms": "1–4",
   "sqftRange": "1,038–3,067",
   "parking": "Covered, assigned garage parking",
-  "description": "Flagler Landing is a gated, low-rise waterfront condominium completed in 2007 at 3940 N Flagler Drive, set on a marina on the Intracoastal Waterway beside the Rybovich superyacht marina. It is four stories tall, with Key West-style architecture and 12 floor plans. Amenities include a heated waterfront pool, a fitness center, a spa and private elevators. A limited number of boat slips have been offered for sale, and a guardhouse is staffed 24/7."
+  "description": "Flagler Landing is a gated, low-rise waterfront condominium completed in 2007 at 3940 N Flagler Drive, set on a marina on the Intracoastal Waterway beside the Rybovich superyacht marina. It is four stories tall, with Key West-style architecture and 12 floor plans. Amenities include a heated waterfront pool, a fitness center, a spa and private elevators. A limited number of boat slips have been offered for sale, and a guardhouse is staffed 24/7.",
+  "photo": {
+   "src": "/images/condos/flagler-landing.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Flagler Landing",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "placido-mar",
@@ -825,7 +1005,17 @@
   ],
   "lat": 26.756965,
   "lng": -80.0524,
-  "description": "Placido Mar is a 26-story, 145-residence condominium tower completed in 1974 at 5200 N Flagler Drive in the Northwood Harbor area, on the Intracoastal Waterway. Its gated grounds include a boat dock, a waterfront pier and private beach access. Recreation facilities include a pool, spa, fitness center, sauna, tennis and pickleball courts, a clubhouse and a library."
+  "description": "Placido Mar is a 26-story, 145-residence condominium tower completed in 1974 at 5200 N Flagler Drive in the Northwood Harbor area, on the Intracoastal Waterway. Its gated grounds include a boat dock, a waterfront pier and private beach access. Recreation facilities include a pool, spa, fitness center, sauna, tennis and pickleball courts, a clubhouse and a library.",
+  "photo": {
+   "src": "/images/condos/placido-mar.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Placido Mar",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "palm-beach-house",
@@ -865,7 +1055,17 @@
   "lng": -80.052304,
   "bedrooms": "1–3",
   "parking": "Underground assigned parking",
-  "description": "The Palm Beach House is a gated high-rise condominium completed in 1978 on the east side of Flagler Drive at 5600 N Flagler Drive, directly on the Intracoastal Waterway, with eastward views toward Palm Beach island and the ocean. On the grounds are a private sand beach, a heated pool, tennis and pickleball courts, a fitness center, a boat dock and a waterfront pier. Security is staffed 24/7, there is an on-site property manager, and each floor has a laundry room."
+  "description": "The Palm Beach House is a gated high-rise condominium completed in 1978 on the east side of Flagler Drive at 5600 N Flagler Drive, directly on the Intracoastal Waterway, with eastward views toward Palm Beach island and the ocean. On the grounds are a private sand beach, a heated pool, tennis and pickleball courts, a fitness center, a boat dock and a waterfront pier. Security is staffed 24/7, there is an on-site property manager, and each floor has a laundry room.",
+  "photo": {
+   "src": "/images/condos/palm-beach-house.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Palm Beach House",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "alba-palm-beach",
@@ -1175,7 +1375,17 @@
   "lng": -80.08356,
   "bedrooms": "1–3",
   "parking": "Assigned parking",
-  "description": "Washington Tower is a 20-story, 114-residence condominium built in 1972 at 2000 Presidential Way in the Lands of the President community. It is one of three 1972 towers there, along with Lincoln and Jefferson. The community is gated with 24-hour security, Lake Mangonia forms most of its eastern edge, and its buildings are set around the Banyan Cay resort's Jack Nicklaus-designed golf course. Building amenities include a doorman, a fitness room and a social room. Downtown West Palm Beach, Clematis Street and The Square are within about three miles."
+  "description": "Washington Tower is a 20-story, 114-residence condominium built in 1972 at 2000 Presidential Way in the Lands of the President community. It is one of three 1972 towers there, along with Lincoln and Jefferson. The community is gated with 24-hour security, Lake Mangonia forms most of its eastern edge, and its buildings are set around the Banyan Cay resort's Jack Nicklaus-designed golf course. Building amenities include a doorman, a fitness room and a social room. Downtown West Palm Beach, Clematis Street and The Square are within about three miles.",
+  "photo": {
+   "src": "/images/condos/washington-tower.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Washington Tower",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "envoy-tower",
@@ -1216,7 +1426,17 @@
   "lng": -80.086253,
   "bedrooms": "2–3",
   "parking": "Assigned parking",
-  "description": "Envoy Tower is a 148-residence high-rise condominium built in 1984 at 2480 Presidential Way in the gated Lands of the President community. Its residences are mostly two- and three-bedroom layouts. The community borders Lake Mangonia and the Banyan Cay resort's Jack Nicklaus-designed golf course, and it is a few miles from downtown West Palm Beach and President Donald J. Trump International Airport (PBI). Building amenities include a doorman, a clubhouse, a sauna, a hot tub and a tennis court."
+  "description": "Envoy Tower is a 148-residence high-rise condominium built in 1984 at 2480 Presidential Way in the gated Lands of the President community. Its residences are mostly two- and three-bedroom layouts. The community borders Lake Mangonia and the Banyan Cay resort's Jack Nicklaus-designed golf course, and it is a few miles from downtown West Palm Beach and President Donald J. Trump International Airport (PBI). Building amenities include a doorman, a clubhouse, a sauna, a hot tub and a tennis court.",
+  "photo": {
+   "src": "/images/condos/envoy-tower.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Envoy Tower",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "bristol",
@@ -1259,7 +1479,17 @@
   "sqftRange": "3,575–14,500",
   "petPolicy": "Pets allowed with breed restrictions and a limit on number of pets",
   "parking": "24-hour valet and private two- and three-car air-conditioned garages",
-  "description": "The Bristol is a glass condominium tower on the Intracoastal Waterway beside the Royal Park Bridge on West Palm Beach's South Flagler corridor. Residences look out over the Intracoastal, the ocean and Palm Beach Island. Solomon Cordwell Buenz designed it with Revuelta Architecture International, taking the shape from the idea of a yacht and its wake, and Amir Khamneipur did the interiors. The tower stands on the former Chapel-by-the-Lake site, and construction ran from 2016 to late 2019."
+  "description": "The Bristol is a glass condominium tower on the Intracoastal Waterway beside the Royal Park Bridge on West Palm Beach's South Flagler corridor. Residences look out over the Intracoastal, the ocean and Palm Beach Island. Solomon Cordwell Buenz designed it with Revuelta Architecture International, taking the shape from the idea of a yacht and its wake, and Amir Khamneipur did the interiors. The tower stands on the former Chapel-by-the-Lake site, and construction ran from 2016 to late 2019.",
+  "photo": {
+   "src": "/images/condos/bristol.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of The Bristol",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "edgeworth",
@@ -1323,7 +1553,17 @@
   "lat": 26.702765,
   "lng": -80.049604,
   "parking": "Assigned parking; guest parking available",
-  "description": "Trianon is an early-1970s waterfront high-rise on South Flagler Drive, on the West Palm Beach side of the Intracoastal Waterway, with water views toward Palm Beach. Most residences have two bedrooms and two baths with private balconies. Amenities include a waterfront heated pool, an exercise room, a community room, extra storage, and doorman service with on-site management. The building sits along the Flagler Drive waterfront path near downtown and the Norton Museum of Art."
+  "description": "Trianon is an early-1970s waterfront high-rise on South Flagler Drive, on the West Palm Beach side of the Intracoastal Waterway, with water views toward Palm Beach. Most residences have two bedrooms and two baths with private balconies. Amenities include a waterfront heated pool, an exercise room, a community room, extra storage, and doorman service with on-site management. The building sits along the Flagler Drive waterfront path near downtown and the Norton Museum of Art.",
+  "photo": {
+   "src": "/images/condos/trianon.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Trianon",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "forte-on-flagler",
@@ -1365,7 +1605,17 @@
   "lng": -80.050498,
   "sqftRange": "4,200–8,900",
   "parking": "Valet service, house cars and EV charging",
-  "description": "Forté on Flagler is a cylinder-shaped tower about 300 feet tall on the Intracoastal Waterway on South Flagler Drive, designed by Bernardo Fort-Brescia of Arquitectonica with interiors by Jean-Louis Deniot. Most floors have two flow-through residences, which can be combined into a full-floor home, and ceilings are at least 10 feet. The amenity levels include a pool deck with a 75-foot lap pool and heated spa, a wellness suite with steam room and sauna, a fitness center, yoga studio, theater, private dining room and guest suites. The building topped out in April 2024, and closings began in July 2025."
+  "description": "Forté on Flagler is a cylinder-shaped tower about 300 feet tall on the Intracoastal Waterway on South Flagler Drive, designed by Bernardo Fort-Brescia of Arquitectonica with interiors by Jean-Louis Deniot. Most floors have two flow-through residences, which can be combined into a full-floor home, and ceilings are at least 10 feet. The amenity levels include a pool deck with a 75-foot lap pool and heated spa, a wellness suite with steam room and sauna, a fitness center, yoga studio, theater, private dining room and guest suites. The building topped out in April 2024, and closings began in July 2025.",
+  "photo": {
+   "src": "/images/condos/forte-on-flagler.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Forté on Flagler",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "south-flagler-house",
@@ -1439,7 +1689,17 @@
   "bedrooms": "1–4",
   "petPolicy": "Pets allowed with breed, number and size restrictions",
   "parking": "Valet service; private garages",
-  "description": "La Clara is a 25-story, 83-residence condominium by Great Gulf on the Intracoastal Waterway on South Flagler Drive, with views of the Intracoastal and Palm Beach Island. Siamak Hariri of Hariri Pontarini Architects was the design architect, with Stantec as architect of record, and the building was designed to capture sky and water exposures. Residences have one to three bedrooms, and the full-floor penthouse has four bedrooms and more than 3,500 square feet of terraces. Unit addresses in many records use 200 Arkona Court."
+  "description": "La Clara is a 25-story, 83-residence condominium by Great Gulf on the Intracoastal Waterway on South Flagler Drive, with views of the Intracoastal and Palm Beach Island. Siamak Hariri of Hariri Pontarini Architects was the design architect, with Stantec as architect of record, and the building was designed to capture sky and water exposures. Residences have one to three bedrooms, and the full-floor penthouse has four bedrooms and more than 3,500 square feet of terraces. Unit addresses in many records use 200 Arkona Court.",
+  "photo": {
+   "src": "/images/condos/la-clara.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of La Clara",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "viking-arms",
@@ -1469,7 +1729,17 @@
   "lat": 26.699704,
   "lng": -80.050492,
   "parking": "Assigned garage parking",
-  "description": "Viking Arms is a three-story condominium built in 1980 at 1527 S Flagler Drive, in the Mango Promenade area south of downtown West Palm Beach. It is a gated community with elevators. Association amenities include a pool and sauna, a recreation room and a bike room."
+  "description": "Viking Arms is a three-story condominium built in 1980 at 1527 S Flagler Drive, in the Mango Promenade area south of downtown West Palm Beach. It is a gated community with elevators. Association amenities include a pool and sauna, a recreation room and a bike room.",
+  "photo": {
+   "src": "/images/condos/viking-arms.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Viking Arms",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "rapallo-north",
@@ -1509,7 +1779,17 @@
   "sqftRange": "980–1,775",
   "petPolicy": "Pets allowed",
   "parking": "Assigned parking; guest parking available",
-  "description": "Rapallo North is the north tower of the 1973 Rapallo complex on South Flagler Drive, in the Mango Promenade area, with Intracoastal Waterway views and a short walk or bike ride to downtown. The full-service building has a doorman, on-site management and maintenance staff. Amenities include a heated pool, exercise room, sauna, clubhouse, library, media room and bike storage."
+  "description": "Rapallo North is the north tower of the 1973 Rapallo complex on South Flagler Drive, in the Mango Promenade area, with Intracoastal Waterway views and a short walk or bike ride to downtown. The full-service building has a doorman, on-site management and maintenance staff. Amenities include a heated pool, exercise room, sauna, clubhouse, library, media room and bike storage.",
+  "photo": {
+   "src": "/images/condos/rapallo-north.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Rapallo North",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "rapallo-south",
@@ -1544,7 +1824,17 @@
   "lng": -80.050271,
   "petPolicy": "Pets allowed, with restrictions",
   "parking": "Assigned parking",
-  "description": "Rapallo South is the south tower of the 1973 Rapallo complex on South Flagler Drive, on the Intracoastal Waterway, where upper-floor residences look over the Intracoastal toward Palm Beach. The building has a 24-hour doorman and attended lobby. Amenities include a heated pool, fitness center, sauna, clubhouse, library, media room, business center and a courtyard garden."
+  "description": "Rapallo South is the south tower of the 1973 Rapallo complex on South Flagler Drive, on the Intracoastal Waterway, where upper-floor residences look over the Intracoastal toward Palm Beach. The building has a 24-hour doorman and attended lobby. Amenities include a heated pool, fitness center, sauna, clubhouse, library, media room, business center and a courtyard garden.",
+  "photo": {
+   "src": "/images/condos/rapallo-south.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Rapallo South",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "flagler-yacht-club",
@@ -1578,7 +1868,17 @@
   "sqftRange": "1,037–1,692",
   "petPolicy": "Pets allowed",
   "parking": "Assigned and guest parking",
-  "description": "Flagler Yacht Club is a low-rise waterfront condominium built in 1981 on the Intracoastal Waterway at 3701 S Flagler Drive, in the Central Park area of West Palm Beach, made up of North and South buildings. Some residences come with private boat slips maintained by the association. Amenities include a clubhouse, pool, fitness center, sauna, waterfront pier, bike room and storage."
+  "description": "Flagler Yacht Club is a low-rise waterfront condominium built in 1981 on the Intracoastal Waterway at 3701 S Flagler Drive, in the Central Park area of West Palm Beach, made up of North and South buildings. Some residences come with private boat slips maintained by the association. Amenities include a clubhouse, pool, fitness center, sauna, waterfront pier, bike room and storage.",
+  "photo": {
+   "src": "/images/condos/flagler-yacht-club.webp",
+   "width": 800,
+   "height": 597,
+   "alt": "Artist's rendering of Flagler Yacht Club",
+   "credit": "Gemini-generated",
+   "license": "Rendering",
+   "licenseUrl": null,
+   "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  }
  },
  {
   "slug": "maison-dor",

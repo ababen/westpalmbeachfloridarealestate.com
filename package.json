@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "node scripts/condos/validate.mjs && astro build",
     "preview": "astro preview",
-    "deploy": "astro build && node scripts/embed-assets.mjs && wrangler deploy",
+    "deploy": "astro build && node scripts/embed-assets.mjs && node scripts/upload-images.mjs && wrangler deploy",
     "condos:check": "node scripts/condos/validate.mjs"
   },
   "dependencies": {

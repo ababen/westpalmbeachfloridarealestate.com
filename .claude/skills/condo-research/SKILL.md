@@ -21,7 +21,7 @@ The condo guide is generated from **`src/data/buildings.json`**. Every page, car
 6. **`waterfront: true` means directly on the Intracoastal.** Buildings across Flagler Drive or a block inland with water *views* are `false`.
 7. **Stay inside City of West Palm Beach limits.** Nothing on Palm Beach island, Riviera Beach, Singer Island or Lake Worth Beach.
 8. **Skip buildings that are effectively gone**: bought out for demolition, or with the association terminated. Note why in the PR.
-9. **Photos:** don't copy images from listing or developer sites (copyright). Use only photos the owner provides.
+9. **Photos:** don't copy images from listing or developer sites (copyright). Use only photos the owner provides, free-licensed Commons photos (`add-photo.mjs`), or AI artist's renderings of **completed** buildings (`render-prompts.json`, then the Renderings workflow or `add-rendering.mjs`). Renderings of inland buildings must not show water.
 
 ## Data shape
 

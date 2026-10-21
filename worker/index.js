@@ -57,6 +57,19 @@ export default {
     }
 
     const path = decodeURIComponent(url.pathname).slice(1);
+    if (path.startsWith('images/condos/') && env.IMAGES) {
+      const object = await env.IMAGES.get(path);
+      if (object) {
+        return new Response(object.body, {
+          headers: {
+            'Content-Type': object.httpMetadata?.contentType ?? 'image/webp',
+            'Cache-Control': 'public, max-age=86400',
+            'X-Content-Type-Options': 'nosniff',
+            'Strict-Transport-Security': 'max-age=31536000',
+          },
+        });
+      }
+    }
     const key = [path || 'index.html', `${path}.html`, `${path}/index.html`].find((k) => k in assets);
     return key ? serve(key) : serve('404.html', 404);
   },
