@@ -22,7 +22,7 @@ export const site = {
     logoLight: '/images/lokation-logo-light.svg',
     address: '',
   },
-  phone: '(561) 317-8424',
+  phone: '(561) 783-4553',
   // Official business address (privacy policy, structured data); forwarded via Cloudflare Email Routing.
   email: 'hello@westpalmbeachfloridarealestate.com',
   // Paste your IDX/MLS search embed URL (e.g. from iHomefinder, IDX Broker, Showcase IDX).
@@ -51,4 +51,4 @@ export const nav = [
   { href: '/about', label: 'About' },
 ];
 
-export const telHref = `tel:${site.phone.replace(/[^\d+]/g, '')}`;
+export const telHref = `tel:+1${site.phone.replace(/\D/g, '')}`;
