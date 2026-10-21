@@ -21,31 +21,22 @@ export interface Building {
   sources: string[];
 }
 
-export const buildings = (raw as Building[]).slice().sort((a, b) => a.name.localeCompare(b.name));
+const sortKey = (name: string) => name.replace(/^the\s+/i, '');
+
+export const buildings = (raw as Building[]).slice().sort((a, b) => sortKey(a.name).localeCompare(sortKey(b.name)));
 
 /** Areas in the order they appear on the index page. */
 export const buildingAreas = [
   'Downtown',
+  'South Flagler',
   'North Flagler',
-  'Old Northwood',
   'Northwood',
-  'El Cid',
-  'Flamingo Park',
-  'South of Southern (SoSo)',
-  'South Dixie',
-  'Palm Beach Lakes',
-  'Other',
+  'Lands of the President',
 ].filter((area) => buildings.some((b) => b.area === area));
 
 /** Building areas that have a matching neighborhood guide. */
 export const areaNeighborhood: Record<string, string> = {
   Downtown: 'downtown',
-  'El Cid': 'el-cid',
-  'Flamingo Park': 'flamingo-park',
-  'Old Northwood': 'old-northwood',
-  Northwood: 'old-northwood',
-  'South of Southern (SoSo)': 'south-of-southern',
-  'Palm Beach Lakes': 'palm-beach-lakes',
 };
 
 export const areaSlug = (area: string) =>
