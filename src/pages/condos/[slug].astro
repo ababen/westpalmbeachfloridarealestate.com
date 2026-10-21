@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { buildings, areaNeighborhood, areaSlug, type Building } from '../../data/buildings';
+import { buildings, areaNeighborhood, areaSlug, photoCredit, type Building } from '../../data/buildings';
 import { neighborhoods } from '../../data/neighborhoods';
 import { landmarks, milesBetween } from '../../data/landmarks';
 import { site } from '../../config/site';
@@ -17,6 +17,16 @@ const hood = neighborhoods.find((n) => n.slug === areaNeighborhood[b.area]);
 const street = b.address.split(',')[0];
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.name}, ${b.address}`)}`;
 const d = 0.006;
+const streetViewEmbed =
+  b.streetView && site.googleMapsKey
+    ? `https://www.google.com/maps/embed/v1/streetview?${new URLSearchParams({
+        key: site.googleMapsKey,
+        pano: b.streetView.pano,
+        heading: String(b.streetView.heading),
+        pitch: '10',
+        fov: '80',
+      })}`
+    : null;
 const mapEmbed = `https://www.openstreetmap.org/export/embed.html?bbox=${b.lng - d},${b.lat - d},${b.lng + d},${b.lat + d}&layer=mapnik&marker=${b.lat},${b.lng}`;
 
 // Closest buildings first, regardless of area label.
@@ -112,6 +122,7 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
       ...(b.units && { numberOfAccommodationUnits: b.units }),
       ...(b.petPolicy && { petsAllowed: !/no pets|not allowed/i.test(b.petPolicy) }),
       ...(b.amenities.length && {
+        ...(b.photo && { image: new URL(b.photo.src, site.url).href }),
         amenityFeature: b.amenities.map((a) => ({ '@type': 'LocationFeatureSpecification', name: a, value: true })),
       }),
     },
@@ -132,7 +143,8 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   ]}
 >
   <section class="page-hero">
-    <div class="container">
+    <div class={b.photo ? 'container hero-grid' : 'container'}>
+      <div>
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/condos">Condos</a> / <a href={`/condos#${areaSlug(b.area)}`}>{b.area}</a> / {b.name}
       </nav>
@@ -146,6 +158,23 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
         {b.yearBuilt && <li><strong>{b.yearBuilt}</strong> {isDone ? 'built' : 'est. completion'}</li>}
         {b.waterfront && <li><strong>Waterfront</strong></li>}
       </ul>
+      </div>
+      {
+        b.photo && (
+          <figure class="hero-photo">
+            <img src={b.photo.src} width={b.photo.width} height={b.photo.height} alt={b.photo.alt} fetchpriority="high" decoding="async" />
+            <figcaption>
+              <a href={b.photo.sourceUrl} rel="noopener" target="_blank">{photoCredit(b.photo)}</a>
+              {b.photo.licenseUrl && (
+                <>
+                  {' · '}
+                  <a href={b.photo.licenseUrl} rel="noopener license" target="_blank">license</a>
+                </>
+              )}
+            </figcaption>
+          </figure>
+        )
+      }
     </div>
   </section>
 
@@ -186,6 +215,16 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
         <p class="map-links">
           <a href={mapUrl} rel="noopener" target="_blank">Open in Google Maps →</a>
         </p>
+        {
+          streetViewEmbed && (
+            <>
+              <h3 class="dist-head">Street view</h3>
+              <div class="map">
+                <iframe src={streetViewEmbed} title={`Street view of ${b.name}`} loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </>
+          )
+        }
         <h3 class="dist-head">Distance to</h3>
         <ul class="dist">
           {
@@ -398,5 +437,35 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   .all {
     margin-top: 2rem;
     text-align: center;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+    gap: 2rem;
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .hero-photo {
+    margin: 0;
+  }
+  .hero-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+  }
+  .hero-photo figcaption {
+    margin-top: 0.4rem;
+    font-size: 0.75rem;
+    opacity: 0.85;
+  }
+  .hero-photo figcaption a {
+    color: inherit;
   }
 </style>

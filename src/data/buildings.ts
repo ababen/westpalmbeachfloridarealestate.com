@@ -27,6 +27,19 @@ export interface Building {
   rentalPolicy?: string | null;
   lat: number;
   lng: number;
+  /** Freely licensed photo (scripts/condos/add-photo.mjs); credit must be shown wherever it appears. */
+  photo?: {
+    src: string;
+    width: number;
+    height: number;
+    alt: string;
+    credit: string;
+    license: string;
+    licenseUrl: string | null;
+    sourceUrl: string;
+  } | null;
+  /** Google Street View panorama aimed at the building (scripts/condos/streetview.mjs); null if none. */
+  streetView?: { pano: string; heading: number } | null;
   /** Where each fact came from; kept for maintenance, not shown on the site. */
   sources: string[];
 }
@@ -54,6 +67,10 @@ export const areaNeighborhood: Record<string, string> = {
 };
 
 /** True for towers that are under construction or not yet started. */
+/** Short attribution line, e.g. "Photo: Jane Doe / Wikimedia Commons, CC BY-SA 4.0". */
+export const photoCredit = (p: NonNullable<Building['photo']>) =>
+  `Photo: ${p.credit}${p.sourceUrl.includes('wikimedia.org') ? ' / Wikimedia Commons' : ''}, ${p.license}`;
+
 export const isNewConstruction = (b: Building) => b.status !== 'completed';
 
 export const areaSlug = (area: string) =>

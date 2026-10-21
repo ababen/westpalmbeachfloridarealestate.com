@@ -30,6 +30,9 @@ export const site = {
   idxEmbedUrl: 'https://link.flexmls.com/1z80v7evrh7o,15',
   // Google Analytics 4 measurement ID.
   gaId: 'G-LHGSP4Y2FY',
+  // Google Maps Embed API key for building Street View. Public in the page, restricted to this domain in
+  // Google Cloud; kept out of git in .env as PUBLIC_GOOGLE_MAPS_KEY. Without it, Street View is hidden.
+  googleMapsKey: import.meta.env.PUBLIC_GOOGLE_MAPS_KEY ?? '',
   // Cloudflare Turnstile site key for the lead forms (public). The secret is the TURNSTILE_SECRET Worker secret.
   turnstileSiteKey: '0x4AAAAAAFesKaEe_ur8uKYV',
   social: {

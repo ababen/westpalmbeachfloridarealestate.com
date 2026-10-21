@@ -1,6 +1,7 @@
 // Checks src/data/buildings.json for schema problems and content-policy issues.
 // Usage: node scripts/condos/validate.mjs   (exits 1 if any error is found)
 import { readFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 
 const file = new URL('../../src/data/buildings.json', import.meta.url);
 const buildings = JSON.parse(await readFile(file, 'utf8'));
@@ -53,6 +54,21 @@ for (const b of buildings) {
   if (typeof b.lat !== 'number' || typeof b.lng !== 'number') err(b, 'missing lat/lng (run scripts/condos/geocode.mjs)');
   else if (b.lat < BOUNDS.latMin || b.lat > BOUNDS.latMax || b.lng < BOUNDS.lngMin || b.lng > BOUNDS.lngMax)
     err(b, `lat/lng ${b.lat},${b.lng} is outside West Palm Beach`);
+
+  if (b.photo != null) {
+    const p = b.photo;
+    if (!/^\/images\/condos\/[a-z0-9-]+\.webp$/.test(p.src ?? '')) err(b, 'photo.src must be /images/condos/<slug>.webp');
+    else if (!existsSync(new URL(`../../public${p.src}`, import.meta.url))) err(b, `photo file missing: public${p.src}`);
+    if (!p.credit || !p.license || !/^https?:\/\//.test(p.sourceUrl ?? '')) err(b, 'photo needs credit, license and sourceUrl');
+    if (!/^(CC0|Public domain|CC BY(-SA)? [\d.]+|Permission)/i.test(p.license ?? '')) err(b, `photo license "${p.license}" is not a free licence or recorded permission`);
+    if (!Number.isInteger(p.width) || !Number.isInteger(p.height)) err(b, 'photo needs integer width and height');
+  }
+
+  if (b.streetView != null) {
+    const { pano, heading } = b.streetView;
+    if (typeof pano !== 'string' || !pano || !Number.isInteger(heading) || heading < 0 || heading >= 360)
+      err(b, 'streetView must be { pano: string, heading: 0-359 } or null');
+  }
 
   for (const f of TEXT_FIELDS) {
     const text = b[f];
