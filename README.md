@@ -35,6 +35,11 @@ Pushes to `main` deploy automatically via `.github/workflows/deploy.yml` once th
 westpalmbeachfloridarealestate.com zone) and `CLOUDFLARE_ACCOUNT_ID` are set. It can also be run by hand
 from the Actions tab (**Deploy → Run workflow**).
 
+Building pages show Google Street View when `PUBLIC_GOOGLE_MAPS_KEY` is set at build time: in `.env`
+(git-ignored) for local builds and deploys, or as a repository secret of the same name for the deploy
+workflow. It's a browser key, restricted in Google Cloud to this domain and to the Maps Embed and Street
+View Static APIs.
+
 Lead form settings (set once as Worker secrets):
 
 ```sh

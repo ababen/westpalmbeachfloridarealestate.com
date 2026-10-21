@@ -27,6 +27,8 @@ export interface Building {
   rentalPolicy?: string | null;
   lat: number;
   lng: number;
+  /** Google Street View panorama aimed at the building (scripts/condos/streetview.mjs); null if none. */
+  streetView?: { pano: string; heading: number } | null;
   /** Where each fact came from; kept for maintenance, not shown on the site. */
   sources: string[];
 }

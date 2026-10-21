@@ -54,6 +54,12 @@ for (const b of buildings) {
   else if (b.lat < BOUNDS.latMin || b.lat > BOUNDS.latMax || b.lng < BOUNDS.lngMin || b.lng > BOUNDS.lngMax)
     err(b, `lat/lng ${b.lat},${b.lng} is outside West Palm Beach`);
 
+  if (b.streetView != null) {
+    const { pano, heading } = b.streetView;
+    if (typeof pano !== 'string' || !pano || !Number.isInteger(heading) || heading < 0 || heading >= 360)
+      err(b, 'streetView must be { pano: string, heading: 0-359 } or null');
+  }
+
   for (const f of TEXT_FIELDS) {
     const text = b[f];
     if (!text) continue;

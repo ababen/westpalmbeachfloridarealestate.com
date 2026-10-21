@@ -17,6 +17,16 @@ const hood = neighborhoods.find((n) => n.slug === areaNeighborhood[b.area]);
 const street = b.address.split(',')[0];
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.name}, ${b.address}`)}`;
 const d = 0.006;
+const streetViewEmbed =
+  b.streetView && site.googleMapsKey
+    ? `https://www.google.com/maps/embed/v1/streetview?${new URLSearchParams({
+        key: site.googleMapsKey,
+        pano: b.streetView.pano,
+        heading: String(b.streetView.heading),
+        pitch: '10',
+        fov: '80',
+      })}`
+    : null;
 const mapEmbed = `https://www.openstreetmap.org/export/embed.html?bbox=${b.lng - d},${b.lat - d},${b.lng + d},${b.lat + d}&layer=mapnik&marker=${b.lat},${b.lng}`;
 
 // Closest buildings first, regardless of area label.
@@ -186,6 +196,16 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
         <p class="map-links">
           <a href={mapUrl} rel="noopener" target="_blank">Open in Google Maps →</a>
         </p>
+        {
+          streetViewEmbed && (
+            <>
+              <h3 class="dist-head">Street view</h3>
+              <div class="map">
+                <iframe src={streetViewEmbed} title={`Street view of ${b.name}`} loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+            </>
+          )
+        }
         <h3 class="dist-head">Distance to</h3>
         <ul class="dist">
           {

@@ -74,6 +74,8 @@ node scripts/condos/geocode.mjs          # only fills buildings missing lat/lng
 npm run condos:check                     # must print 0 errors
 npm run build                            # also runs the validator
 ```
+Then run `node scripts/condos/streetview.mjs` to give new buildings a Street View panorama (needs `PUBLIC_GOOGLE_MAPS_KEY` in `.env`). After moving a pin, re-run it with `--force slug`. Check that the printed heading shows the building on its page.
+
 `geocode.mjs` prints each match. Confirm the match is the right building, since street-only matches are rejected but a wrong house can slip through. Re-run with `--force slug` after fixing an address, or set `lat`/`lng` by hand.
 
 ### 5. Check the pages
@@ -97,6 +99,7 @@ Preview with `npm run build && node scripts/embed-assets.mjs && npx wrangler dev
 | `floors`, `units`, `yearBuilt`, `waterfront` | Hero pills, facts grid, card, comparison table, FAQ |
 | `bedrooms`, `sqftRange` | Facts grid, "What size are the residences" FAQ |
 | `petPolicy` | Facts grid, pets FAQ, `petsAllowed` in JSON-LD |
+| `streetView` | Street view embed on the building page (hidden when null or when no Maps key is set) |
 | `lat`, `lng` | Map embed, distances (`src/data/landmarks.ts`), nearby buildings, JSON-LD `geo` |
 | `status` | Badge, filters, FAQ ("When will X be completed" / "What is the status") |
 | `area` | Index section, breadcrumb, neighborhood link |
