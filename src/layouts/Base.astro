@@ -13,7 +13,11 @@ interface Props {
 
 const { title, description = site.description, schema = [] } = Astro.props;
 const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | Homes for Sale & Local Expertise`;
-const canonical = new URL(Astro.url.pathname, site.url).href;
+// build.format 'file' makes pathname end in .html; canonical URLs use the clean, extensionless form.
+const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), site.url).href;
+// Contact-card share image; regenerate with `node scripts/render-og-card.mjs`.
+const ogImage = new URL('/og-card.png', site.url).href;
+const ogImageAlt = `${site.agent.name}, ${site.agent.title} with ${site.brokerage.name} — ${site.phone}, ${site.agent.email}`;
 
 const agentSchema = {
   '@context': 'https://schema.org',
@@ -46,8 +50,16 @@ const agentSchema = {
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={new URL('/og-image.svg', site.url).href} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
 
     <script type="application/ld+json" set:html={JSON.stringify([agentSchema, ...schema])} />
   </head>
