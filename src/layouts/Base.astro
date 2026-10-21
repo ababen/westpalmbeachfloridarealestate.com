@@ -23,7 +23,7 @@ const agentSchema = {
   telephone: site.phone,
   email: site.email,
   areaServed: { '@type': 'City', name: 'West Palm Beach', containedInPlace: 'Florida' },
-  employee: { '@type': 'Person', name: site.agent.name, jobTitle: site.agent.title },
+  employee: { '@type': 'Person', name: site.agent.name, jobTitle: site.agent.title, email: site.agent.email },
   parentOrganization: { '@type': 'RealEstateAgent', name: site.brokerage.legalName },
   ...(site.brokerage.address && { address: { '@type': 'PostalAddress', streetAddress: site.brokerage.address } }),
 };
