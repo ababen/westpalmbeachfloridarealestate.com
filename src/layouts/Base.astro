@@ -69,11 +69,19 @@ const agentSchema = {
           <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${site.gaId}`} />
           <script is:inline define:vars={{ gaId: site.gaId }}>
             window.dataLayer = window.dataLayer || [];
-            function gtag() {
+            // define:vars wraps this in a function, so expose gtag for other scripts.
+            window.gtag = function () {
               dataLayer.push(arguments);
-            }
+            };
             gtag('js', new Date());
             gtag('config', gaId);
+            // Every tap-to-call link (header, footer, mobile button, CTAs) counts as a conversion.
+            document.addEventListener('click', (event) => {
+              const link = event.target.closest && event.target.closest('a[href^="tel:"]');
+              if (!link) return;
+              const where = link.closest('header, footer, .call-fab, .cta') || document.body;
+              gtag('event', 'click_to_call', { link_location: where.className || where.tagName.toLowerCase() });
+            });
           </script>
         </>
       )

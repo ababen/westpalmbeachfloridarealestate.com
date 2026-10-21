@@ -31,6 +31,8 @@ function serve(key, status = 200) {
       'Content-Type': TYPES[ext] || 'application/octet-stream',
       'Cache-Control': key.startsWith('_astro/') ? 'public, max-age=31536000, immutable' : 'public, max-age=300',
       'X-Content-Type-Options': 'nosniff',
+      // HSTS without includeSubDomains/preload until every subdomain is known to serve HTTPS (#11).
+      'Strict-Transport-Security': 'max-age=31536000',
       'Referrer-Policy': 'strict-origin-when-cross-origin',
     },
   });
