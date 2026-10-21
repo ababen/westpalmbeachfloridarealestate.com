@@ -12,7 +12,7 @@ export const site = {
     license: 'FL License #SL3596634',
     licenseUrl:
       'https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=DDFABB0C721DCA8BCD909FDE963713A5',
-    photo: '', // TODO: e.g. '/images/agent.jpg'
+    photo: '/images/alex-babenchuk.jpg',
   },
   brokerage: {
     name: 'LoKation® Real Estate',
