@@ -58,6 +58,11 @@ if (b.yearBuilt)
       ? { q: `When was ${b.name} built?`, a: `${b.name} was completed in ${b.yearBuilt}.` }
       : { q: `When will ${b.name} be completed?`, a: `${b.name} is ${b.status}, with completion expected in ${b.yearBuilt}.` },
   );
+if (!isDone && !b.yearBuilt)
+  faqs.push({
+    q: `What is the status of ${b.name}?`,
+    a: `${b.name} is ${b.status}. No completion date has been published yet.`,
+  });
 if (b.floors || b.units)
   faqs.push({
     q: `How big is ${b.name}?`,
@@ -68,9 +73,9 @@ if (b.bedrooms || b.sqftRange)
     q: `What size are the residences at ${b.name}?`,
     a:
       b.bedrooms && b.sqftRange
-        ? `Residences range from ${b.bedrooms} bedrooms and about ${b.sqftRange} square feet.`
+        ? `Residences have ${b.bedrooms} bedrooms and range from about ${b.sqftRange} square feet.`
         : b.bedrooms
-          ? `Residences range from ${b.bedrooms} bedrooms.`
+          ? `Residences have ${b.bedrooms} bedrooms.`
           : `Residences are about ${b.sqftRange} square feet.`,
   });
 if (b.waterfront) faqs.push({ q: `Is ${b.name} on the water?`, a: `Yes. ${b.name} is on the Intracoastal Waterway along Flagler Drive.` });
@@ -147,8 +152,7 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   <section class="section">
     <div class="container grid grid--2">
       <article>
-        <p class="lede">{b.summary}</p>
-        {b.description && b.description !== b.summary && <p>{b.description}</p>}
+        <p class="intro">{b.description || b.summary}</p>
 
         <h2 class="sub">Building facts</h2>
         <dl class="facts">
@@ -278,6 +282,10 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
     border-radius: 999px;
     padding: 0.35rem 0.9rem;
     font-size: 0.92rem;
+  }
+  .intro {
+    font-size: 1.12rem;
+    line-height: 1.7;
   }
   .sub {
     font-size: 1.6rem;
