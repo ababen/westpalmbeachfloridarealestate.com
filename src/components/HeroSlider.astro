@@ -1,11 +1,33 @@
 ---
 import { photoCredit, type Building } from '../data/buildings';
+import { site } from '../config/site';
 
 interface Props {
   items: Building[];
 }
 
 const { items } = Astro.props;
+
+// Real image for each slide: an own/licensed photo first, else the building's Street View image
+// (loaded live from Google, as its terms require, and credited). Given only a location, Google picks
+// the nearest outdoor panorama and points the camera at the building.
+const image = (b: Building) =>
+  b.photo
+    ? { src: b.photo.src, width: b.photo.width, height: b.photo.height, credit: photoCredit(b.photo) }
+    : site.googleMapsKey
+      ? {
+          src: `https://maps.googleapis.com/maps/api/streetview?${new URLSearchParams({
+            size: '640x480',
+            ...(b.streetView ? { pano: b.streetView.pano, heading: String(b.streetView.heading) } : { location: `${b.lat},${b.lng}`, source: 'outdoor' }),
+            pitch: '20',
+            fov: '80',
+            key: site.googleMapsKey,
+          })}`,
+          width: 640,
+          height: 480,
+          credit: 'Street View © Google',
+        }
+      : null;
 
 // Sky colours per area, so slides differ at a glance.
 const SKIES: Record<string, [string, string]> = {
@@ -48,11 +70,12 @@ const art = (b: Building) => {
             data-active={i === 0 ? '' : undefined}
           >
             <a class="slide__link" href={`/condos/${b.slug}`} tabindex={i === 0 ? undefined : -1}>
-            {b.photo && (
+            <span class="media">
+            {image(b) && (
               <img
-                src={b.photo.src}
-                width={b.photo.width}
-                height={b.photo.height}
+                src={image(b)!.src}
+                width={image(b)!.width}
+                height={image(b)!.height}
                 alt=""
                 decoding="async"
                 loading={i === 0 ? 'eager' : 'lazy'}
@@ -86,12 +109,13 @@ const art = (b: Building) => {
                 <rect y="338" width="400" height="62" fill="#1d3b4c" />
               )}
             </svg>
+            </span>
             <span class="caption">
               <span class="caption__area">{b.area}{b.status !== 'completed' && ` · ${b.status}`}</span>
               <span class="caption__name">{b.name}</span>
               {facts(b) && <span class="caption__facts">{facts(b)}</span>}
               <span class="caption__cta">View building →</span>
-              {b.photo && <span class="caption__credit">{photoCredit(b.photo)}</span>}
+              {image(b) && <span class="caption__credit">{image(b)!.credit}</span>}
             </span>
             </a>
           </div>
@@ -169,13 +193,12 @@ const art = (b: Building) => {
     box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.5);
     background: var(--ink);
   }
+  /* All slides share one grid cell, so the slider is as tall as its tallest slide. */
   .slides {
-    position: relative;
-    aspect-ratio: 1 / 1;
+    display: grid;
   }
   .slide {
-    position: absolute;
-    inset: 0;
+    grid-area: 1 / 1;
     opacity: 0;
     visibility: hidden;
     transition:
@@ -192,6 +215,11 @@ const art = (b: Building) => {
     color: var(--white);
     text-decoration: none;
   }
+  .media {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+  }
   .slide img {
     position: absolute;
     inset: 0;
@@ -207,20 +235,19 @@ const art = (b: Building) => {
     display: none;
   }
   .slide svg {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: block;
   }
   /* Solid panel (not a fade over artwork) keeps the text at full contrast. */
+  /* Caption sits below the image (not over it), so text stays crisp and Google's logo stays visible. */
   .caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: grid;
     gap: 0.2rem;
-    padding: 1rem 1.25rem 3.4rem;
-    background: rgb(11 31 45 / 0.92);
+    padding: 0.9rem 1.1rem 3.3rem;
+    background: var(--ink);
   }
   .caption__area {
     font-size: 0.75rem;
@@ -237,6 +264,7 @@ const art = (b: Building) => {
     color: rgb(255 255 255 / 0.9);
   }
   .caption__cta {
+    display: none;
     margin-top: 0.3rem;
     font-weight: 600;
     font-size: 0.95rem;
@@ -292,11 +320,6 @@ const art = (b: Building) => {
     background: var(--white);
     width: 22px;
     border-radius: 5px;
-  }
-  @media (max-width: 960px) {
-    .slides {
-      aspect-ratio: 1 / 1;
-    }
   }
   @media (prefers-reduced-motion: reduce) {
     .slide {
