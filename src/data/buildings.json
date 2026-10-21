@@ -11,7 +11,7 @@
   "status": "completed",
   "yearBuilt": 1985,
   "floors": 32,
-  "units": null,
+  "units": 225,
   "developer": "Armour Guider Development Corporation",
   "architect": "Schwab & Twitty Architects",
   "waterfront": true,
@@ -29,7 +29,8 @@
    "https://en.wikipedia.org/wiki/The_Plaza_(West_Palm_Beach)",
    "https://www.condoblackbook.com/west-palm-beach/the-plaza-of-the-palm-beaches",
    "https://downtownwpb.com/live/housing/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Plaza-Of-The-Palm-Beaches/"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Plaza-Of-The-Palm-Beaches/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343222500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "lat": 26.708038,
   "lng": -80.051519,
@@ -154,7 +155,7 @@
   "status": "completed",
   "yearBuilt": 2006,
   "floors": 8,
-  "units": null,
+  "units": 244,
   "developer": null,
   "architect": null,
   "waterfront": false,
@@ -173,7 +174,8 @@
    "https://www.condoblackbook.com/west-palm-beach/610-clematis",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/610-Clematis/",
    "https://downtownwpb.com/live/housing/",
-   "https://globest.com/2002/12/16/610-clematis-opens-sales-center/?amp=1"
+   "https://globest.com/2002/12/16/610-clematis-opens-sales-center/?amp=1",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343212300%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.712937,
@@ -348,7 +350,7 @@
   "status": "completed",
   "yearBuilt": 2006,
   "floors": 16,
-  "units": null,
+  "units": 322,
   "developer": "Kolter Homes",
   "architect": null,
   "waterfront": false,
@@ -368,7 +370,8 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/One-City-Plaza/",
    "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/one-city-plaza-condo/801-s-olive-avenue-601-west-palm-beach-fl-33401/B26081923-6317275",
    "https://downtownwpb.com/live/housing/",
-   "https://www.condowpb.com/buildings"
+   "https://www.condowpb.com/buildings",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343223800%25%27+OR+PCN+LIKE+%27744343223801%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.706172,
@@ -427,7 +430,7 @@
   "status": "completed",
   "yearBuilt": 2004,
   "floors": 12,
-  "units": null,
+  "units": 126,
   "developer": null,
   "architect": null,
   "waterfront": false,
@@ -442,7 +445,8 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/the-tower-condominium-at-cityplace",
    "https://www.condowpb.com/buildings",
-   "https://www.apartments.com/listing/5k9n5wm"
+   "https://www.apartments.com/listing/5k9n5wm",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343211500%25%27+OR+PCN+LIKE+%27744343211501%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "lat": 26.705853,
   "lng": -80.05808,
@@ -746,7 +750,7 @@
   "status": "completed",
   "yearBuilt": 2007,
   "floors": 4,
-  "units": null,
+  "units": 68,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -763,7 +767,8 @@
    "https://www.compass.com/building/flagler-landing-west-palm-beach-fl/756525472845625829/",
    "https://www.echofineproperties.com/communities/west-palm-beach-condos/flagler-landing/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Landing/",
-   "https://subdivisions.com/west-palm-beach-fl/flagler-landing-condos-for-sale"
+   "https://subdivisions.com/west-palm-beach-fl/flagler-landing-condos-for-sale",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343103500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.746989,
@@ -820,7 +825,7 @@
   "status": "completed",
   "yearBuilt": 1978,
   "floors": null,
-  "units": null,
+  "units": 281,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -839,7 +844,8 @@
   "sources": [
    "https://www.compass.com/building/palm-beach-house-west-palm-beach-fl/756854114272393701/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Palm-Beach-House/",
-   "https://www.skydb.net/building/99179966/palm-beach-house-west-palm-beach"
+   "https://www.skydb.net/building/99179966/palm-beach-house-west-palm-beach",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343042500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "lat": 26.759844,
   "lng": -80.052304,
@@ -1276,7 +1282,7 @@
   "status": "completed",
   "yearBuilt": 1972,
   "floors": 19,
-  "units": null,
+  "units": 106,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -1292,7 +1298,8 @@
   "sources": [
    "https://compass.com/building/trianon-west-palm-beach-fl/756795849316282149",
    "https://www.condoblackbook.com/west-palm-beach/trianon",
-   "https://www.squarefoothomes.com/real-estate/west-palm-beach/trianon-condominiums/"
+   "https://www.squarefoothomes.com/real-estate/west-palm-beach/trianon-condominiums/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343273700%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.702765,
@@ -1525,7 +1532,7 @@
   "status": "completed",
   "yearBuilt": 1981,
   "floors": 4,
-  "units": null,
+  "units": 39,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -1539,7 +1546,8 @@
   "summary": "Flagler Yacht Club is a small boutique condominium on the Intracoastal Waterway on South Flagler Drive, built in 1981, with a marina for residents.",
   "sources": [
    "https://www.compass.com/building/flagler-yacht-club-west-palm-beach-fl/756622546966645661/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Yacht-Club/"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Yacht-Club/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343342000%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.678507,
