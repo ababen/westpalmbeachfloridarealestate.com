@@ -47,6 +47,10 @@ export const buildingAreas = [
 /** Building areas that have a matching neighborhood guide. */
 export const areaNeighborhood: Record<string, string> = {
   Downtown: 'downtown',
+  'South Flagler': 'south-flagler',
+  'North Flagler': 'north-flagler',
+  Northwood: 'north-flagler',
+  'Lands of the President': 'lands-of-the-president',
 };
 
 /** True for towers that are under construction or not yet started. */
