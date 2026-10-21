@@ -1,9 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import HeroArt from '../components/HeroArt.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import { buildings } from '../data/buildings';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { neighborhoods } from '../data/neighborhoods';
+
+// Hero slider: a mix of established and new waterfront towers.
+const featured = ['bristol', 'ritz-carlton-residences-west-palm-beach', 'la-clara', 'olara', 'plaza-of-the-palm-beaches', 'forte-on-flagler', 'shorecrest', 'placido-mar']
+  .map((slug) => buildings.find((b) => b.slug === slug))
+  .filter((b) => b !== undefined);
 
 const propertyTypes = [
   { label: 'Waterfront Homes', q: 'waterfront', icon: 'M3 17c3-2 6-2 9 0s6 2 9 0M3 21c3-2 6-2 9 0s6 2 9 0M6 13V7l6-4 6 4v6' },
@@ -36,6 +43,7 @@ const reasons = [
   <section class="hero">
     <HeroArt />
     <div class="container hero__inner">
+      <div class="hero__text">
       <span class="eyebrow">West Palm Beach, Florida</span>
       <h1>Find your place in the Palm Beaches.</h1>
       <p class="hero__lede">
@@ -43,6 +51,8 @@ const reasons = [
         downtown waterfront condos.
       </p>
 
+      </div>
+      {featured.length > 0 && <HeroSlider items={featured} />}
       <form class="search" action="/listings" method="get" role="search">
         <label>
           <span class="visually-hidden">Neighborhood</span>
@@ -173,7 +183,35 @@ const reasons = [
   .hero__inner {
     position: relative;
     z-index: 1;
-    padding-block: 96px 120px;
+    padding-block: 56px 72px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.5rem);
+    align-items: center;
+  }
+  .hero__inner > .search {
+    grid-column: 1 / -1;
+  }
+  .hero__inner > :global(.slider) {
+    max-width: 400px;
+    justify-self: end;
+  }
+  @media (max-width: 960px) {
+    .hero__inner {
+      grid-template-columns: 1fr;
+      padding-block: 64px 72px;
+    }
+    .hero__inner > :global(.slider) {
+      max-width: none;
+      justify-self: stretch;
+    }
+    /* On narrow screens the search comes right after the intro, before the slider. */
+    .hero__inner > .search {
+      order: 1;
+    }
+    .hero__inner > :global(.slider) {
+      order: 2;
+    }
   }
   .hero h1 {
     max-width: 14ch;
@@ -182,7 +220,7 @@ const reasons = [
     font-size: 1.2rem;
     max-width: 36rem;
     color: rgb(255 255 255 / 0.88);
-    margin-bottom: 2rem;
+    margin-bottom: 0;
   }
   .search {
     display: grid;
