@@ -1,0 +1,79 @@
+{
+ "downtown": {
+  "src": "/images/neighborhoods/downtown.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "el-cid": {
+  "src": "/images/neighborhoods/el-cid.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "flamingo-park": {
+  "src": "/images/neighborhoods/flamingo-park.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "grandview-heights": {
+  "src": "/images/neighborhoods/grandview-heights.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "ibis": {
+  "src": "/images/neighborhoods/ibis.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "lands-of-the-president": {
+  "src": "/images/neighborhoods/lands-of-the-president.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "north-flagler": {
+  "src": "/images/neighborhoods/north-flagler.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "old-northwood": {
+  "src": "/images/neighborhoods/old-northwood.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "palm-beach-lakes": {
+  "src": "/images/neighborhoods/palm-beach-lakes.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "south-flagler": {
+  "src": "/images/neighborhoods/south-flagler.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ },
+ "south-of-southern": {
+  "src": "/images/neighborhoods/south-of-southern.webp",
+  "width": 1200,
+  "height": 670,
+  "credit": "Gemini-generated",
+  "license": "Rendering"
+ }
+}

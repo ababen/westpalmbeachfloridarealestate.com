@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import { buildings, photoCredit } from '../data/buildings';
+import { neighborhoods, neighborhoodImage, illustrationCredit } from '../data/neighborhoods';
 
 const credited = buildings.filter((b) => b.photo);
+const hoodImages = neighborhoods.filter((n) => neighborhoodImage(n.slug));
 ---
 
 <Base title="Photo Credits" description="Credits and licenses for the building photos used on this site.">
@@ -36,6 +38,21 @@ const credited = buildings.filter((b) => b.photo);
           </ul>
         ) : (
           <p>No photos yet.</p>
+        )
+      }
+      {
+        hoodImages.length > 0 && (
+          <>
+            <h2>Neighborhood illustrations</h2>
+            <p>The images at the top of each neighborhood guide are AI-generated illustrations of the area's typical streets and homes. They don't show specific properties.</p>
+            <ul>
+              {hoodImages.map((n) => (
+                <li>
+                  <a href={`/neighborhoods/${n.slug}`}>{n.name}</a>: {illustrationCredit(neighborhoodImage(n.slug)!)}
+                </li>
+              ))}
+            </ul>
+          </>
         )
       }
       <p>Map data © OpenStreetMap contributors. Street View imagery © Google.</p>

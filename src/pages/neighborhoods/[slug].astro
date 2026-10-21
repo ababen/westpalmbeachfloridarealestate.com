@@ -3,7 +3,7 @@ import Base from '../../layouts/Base.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import NeighborhoodCard from '../../components/NeighborhoodCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
-import { neighborhoods, type Neighborhood } from '../../data/neighborhoods';
+import { neighborhoods, type Neighborhood, neighborhoodImage, illustrationCredit } from '../../data/neighborhoods';
 import BuildingCard from '../../components/BuildingCard.astro';
 import { buildings, areaNeighborhood } from '../../data/buildings';
 
@@ -15,6 +15,7 @@ const { n } = Astro.props as { n: Neighborhood };
 const others = neighborhoods.filter((o) => o.slug !== n.slug).slice(0, 3);
 const condos = buildings.filter((b) => areaNeighborhood[b.area] === n.slug);
 const [from, to] = n.palette;
+const img = neighborhoodImage(n.slug);
 ---
 
 <Base
@@ -32,11 +33,13 @@ const [from, to] = n.palette;
   ]}
 >
   <section class="page-hero hood-hero" style={`--from:${from};--to:${to}`}>
+    {img && <img class="hood-hero__img" src={img.src} width={img.width} height={img.height} alt="" fetchpriority="high" decoding="async" />}
     <div class="container">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="/neighborhoods">Neighborhoods</a> / {n.name}</nav>
       <h1>{n.name}</h1>
       <p class="lede">{n.tagline}</p>
     </div>
+    {img && <span class="hood-hero__credit">{illustrationCredit(img)}</span>}
   </section>
 
   <section class="section">
@@ -89,7 +92,42 @@ const [from, to] = n.palette;
 
 <style>
   .hood-hero {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(135deg, var(--ink) 10%, var(--from) 70%, var(--to) 130%);
+  }
+  .hood-hero__img {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  /* Dark wash on the text side keeps the heading and tagline readable over the illustration. */
+  .hood-hero:has(.hood-hero__img)::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(11 31 45 / 0.88) 0%, rgb(11 31 45 / 0.6) 55%, rgb(11 31 45 / 0.25) 100%);
+  }
+  @media (max-width: 720px) {
+    .hood-hero:has(.hood-hero__img)::before {
+      background: rgb(11 31 45 / 0.68);
+    }
+  }
+  .hood-hero > .container {
+    position: relative;
+    z-index: 2;
+  }
+  .hood-hero__credit {
+    position: absolute;
+    z-index: 2;
+    right: 0.75rem;
+    bottom: 0.5rem;
+    font-size: 0.7rem;
+    color: rgb(255 255 255 / 0.8);
   }
   .crumbs {
     font-size: 0.9rem;
