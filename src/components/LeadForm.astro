@@ -1,5 +1,6 @@
 ---
 import { neighborhoods } from '../data/neighborhoods';
+import { site } from '../config/site';
 
 type Kind = 'contact' | 'buy' | 'sell' | 'search' | 'building';
 
@@ -109,12 +110,26 @@ const id = `lead-${kind}`;
     <textarea id={`${id}-message`} name="message" rows="4"></textarea>
   </label>
 
+  {
+    site.turnstileSiteKey && (
+      <div class="cf-turnstile" data-sitekey={site.turnstileSiteKey} data-size="flexible" data-appearance="interaction-only" />
+    )
+  }
+
   <button class="btn btn--primary" type="submit">{submitLabel}</button>
   <p class="fine">By submitting, you agree to be contacted about your real estate needs. We never sell your information.</p>
   <p class="status" role="status" aria-live="polite"></p>
 </form>
 
 <script>
+  // Load Turnstile once per page; it renders every .cf-turnstile widget and adds its token to the form.
+  if (document.querySelector('.cf-turnstile')) {
+    const script = document.createElement('script');
+    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+    script.async = true;
+    document.head.append(script);
+  }
+
   document.querySelectorAll<HTMLFormElement>('[data-lead-form]').forEach((form) => {
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
@@ -130,7 +145,10 @@ const id = `lead-${kind}`;
           headers: { Accept: 'application/json' },
           body: new FormData(form),
         });
-        if (!res.ok) throw new Error(await res.text());
+        if (!res.ok) {
+          const { error } = await res.json().catch(() => ({}));
+          throw new Error(error || '');
+        }
         const data = new FormData(form);
         (window as any).gtag?.('event', 'generate_lead', {
           form_kind: data.get('kind'),
@@ -140,10 +158,12 @@ const id = `lead-${kind}`;
         form.reset();
         status.dataset.state = 'ok';
         status.textContent = 'Thank you! We’ll be in touch shortly.';
-      } catch {
+      } catch (err) {
         status.dataset.state = 'error';
-        status.textContent = 'Something went wrong. Please call or email us directly.';
+        status.textContent = (err as Error).message || 'Something went wrong. Please call or email us directly.';
       } finally {
+        // Turnstile tokens are single-use; get a fresh one for the next submission.
+        (window as any).turnstile?.reset(form.querySelector('.cf-turnstile'));
         button.disabled = false;
       }
     });
