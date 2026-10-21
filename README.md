@@ -30,6 +30,11 @@ The site runs as a Cloudflare Worker that serves the built pages (bundled into t
 npm run deploy   # astro build → embed dist/ → wrangler deploy
 ```
 
+Pushes to `main` deploy automatically via `.github/workflows/deploy.yml` once the repository secrets
+`CLOUDFLARE_API_TOKEN` (Cloudflare "Edit Cloudflare Workers" template, scoped to this account and the
+westpalmbeachfloridarealestate.com zone) and `CLOUDFLARE_ACCOUNT_ID` are set. It can also be run by hand
+from the Actions tab (**Deploy → Run workflow**).
+
 Lead form settings (set once as Worker secrets):
 
 ```sh
