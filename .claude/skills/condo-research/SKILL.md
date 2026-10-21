@@ -43,6 +43,12 @@ See `Building` in `src/data/buildings.ts`. Fields:
   node -e "for (const b of require('./src/data/buildings.json')) { const m=['yearBuilt','floors','units','developer','architect','bedrooms','sqftRange','petPolicy','description'].filter(k=>b[k]==null); if(m.length) console.log(b.slug, m.join(',')) }"
   ```
 
+### Unit counts: use county records first
+`node scripts/condos/county-units.mjs [slug,slug]` counts each building's residential condo parcels in Palm Beach County's address layer, and prints a source URL for each count. Use it before web research:
+- When `units` is blank or sources conflict, set it to the county count and add the printed URL to `sources`.
+- A county count a few below a published one usually means owners combined units. Keep the published declared count, and mention the combinations in `description` if it matters.
+- "No condo parcels" means the tower is new or not yet platted as a condominium. Use developer figures.
+
 ### 2. Research in parallel
 Split the work so agents don't overlap:
 ```sh

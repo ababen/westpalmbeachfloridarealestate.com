@@ -9,9 +9,9 @@
   "address": "525 & 529 S Flagler Dr, West Palm Beach, FL 33401",
   "area": "Downtown",
   "status": "completed",
-  "yearBuilt": 1985,
+  "yearBuilt": 1986,
   "floors": 32,
-  "units": null,
+  "units": 225,
   "developer": "Armour Guider Development Corporation",
   "architect": "Schwab & Twitty Architects",
   "waterfront": true,
@@ -29,7 +29,10 @@
    "https://en.wikipedia.org/wiki/The_Plaza_(West_Palm_Beach)",
    "https://www.condoblackbook.com/west-palm-beach/the-plaza-of-the-palm-beaches",
    "https://downtownwpb.com/live/housing/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Plaza-Of-The-Palm-Beaches/"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Plaza-Of-The-Palm-Beaches/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343222500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://pbcpao.gov/Property/Details?parcelId=74434322250003201",
+   "https://www.skyscrapercenter.com/building/the-plaza-i/20973"
   ],
   "lat": 26.708038,
   "lng": -80.051519,
@@ -66,7 +69,9 @@
    "https://www.condoblackbook.com/west-palm-beach/esplanade-grande",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Esplanade-Grande/",
    "https://downtownwpb.com/live/housing/",
-   "https://premierestateproperties.com/neighborhoods/esplanade-grande-condo/"
+   "https://premierestateproperties.com/neighborhoods/esplanade-grande-condo/",
+   "https://skyscraperpage.com/b17816/west-palm-beach/esplanade-grande",
+   "https://pbcpao.gov/Property/Details?parcelId=74434322350077040"
   ],
   "aka": [],
   "lat": 26.712118,
@@ -154,7 +159,7 @@
   "status": "completed",
   "yearBuilt": 2006,
   "floors": 8,
-  "units": null,
+  "units": 244,
   "developer": null,
   "architect": null,
   "waterfront": false,
@@ -173,7 +178,8 @@
    "https://www.condoblackbook.com/west-palm-beach/610-clematis",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/610-Clematis/",
    "https://downtownwpb.com/live/housing/",
-   "https://globest.com/2002/12/16/610-clematis-opens-sales-center/?amp=1"
+   "https://globest.com/2002/12/16/610-clematis-opens-sales-center/?amp=1",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343212300%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.712937,
@@ -348,7 +354,7 @@
   "status": "completed",
   "yearBuilt": 2006,
   "floors": 16,
-  "units": null,
+  "units": 322,
   "developer": "Kolter Homes",
   "architect": null,
   "waterfront": false,
@@ -368,7 +374,9 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/One-City-Plaza/",
    "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/one-city-plaza-condo/801-s-olive-avenue-601-west-palm-beach-fl-33401/B26081923-6317275",
    "https://downtownwpb.com/live/housing/",
-   "https://www.condowpb.com/buildings"
+   "https://www.condowpb.com/buildings",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343223800%25%27+OR+PCN+LIKE+%27744343223801%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://pbcpao.gov/Property/Details?parcelId=74434322380121213"
   ],
   "aka": [],
   "lat": 26.706172,
@@ -407,7 +415,9 @@
    "https://www.cnu.org/node/1899",
    "https://therealdeal.com/miami/2009/01/30/s-florida-real-estate-in-brief/",
    "https://skyscraperpage.com/b66964",
-   "https://globest.com/2009/01/30/420-unit-luxury-condo-delivered/?amp=1"
+   "https://globest.com/2009/01/30/420-unit-luxury-condo-delivered/?amp=1",
+   "https://pbcpao.gov/Property/Details?parcelId=74434328340001822",
+   "https://skyscraperpage.com/b66964/west-palm-beach/cityplace-south-tower"
   ],
   "aka": [],
   "lat": 26.704984,
@@ -427,7 +437,7 @@
   "status": "completed",
   "yearBuilt": 2004,
   "floors": 12,
-  "units": null,
+  "units": 126,
   "developer": null,
   "architect": null,
   "waterfront": false,
@@ -442,7 +452,8 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/the-tower-condominium-at-cityplace",
    "https://www.condowpb.com/buildings",
-   "https://www.apartments.com/listing/5k9n5wm"
+   "https://www.apartments.com/listing/5k9n5wm",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343211500%25%27+OR+PCN+LIKE+%27744343211501%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "lat": 26.705853,
   "lng": -80.05808,
@@ -458,7 +469,7 @@
   "address": "630, 720 & 780 S Sapodilla Ave, West Palm Beach, FL 33401",
   "area": "Downtown",
   "status": "completed",
-  "yearBuilt": null,
+  "yearBuilt": 2001,
   "floors": 5,
   "units": 264,
   "developer": null,
@@ -477,7 +488,8 @@
    "https://www.condoblackbook.com/west-palm-beach/courtyards-in-cityplace",
    "https://www.condowpb.com/buildings",
    "https://activerain.com/blogsview/198910/city-place-courtyard-west-palm-beach--fl--33401",
-   "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/courtyards-in-cityplace-condo/780-s-sapodilla-avenue-206-west-palm-beach-fl-33401/B26056504-6190250"
+   "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/courtyards-in-cityplace-condo/780-s-sapodilla-avenue-206-west-palm-beach-fl-33401/B26056504-6190250",
+   "https://pbcpao.gov/Property/Details?parcelId=74434321160045150"
   ],
   "aka": [],
   "lat": 26.708427,
@@ -531,7 +543,7 @@
   "area": "Downtown",
   "status": "pre-construction",
   "yearBuilt": 2029,
-  "floors": null,
+  "floors": 22,
   "units": 88,
   "developer": "Mast Capital and Curated JCZM Development, with Banyan Group",
   "architect": "OMA",
@@ -549,7 +561,8 @@
    "https://floridayimby.com/2026/08/banyan-tree-residences-west-palm-beach-secures-unanimous-downtown-action-committee-approval.html",
    "https://stetnews.org/2026/08/14/another-tower-rising-in-downtown-west-palm-beach/",
    "https://www.bisnow.com/south-florida/news/multifamily/mast-capital-to-build-branded-condos-in-west-palm-beach-133820",
-   "https://www.bolsamania.com/nota-de-prensa/mercados/banyan-group-enters-the-united-states-with-banyan-tree-residences-west-palm-beach--22149762.html"
+   "https://www.bolsamania.com/nota-de-prensa/mercados/banyan-group-enters-the-united-states-with-banyan-tree-residences-west-palm-beach--22149762.html",
+   "https://www.wpb.org/files/assets/city/v/1/development-services/documents/downtown-action-committee/2026-agendas/final-packet-dac-09.09.2026.pdf"
   ],
   "aka": [],
   "lat": 26.708449,
@@ -597,7 +610,7 @@
   "area": "Downtown",
   "status": "completed",
   "yearBuilt": 1981,
-  "floors": 27,
+  "floors": null,
   "units": 132,
   "developer": null,
   "architect": null,
@@ -611,13 +624,15 @@
    "bike storage",
    "extra storage"
   ],
-  "summary": "Waterview Towers is a 27-story, 132-unit condominium completed in 1981 that sits between Flagler Drive and the Intracoastal Waterway near Clematis Street. Units commonly look out on the Palm Harbor Marina, the Intracoastal and the island of Palm Beach.",
+  "summary": "Waterview Towers is a 132-unit condominium completed in 1981 that sits between Flagler Drive and the Intracoastal Waterway near Clematis Street. Units commonly look out on the Palm Harbor Marina, the Intracoastal and the island of Palm Beach.",
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/waterview-towers",
    "https://www.compass.com/building/waterview-towers-west-palm-beach-fl/757486528157728221/",
    "https://premierestateproperties.com/neighborhoods/waterview-towers/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Waterview-Towers/",
-   "https://downtownwpb.com/live/housing/"
+   "https://downtownwpb.com/live/housing/",
+   "https://skyscraperpage.com/b17811/west-palm-beach/the-waterview-towers",
+   "https://pbcpao.gov/Property/Details?parcelId=74434322170000604"
   ],
   "aka": [],
   "lat": 26.716153,
@@ -625,7 +640,7 @@
   "bedrooms": "2–4",
   "sqftRange": "1,700–2,600+",
   "parking": "Underground assigned garage parking with valet",
-  "description": "Waterview Towers is a 27-story building with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security."
+  "description": "Waterview Towers is a high-rise with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security."
  },
  {
   "slug": "slade",
@@ -637,7 +652,7 @@
   "area": "North Flagler",
   "status": "completed",
   "yearBuilt": 2005,
-  "floors": null,
+  "floors": 16,
   "units": 200,
   "developer": null,
   "architect": "Arquitectonica",
@@ -655,7 +670,9 @@
   "summary": "The Slade is a 200-unit condominium completed in 2005 on the west side of North Flagler Drive, about 1.2 miles north of Clematis Street, with views across the Intracoastal. The building is credited to the architecture firm Arquitectonica.",
   "sources": [
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Slade/",
-   "https://www.compass.com/building/slade-west-palm-beach-fl/756459424830287805/"
+   "https://www.compass.com/building/slade-west-palm-beach-fl/756459424830287805/",
+   "https://skyscraperpage.com/b66937/west-palm-beach/the-slade",
+   "https://pbcpao.gov/Property/Details?parcelId=74434315420066080"
   ],
   "lat": 26.72713,
   "lng": -80.050587,
@@ -746,7 +763,7 @@
   "status": "completed",
   "yearBuilt": 2007,
   "floors": 4,
-  "units": null,
+  "units": 68,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -763,7 +780,8 @@
    "https://www.compass.com/building/flagler-landing-west-palm-beach-fl/756525472845625829/",
    "https://www.echofineproperties.com/communities/west-palm-beach-condos/flagler-landing/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Landing/",
-   "https://subdivisions.com/west-palm-beach-fl/flagler-landing-condos-for-sale"
+   "https://subdivisions.com/west-palm-beach-fl/flagler-landing-condos-for-sale",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343103500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.746989,
@@ -820,7 +838,7 @@
   "status": "completed",
   "yearBuilt": 1978,
   "floors": null,
-  "units": null,
+  "units": 281,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -839,7 +857,9 @@
   "sources": [
    "https://www.compass.com/building/palm-beach-house-west-palm-beach-fl/756854114272393701/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Palm-Beach-House/",
-   "https://www.skydb.net/building/99179966/palm-beach-house-west-palm-beach"
+   "https://www.skydb.net/building/99179966/palm-beach-house-west-palm-beach",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343042500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://pbcpao.gov/Property/Details?parcelId=74434304250011703"
   ],
   "lat": 26.759844,
   "lng": -80.052304,
@@ -1188,7 +1208,9 @@
    "https://compass.com/building/envoy-west-palm-beach-fl/757059781491026029",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Envoy/",
-   "https://www.waterfront-properties.com/listing/rx-11122207-2480-presidential-way-603-west-palm-beach-fl-33401"
+   "https://www.waterfront-properties.com/listing/rx-11122207-2480-presidential-way-603-west-palm-beach-fl-33401",
+   "https://skyscraperpage.com/b66954/west-palm-beach/the-envoy-condominium",
+   "https://pbcpao.gov/Property/Details?parcelId=74434318100001010"
   ],
   "lat": 26.734161,
   "lng": -80.086253,
@@ -1276,7 +1298,7 @@
   "status": "completed",
   "yearBuilt": 1972,
   "floors": 19,
-  "units": null,
+  "units": 106,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -1292,7 +1314,10 @@
   "sources": [
    "https://compass.com/building/trianon-west-palm-beach-fl/756795849316282149",
    "https://www.condoblackbook.com/west-palm-beach/trianon",
-   "https://www.squarefoothomes.com/real-estate/west-palm-beach/trianon-condominiums/"
+   "https://www.squarefoothomes.com/real-estate/west-palm-beach/trianon-condominiums/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343273700%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://skyscraperpage.com/b66948/west-palm-beach/trianon-condominium",
+   "https://pbcpao.gov/Property/Details?parcelId=74434327370011606"
   ],
   "aka": [],
   "lat": 26.702765,
@@ -1456,7 +1481,7 @@
   "area": "South Flagler",
   "status": "completed",
   "yearBuilt": 1973,
-  "floors": 19,
+  "floors": 18,
   "units": 156,
   "developer": null,
   "architect": null,
@@ -1474,7 +1499,9 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/rapallo",
    "https://www.compass.com/building/rapallo-west-palm-beach-fl/756892549381211845/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Rapallo/"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Rapallo/",
+   "https://skyscraperpage.com/b66944/west-palm-beach/rapallo-condominiums-north",
+   "https://pbcpao.gov/Property/Details?parcelId=74434327400005030"
   ],
   "lat": 26.698382,
   "lng": -80.050353,
@@ -1491,7 +1518,7 @@
   "area": "South Flagler",
   "status": "completed",
   "yearBuilt": 1973,
-  "floors": 19,
+  "floors": 18,
   "units": 192,
   "developer": null,
   "architect": null,
@@ -1508,7 +1535,9 @@
   "sources": [
    "https://www.compass.com/building/rapallo-south-west-palm-beach-fl/756672032321476581/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Rapallo/",
-   "https://www.waterfront-properties.com/listing/rx-10995072-1801-s-flagler-dr-1804-west-palm-beach-fl-33401"
+   "https://www.waterfront-properties.com/listing/rx-10995072-1801-s-flagler-dr-1804-west-palm-beach-fl-33401",
+   "https://skyscraperpage.com/b66943/west-palm-beach/rapallo-condominiums-south",
+   "https://pbcpao.gov/Property/Details?parcelId=74434327410011101"
   ],
   "aka": [],
   "lat": 26.697622,
@@ -1525,7 +1554,7 @@
   "status": "completed",
   "yearBuilt": 1981,
   "floors": 4,
-  "units": null,
+  "units": 39,
   "developer": null,
   "architect": null,
   "waterfront": true,
@@ -1539,7 +1568,8 @@
   "summary": "Flagler Yacht Club is a small boutique condominium on the Intracoastal Waterway on South Flagler Drive, built in 1981, with a marina for residents.",
   "sources": [
    "https://www.compass.com/building/flagler-yacht-club-west-palm-beach-fl/756622546966645661/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Yacht-Club/"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Yacht-Club/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343342000%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
   ],
   "aka": [],
   "lat": 26.678507,
