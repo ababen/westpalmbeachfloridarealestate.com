@@ -5,38 +5,88 @@ import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { buildings, areaNeighborhood, areaSlug, type Building } from '../../data/buildings';
 import { neighborhoods } from '../../data/neighborhoods';
+import { landmarks, milesBetween } from '../../data/landmarks';
+import { site } from '../../config/site';
 
 export function getStaticPaths() {
   return buildings.map((b) => ({ params: { slug: b.slug }, props: { b } }));
 }
 
 const { b } = Astro.props as { b: Building };
-const nearby = buildings.filter((o) => o.area === b.area && o.slug !== b.slug).slice(0, 3);
 const hood = neighborhoods.find((n) => n.slug === areaNeighborhood[b.area]);
+const street = b.address.split(',')[0];
 const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.name}, ${b.address}`)}`;
+const d = 0.006;
+const mapEmbed = `https://www.openstreetmap.org/export/embed.html?bbox=${b.lng - d},${b.lat - d},${b.lng + d},${b.lat + d}&layer=mapnik&marker=${b.lat},${b.lng}`;
+
+// Closest buildings first, regardless of area label.
+const nearby = buildings
+  .filter((o) => o.slug !== b.slug)
+  .map((o) => ({ o, miles: milesBetween(b, o) }))
+  .sort((x, y) => x.miles - y.miles)
+  .slice(0, 3)
+  .map((x) => x.o);
+
+const fmtMiles = (m: number) => (m < 0.1 ? 'Under 0.1 mi' : `${m.toFixed(1)} mi`);
+const distances = landmarks.map((l) => ({ name: l.name, miles: milesBetween(b, l) })).sort((x, y) => x.miles - y.miles);
+
+const isDone = b.status === 'completed';
+const statusLabel = b.status[0].toUpperCase() + b.status.slice(1);
 
 const facts: [string, string][] = [
   ['Address', b.address],
   ['Area', b.area],
-  ['Status', b.status[0].toUpperCase() + b.status.slice(1)],
-  b.yearBuilt ? [b.status === 'completed' ? 'Year built' : 'Expected completion', String(b.yearBuilt)] : null,
+  ['Status', statusLabel],
+  b.yearBuilt ? [isDone ? 'Year built' : 'Expected completion', String(b.yearBuilt)] : null,
   b.floors ? ['Floors', String(b.floors)] : null,
   b.units ? ['Residences', String(b.units)] : null,
+  b.bedrooms ? ['Bedrooms', b.bedrooms] : null,
+  b.sqftRange ? ['Residence sizes', `${b.sqftRange} sq ft`] : null,
   b.developer ? ['Developer', b.developer] : null,
   b.architect ? ['Architect', b.architect] : null,
-  b.waterfront ? ['Waterfront', 'Yes — on the Intracoastal'] : null,
+  b.waterfront ? ['Waterfront', 'Yes, on the Intracoastal'] : null,
+  b.parking ? ['Parking', b.parking] : null,
+  b.petPolicy ? ['Pets', b.petPolicy] : null,
+  b.rentalPolicy ? ['Rentals', b.rentalPolicy] : null,
 ].filter((f): f is [string, string] => f !== null);
 
-const descParts = [
-  b.floors && `${b.floors}-story`,
-  b.status === 'completed' ? 'condominium' : `${b.status} condominium`,
-  `at ${b.address}`,
-];
-const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building facts, amenities, and current units for sale.`;
+// FAQ built only from facts on this page.
+const faqs: { q: string; a: string }[] = [];
+if (b.yearBuilt)
+  faqs.push(
+    isDone
+      ? { q: `When was ${b.name} built?`, a: `${b.name} was completed in ${b.yearBuilt}.` }
+      : { q: `When will ${b.name} be completed?`, a: `${b.name} is ${b.status}, with completion expected in ${b.yearBuilt}.` },
+  );
+if (b.floors || b.units)
+  faqs.push({
+    q: `How big is ${b.name}?`,
+    a: `${b.name} ${isDone ? 'has' : 'is planned with'} ${[b.floors && `${b.floors} floors`, b.units && `${b.units} residences`].filter(Boolean).join(' and ')}.`,
+  });
+if (b.bedrooms || b.sqftRange)
+  faqs.push({
+    q: `What size are the residences at ${b.name}?`,
+    a:
+      b.bedrooms && b.sqftRange
+        ? `Residences range from ${b.bedrooms} bedrooms and about ${b.sqftRange} square feet.`
+        : b.bedrooms
+          ? `Residences range from ${b.bedrooms} bedrooms.`
+          : `Residences are about ${b.sqftRange} square feet.`,
+  });
+if (b.waterfront) faqs.push({ q: `Is ${b.name} on the water?`, a: `Yes. ${b.name} is on the Intracoastal Waterway along Flagler Drive.` });
+if (b.petPolicy) faqs.push({ q: `Does ${b.name} allow pets?`, a: `${b.petPolicy}. Confirm current rules with the association before you buy.` });
+if (b.amenities.length)
+  faqs.push({ q: `What amenities does ${b.name} have?`, a: `Amenities include ${b.amenities.slice(0, 6).join(', ')}.` });
+faqs.push({
+  q: `How do I find units for sale at ${b.name}?`,
+  a: `Use the form on this page or call ${site.phone} for current listings, recent sale prices, and upcoming availability at ${b.name}.`,
+});
+
+const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${isDone ? '' : `${b.status} `}condominium at ${street}, West Palm Beach. Building facts, amenities, location, and units for sale.`;
 ---
 
 <Base
-  title={`${b.name} Condos for Sale | ${b.address.split(',')[0]}`}
+  title={`${b.name} Condos for Sale | ${street}`}
   description={description}
   schema={[
     {
@@ -44,18 +94,34 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
       '@type': 'ApartmentComplex',
       name: b.name,
       ...(b.aka?.length && { alternateName: b.aka }),
-      address: { '@type': 'PostalAddress', streetAddress: b.address, addressLocality: 'West Palm Beach', addressRegion: 'FL' },
+      description: b.description || b.summary,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: street,
+        addressLocality: 'West Palm Beach',
+        addressRegion: 'FL',
+        postalCode: b.address.match(/\d{5}/)?.[0],
+        addressCountry: 'US',
+      },
+      geo: { '@type': 'GeoCoordinates', latitude: b.lat, longitude: b.lng },
       ...(b.units && { numberOfAccommodationUnits: b.units }),
+      ...(b.petPolicy && { petsAllowed: !/no pets|not allowed/i.test(b.petPolicy) }),
       ...(b.amenities.length && {
         amenityFeature: b.amenities.map((a) => ({ '@type': 'LocationFeatureSpecification', name: a, value: true })),
       }),
     },
     {
       '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+    },
+    {
+      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Condos', item: `${Astro.site}condos` },
-        { '@type': 'ListItem', position: 2, name: b.name },
+        { '@type': 'ListItem', position: 2, name: b.area, item: `${Astro.site}condos#${areaSlug(b.area)}` },
+        { '@type': 'ListItem', position: 3, name: b.name },
       ],
     },
   ]}
@@ -65,9 +131,16 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/condos">Condos</a> / <a href={`/condos#${areaSlug(b.area)}`}>{b.area}</a> / {b.name}
       </nav>
+      {!isDone && <span class="badge">{statusLabel}</span>}
       <h1>{b.name}</h1>
       <p class="lede">{b.address}</p>
       {b.aka?.length ? <p class="aka">Also known as {b.aka.join(', ')}</p> : null}
+      <ul class="quick">
+        {b.floors && <li><strong>{b.floors}</strong> floors</li>}
+        {b.units && <li><strong>{b.units}</strong> residences</li>}
+        {b.yearBuilt && <li><strong>{b.yearBuilt}</strong> {isDone ? 'built' : 'est. completion'}</li>}
+        {b.waterfront && <li><strong>Waterfront</strong></li>}
+      </ul>
     </div>
   </section>
 
@@ -75,6 +148,7 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
     <div class="container grid grid--2">
       <article>
         <p class="lede">{b.summary}</p>
+        {b.description && b.description !== b.summary && <p>{b.description}</p>}
 
         <h2 class="sub">Building facts</h2>
         <dl class="facts">
@@ -87,7 +161,6 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
             ))
           }
         </dl>
-        <p><a href={mapUrl} rel="noopener" target="_blank">View on Google Maps →</a></p>
 
         {
           b.amenities.length > 0 && (
@@ -102,6 +175,26 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
           )
         }
 
+        <h2 class="sub">Location</h2>
+        <div class="map">
+          <iframe src={mapEmbed} title={`Map of ${b.name}`} loading="lazy"></iframe>
+        </div>
+        <p class="map-links">
+          <a href={mapUrl} rel="noopener" target="_blank">Open in Google Maps →</a>
+        </p>
+        <h3 class="dist-head">Distance to</h3>
+        <ul class="dist">
+          {
+            distances.map((x) => (
+              <li>
+                <span>{x.name}</span>
+                <span>{fmtMiles(x.miles)}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="fine">Straight-line distances; travel distances will be longer.</p>
+
         {
           hood && (
             <p class="hood">
@@ -109,6 +202,16 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
               {hood.summary}
             </p>
           )
+        }
+
+        <h2 class="sub">Frequently asked questions</h2>
+        {
+          faqs.map((f) => (
+            <details class="faq">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))
         }
 
         <p class="note">
@@ -124,20 +227,15 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
     </div>
   </section>
 
-  {
-    nearby.length > 0 && (
-      <section class="section section--white">
-        <div class="container">
-          <h2>More condos in {b.area}</h2>
-          <div class="grid grid--3">
-            {nearby.map((o) => (
-              <BuildingCard b={o} />
-            ))}
-          </div>
-        </div>
-      </section>
-    )
-  }
+  <section class="section section--white">
+    <div class="container">
+      <h2>Nearby condo buildings</h2>
+      <div class="grid grid--3">
+        {nearby.map((o) => <BuildingCard b={o} />)}
+      </div>
+      <p class="all"><a class="btn btn--dark" href="/condos">See all West Palm Beach condos</a></p>
+    </div>
+  </section>
 
   <CtaBand heading={`Buying or selling at ${b.name}?`} />
 </Base>
@@ -151,27 +249,54 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
   .crumbs a {
     color: inherit;
   }
+  .badge {
+    display: inline-block;
+    background: var(--coral);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+  }
   .aka {
     color: rgb(247 241 232 / 0.7);
     margin: 0;
   }
+  .quick {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+  }
+  .quick li {
+    border: 1px solid rgb(247 241 232 / 0.35);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.92rem;
+  }
   .sub {
     font-size: 1.6rem;
-    margin-top: 2rem;
+    margin-top: 2.25rem;
   }
   .facts {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-    gap: 1px;
-    background: var(--line);
+    background: var(--white);
     border: 1px solid var(--line);
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 0 1rem;
+    margin: 0;
   }
   .facts div {
-    background: var(--white);
     padding: 0.8rem 1rem;
+    box-shadow:
+      1px 0 0 var(--line),
+      0 1px 0 var(--line);
   }
   .facts dt {
     font-size: 0.75rem;
@@ -190,11 +315,65 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
   .amenities li {
     break-inside: avoid;
   }
+  .map {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    aspect-ratio: 16 / 10;
+    background: var(--sand-deep);
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  .map-links {
+    margin: 0.6rem 0 0;
+    font-size: 0.95rem;
+  }
+  .dist-head {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+  .dist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+  .dist li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .dist li span:last-child {
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .fine {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+  }
   .hood {
     margin-top: 2rem;
     padding: 1rem 1.25rem;
     background: var(--sand-deep);
     border-radius: 10px;
+  }
+  .faq {
+    border-bottom: 1px solid var(--line);
+    padding-block: 0.9rem;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .faq p {
+    margin: 0.6rem 0 0;
+    color: var(--ink-soft);
   }
   .note {
     font-size: 0.85rem;
@@ -207,5 +386,9 @@ const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building
   }
   .section--white h2 {
     margin-bottom: 1.5rem;
+  }
+  .all {
+    margin-top: 2rem;
+    text-align: center;
   }
 </style>

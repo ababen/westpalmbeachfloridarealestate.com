@@ -16,7 +16,17 @@ export interface Building {
   architect?: string | null;
   waterfront?: boolean | null;
   amenities: string[];
+  /** One- or two-sentence summary used on cards and in meta descriptions. */
   summary: string;
+  /** Longer, sourced description for the building page. */
+  description?: string | null;
+  bedrooms?: string | null;
+  sqftRange?: string | null;
+  petPolicy?: string | null;
+  parking?: string | null;
+  rentalPolicy?: string | null;
+  lat: number;
+  lng: number;
   /** Where each fact came from; kept for maintenance, not shown on the site. */
   sources: string[];
 }
@@ -38,6 +48,9 @@ export const buildingAreas = [
 export const areaNeighborhood: Record<string, string> = {
   Downtown: 'downtown',
 };
+
+/** True for towers that are under construction or not yet started. */
+export const isNewConstruction = (b: Building) => b.status !== 'completed';
 
 export const areaSlug = (area: string) =>
   area

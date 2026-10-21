@@ -29,7 +29,9 @@
    "https://en.wikipedia.org/wiki/The_Plaza_(West_Palm_Beach)",
    "https://www.condoblackbook.com/west-palm-beach/the-plaza-of-the-palm-beaches",
    "https://downtownwpb.com/live/housing/"
-  ]
+  ],
+  "lat": 26.708038,
+  "lng": -80.051519
  },
  {
   "slug": "esplanade-grande",
@@ -59,7 +61,9 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Esplanade-Grande/",
    "https://downtownwpb.com/live/housing/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.712118,
+  "lng": -80.050802
  },
  {
   "slug": "101-lofts",
@@ -82,7 +86,9 @@
    "https://www.condoblackbook.com/west-palm-beach/101-lofts",
    "https://compass.com/building/101-lofts-west-palm-beach-fl/756264981183023853"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.713757,
+  "lng": -80.05009
  },
  {
   "slug": "strand",
@@ -113,7 +119,9 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Strand/",
    "https://globest.com/2002/11/12/55m-the-strand-mixed-use-project-opens/?amp=1"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.711357,
+  "lng": -80.051386
  },
  {
   "slug": "610-clematis",
@@ -142,7 +150,9 @@
    "https://www.condoblackbook.com/west-palm-beach/610-clematis",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/610-Clematis/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.712937,
+  "lng": -80.057254
  },
  {
   "slug": "city-palms",
@@ -175,7 +185,9 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/city-palms",
    "https://compass.com/building/city-palms-west-palm-beach-fl/757189635213035877"
-  ]
+  ],
+  "lat": 26.708496,
+  "lng": -80.054791
  },
  {
   "slug": "prado",
@@ -204,7 +216,9 @@
    "https://www.condoblackbook.com/west-palm-beach/the-prado",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Prado/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.708405,
+  "lng": -80.05357
  },
  {
   "slug": "metropolitan",
@@ -234,7 +248,9 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/the-metropolitan",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Metropolitan/"
-  ]
+  ],
+  "lat": 26.710042,
+  "lng": -80.058958
  },
  {
   "slug": "two-city-plaza",
@@ -264,7 +280,9 @@
    "https://www.condoblackbook.com/west-palm-beach/two-city-plaza",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Two-City-Plaza/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.706943,
+  "lng": -80.052119
  },
  {
   "slug": "one-city-plaza",
@@ -294,7 +312,9 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/One-City-Plaza/",
    "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/one-city-plaza-condo/801-s-olive-avenue-601-west-palm-beach-fl-33401/B26081923-6317275"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.706172,
+  "lng": -80.052136
  },
  {
   "slug": "cityplace-south-tower",
@@ -323,7 +343,9 @@
    "https://www.condoblackbook.com/west-palm-beach/cityplace-south-tower",
    "https://www.cnu.org/node/1899"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.704984,
+  "lng": -80.056493
  },
  {
   "slug": "tower-condominium-at-cityplace",
@@ -351,7 +373,9 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/the-tower-condominium-at-cityplace",
    "https://www.condowpb.com/buildings"
-  ]
+  ],
+  "lat": 26.705853,
+  "lng": -80.05808
  },
  {
   "slug": "courtyards-in-cityplace",
@@ -378,7 +402,9 @@
    "https://www.condoblackbook.com/west-palm-beach/courtyards-in-cityplace",
    "https://www.condowpb.com/buildings"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.708427,
+  "lng": -80.058747
  },
  {
   "slug": "mr-c-residences-west-palm-beach",
@@ -407,7 +433,9 @@
   "sources": [
    "https://floridayimby.com/2026/08/construction-progresses-on-27-story-mr-c-hotel-residences-west-palm-beach.html",
    "https://www.hospitalitynet.org/announcement/41010208/terra-unveils-plans-for-mr-c-hotel-residences-in-west-palm-beach.html"
-  ]
+  ],
+  "lat": 26.706154,
+  "lng": -80.052493
  },
  {
   "slug": "banyan-tree-residences-west-palm-beach",
@@ -434,7 +462,9 @@
    "https://floridayimby.com/2026/08/banyan-tree-residences-west-palm-beach-secures-unanimous-downtown-action-committee-approval.html",
    "https://stetnews.org/2026/08/14/another-tower-rising-in-downtown-west-palm-beach/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.708449,
+  "lng": -80.053797
  },
  {
   "slug": "residences-at-464-fern-street",
@@ -460,7 +490,9 @@
    "https://floridayimby.com/2026/08/plans-filed-for-25-story-residences-at-464-fern-street-in-downtown-west-palm-beach.html",
    "https://commercialobserver.com/2026/05/stephen-related-ross-west-palm-beach/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.710303,
+  "lng": -80.054505
  },
  {
   "slug": "waterview-towers",
@@ -489,7 +521,9 @@
    "https://www.compass.com/building/waterview-towers-west-palm-beach-fl/757486528157728221/",
    "https://premierestateproperties.com/neighborhoods/waterview-towers/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.716153,
+  "lng": -80.050493
  },
  {
   "slug": "slade",
@@ -520,7 +554,9 @@
   "sources": [
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Slade/",
    "https://www.compass.com/building/slade-west-palm-beach-fl/756459424830287805/"
-  ]
+  ],
+  "lat": 26.72713,
+  "lng": -80.050587
  },
  {
   "slug": "flagler-pointe",
@@ -550,7 +586,9 @@
    "https://www.compass.com/building/flagler-pointe-west-palm-beach-fl/756497344970584989/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Pointe/?by=ASC"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.729184,
+  "lng": -80.05102
  },
  {
   "slug": "portofino",
@@ -578,7 +616,9 @@
   "sources": [
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Portofino/",
    "https://www.compass.com/homedetails/2600-N-Flagler-Dr-West-Palm-Beach-FL-33407/1CU7HR_pid/"
-  ]
+  ],
+  "lat": 26.736561,
+  "lng": -80.05053
  },
  {
   "slug": "flagler-landing",
@@ -605,7 +645,9 @@
    "https://www.compass.com/building/flagler-landing-west-palm-beach-fl/756525472845625829/",
    "https://www.echofineproperties.com/communities/west-palm-beach-condos/flagler-landing/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.746989,
+  "lng": -80.052409
  },
  {
   "slug": "placido-mar",
@@ -638,7 +680,9 @@
   "sources": [
    "https://compass.com/building/placido-mar-west-palm-beach-fl/756376529805335829",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Placido-Mar/"
-  ]
+  ],
+  "lat": 26.756965,
+  "lng": -80.0524
  },
  {
   "slug": "palm-beach-house",
@@ -670,7 +714,9 @@
   "sources": [
    "https://www.compass.com/building/palm-beach-house-west-palm-beach-fl/756854114272393701/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Palm-Beach-House/"
-  ]
+  ],
+  "lat": 26.759844,
+  "lng": -80.052304
  },
  {
   "slug": "alba-palm-beach",
@@ -701,7 +747,9 @@
    "https://floridayimby.com/2025/08/construction-progresses-on-22-story-alba-palm-beach-at-4714-north-flagler-drive-in-northwood-west-palm-beach.html",
    "https://commercialobserver.com/2026/05/kenneth-baboun-bgi-florida-west-palm/",
    "https://www.condoblackbook.com/blog/july-2026-broward-and-palm-beach-preconstruction-updates"
-  ]
+  ],
+  "lat": 26.753672,
+  "lng": -80.052574
  },
  {
   "slug": "alba-reserve",
@@ -724,7 +772,9 @@
    "https://floridayimby.com/2025/01/developers-seek-approval-for-alba-reserve-at-4720-n-flagler-dr-west-palm-beach-fl.html",
    "https://www.wlrn.org/development/2025-02-11/high-rise-boom-underway-on-north-flagler-in-west-palm-beach"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.753698,
+  "lng": -80.05257
  },
  {
   "slug": "apogee",
@@ -746,7 +796,9 @@
   "sources": [
    "https://www.wlrn.org/development/2025-02-11/high-rise-boom-underway-on-north-flagler-in-west-palm-beach",
    "https://www.bisnow.com/news/south-florida/construction-development/related-group-dealt-setback-for-west-palm-beach-condo-tower-122212"
-  ]
+  ],
+  "lat": 26.755212,
+  "lng": -80.052486
  },
  {
   "slug": "residences-at-mandarin-oriental-west-palm-beach",
@@ -773,7 +825,9 @@
   "sources": [
    "https://floridayimby.com/2026/03/the-mandarin-oriental-residences-west-palm-beach-planned-for-2031-completion-at-5400-n-flagler-dr-west-palm-beach-fl.html",
    "https://www.condoblackbook.com/blog/february-2026-fort-lauderdale-and-palm-beach-pre-construction-condo-news-update"
-  ]
+  ],
+  "lat": 26.758845,
+  "lng": -80.052339
  },
  {
   "slug": "ritz-carlton-residences-west-palm-beach",
@@ -801,7 +855,9 @@
    "https://floridayimby.com/?p=38241",
    "https://www.elliman.com/florida/buildings-communities/detail/510-c-713-2405131409333888/1717-n-flagler-dr-west-palm-beach-fl-33407"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.728303,
+  "lng": -80.050366
  },
  {
   "slug": "olara",
@@ -833,7 +889,9 @@
   "sources": [
    "https://resident.com/amp/story/press-releases/2025/12/12/olara-commences-vertical-construction-marking-major-milestone-for-west-palm-beachs-waterfront",
    "https://www.wlrn.org/development/2025-02-11/high-rise-boom-underway-on-north-flagler-in-west-palm-beach"
-  ]
+  ],
+  "lat": 26.730268,
+  "lng": -80.049734
  },
  {
   "slug": "shorecrest",
@@ -862,7 +920,9 @@
    "https://resident.com/press-releases/2026/04/11/related-ross-breaks-ground-on-shorecrest-defining-next-era-of-luxury-waterfront-living-in-west-palm-beach",
    "https://www.connectcre.com/stories/related-ross-inks-157m-construction-loan-for-west-palm-beach-condos/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.729471,
+  "lng": -80.049991
  },
  {
   "slug": "rosewood-residences-west-palm-beach",
@@ -884,7 +944,9 @@
   "sources": [
    "https://therealdeal.com/miami/2026/06/24/related-group-bh-group-greenlighted-for-rosewood-residences/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.731095,
+  "lng": -80.049581
  },
  {
   "slug": "washington-tower",
@@ -914,7 +976,9 @@
   "summary": "Washington Tower is a 20-story, 114-unit condominium from 1972 in the gated Lands of the President community on Presidential Way, in the north end of West Palm Beach.",
   "sources": [
    "https://www.compass.com/listing/2000-presidential-way-unit-1404-west-palm-beach-fl-33401/1800885909896778609/"
-  ]
+  ],
+  "lat": 26.732915,
+  "lng": -80.08356
  },
  {
   "slug": "envoy-tower",
@@ -944,7 +1008,9 @@
   "summary": "Envoy Tower is a 20-story, 148-unit condominium completed in 1984, part of the gated Lands of the President complex on Presidential Way.",
   "sources": [
    "https://www.compass.com/homedetails/2480-Presidential-Way-Unit-101-West-Palm-Beach-FL-33401/1DXGCK_pid/"
-  ]
+  ],
+  "lat": 26.734161,
+  "lng": -80.086253
  },
  {
   "slug": "bristol",
@@ -979,7 +1045,9 @@
    "https://mail.e-architect.com/articles/the-bristol-palm-beach-luxury-condo",
    "https://golubandcompany.com/?p=212",
    "https://www.bisnow.com/news/south-florida/multifamily/condo-palm-beach-county-florida-the-bristol-84384"
-  ]
+  ],
+  "lat": 26.703923,
+  "lng": -80.049434
  },
  {
   "slug": "edgeworth",
@@ -1004,7 +1072,9 @@
    "https://www.relatedross.com/press-releases/2026-03-16/related-ross-debuts-edgeworth-new-ultra-luxury-condominium-along",
    "https://floridayimby.com/2026/03/two-tower-164-unit-edgeworth-slated-for-1155-south-flagler-drive-west-palm-beach-florida.html"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.703421,
+  "lng": -80.05043
  },
  {
   "slug": "trianon",
@@ -1031,7 +1101,9 @@
    "https://compass.com/building/trianon-west-palm-beach-fl/756795849316282149",
    "https://www.condoblackbook.com/west-palm-beach/trianon"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.702765,
+  "lng": -80.049604
  },
  {
   "slug": "forte-on-flagler",
@@ -1066,7 +1138,9 @@
   "sources": [
    "https://floridayimby.com/?p=10955",
    "https://www.manhattanmiami.com/manhattan/forte-on-flagler"
-  ]
+  ],
+  "lat": 26.701789,
+  "lng": -80.050498
  },
  {
   "slug": "south-flagler-house",
@@ -1093,7 +1167,9 @@
    "https://floridayimby.com/?p=36695",
    "https://www.related.com/press-releases/2024-04-17/related-companies-breaks-ground-south-flagler-house-west-palm-beach"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.701319,
+  "lng": -80.050513
  },
  {
   "slug": "la-clara",
@@ -1127,7 +1203,9 @@
   "sources": [
    "https://www.greatgulf.com/news/article/small-town-life-meets-big-city-amenities-in-newest-palm-beach-high-rise-invite-the-outdoors-in-or-vice-versa",
    "https://stantec.com/en/news/2023/stantec-designed-la-clara-condominiums-open-west-palm-beach-florida"
-  ]
+  ],
+  "lat": 26.699796,
+  "lng": -80.050502
  },
  {
   "slug": "viking-arms",
@@ -1153,7 +1231,9 @@
   "sources": [
    "https://compass.com/building/viking-arms-west-palm-beach-fl/757563647626138237"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.699704,
+  "lng": -80.050492
  },
  {
   "slug": "rapallo-north",
@@ -1183,7 +1263,9 @@
   "sources": [
    "https://www.condoblackbook.com/west-palm-beach/rapallo",
    "https://www.compass.com/building/rapallo-west-palm-beach-fl/756892549381211845/"
-  ]
+  ],
+  "lat": 26.698382,
+  "lng": -80.050353
  },
  {
   "slug": "rapallo-south",
@@ -1209,7 +1291,9 @@
   "sources": [
    "https://www.compass.com/building/rapallo-south-west-palm-beach-fl/756672032321476581/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.697622,
+  "lng": -80.050271
  },
  {
   "slug": "flagler-yacht-club",
@@ -1234,7 +1318,9 @@
   "sources": [
    "https://www.compass.com/building/flagler-yacht-club-west-palm-beach-fl/756622546966645661/"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.678507,
+  "lng": -80.048756
  },
  {
   "slug": "maison-dor",
@@ -1263,6 +1349,8 @@
    "https://resident.com/press-releases/2026/01/09/kolter-urban-and-perko-development-launch-sales-for-maison-dor",
    "https://floridayimby.com/2025/06/18-story-flagler-house-planned-for-3705-s-flagler-drive-west-palm-beach-florida.html"
   ],
-  "aka": []
+  "aka": [],
+  "lat": 26.67847,
+  "lng": -80.048757
  }
 ]

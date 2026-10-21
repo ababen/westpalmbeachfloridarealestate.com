@@ -20,7 +20,7 @@ export const neighborhoods: Neighborhood[] = [
       'The walkable urban core along the Intracoastal, with luxury condos, restaurants, and the Brightline station a few blocks away.',
     body: [
       'Downtown West Palm Beach has grown into one of South Florida’s most in-demand places to live. Condo towers line Flagler Drive with views across the Lake Worth Lagoon to Palm Beach Island, while Clematis Street and Rosemary Square offer dining, shopping, and nightlife within walking distance.',
-      'The Brightline station connects downtown to Fort Lauderdale, Miami, and Orlando, and Palm Beach International Airport is a short drive away — making downtown a favorite for professionals, second-home owners, and anyone who wants a lock-and-leave lifestyle.',
+      'The Brightline station connects downtown to Fort Lauderdale, Miami, and Orlando, and President Donald J. Trump International Airport (PBI) is a short drive away — making downtown a favorite for professionals, second-home owners, and anyone who wants a lock-and-leave lifestyle.',
     ],
     homeStyles: ['Luxury condominiums', 'Boutique mid-rise buildings', 'Townhomes'],
     highlights: [
@@ -108,7 +108,7 @@ export const neighborhoods: Neighborhood[] = [
       'Intracoastal frontage and boat docks',
       'Quick access to Palm Beach via Southern Blvd',
       'Larger lots than downtown-adjacent districts',
-      'Close to Palm Beach International Airport',
+      'Close to President Donald J. Trump International Airport (PBI)',
     ],
     bestFor: 'Waterfront living and buyers who want room to spread out',
     palette: ['#0f6f8f', '#7fd1d6'],
@@ -161,7 +161,7 @@ export const neighborhoods: Neighborhood[] = [
       'A central area around Palm Beach Lakes Boulevard with condos, townhomes, and quick access to I-95, shopping, and the airport.',
     body: [
       'The Palm Beach Lakes area offers some of the most accessible price points near the city center, with a mix of condominiums, townhomes, and single-family homes around lakes and golf.',
-      'Its central location puts I-95, Palm Beach International Airport, Palm Beach Outlets, and downtown within easy reach.',
+      'Its central location puts I-95, President Donald J. Trump International Airport (PBI), Palm Beach Outlets, and downtown within easy reach.',
     ],
     homeStyles: ['Condominiums', 'Townhomes', 'Single-family homes'],
     highlights: [
