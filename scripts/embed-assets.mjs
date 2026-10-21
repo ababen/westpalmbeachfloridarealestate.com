@@ -13,9 +13,15 @@ async function* walk(dir) {
   }
 }
 
+// Building images are served from the R2 bucket instead (scripts/upload-images.mjs), keeping the
+// Worker under its size limit.
+const R2_PREFIX = 'images/condos/';
+
 const assets = {};
 for await (const file of walk(root)) {
-  assets[relative(root, file)] = (await readFile(file)).toString('base64');
+  const key = relative(root, file);
+  if (key.startsWith(R2_PREFIX)) continue;
+  assets[key] = (await readFile(file)).toString('base64');
 }
 
 await writeFile(

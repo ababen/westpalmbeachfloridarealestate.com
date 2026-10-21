@@ -6,8 +6,8 @@ import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { neighborhoods } from '../data/neighborhoods';
 
-// Hero slider: a mix of building styles (curved glass, white slabs, twin towers, Mediterranean).
-const featured = ['bristol', 'trianon', 'placido-mar', 'olara', 'two-city-plaza', 'la-clara', 'plaza-of-the-palm-beaches', 'ritz-carlton-residences-west-palm-beach']
+// Hero slider: buildings with hand-drawn illustrations (src/components/art/custom.ts).
+const featured = ['bristol', 'trianon', 'placido-mar', 'la-clara', 'two-city-plaza', 'palm-beach-house', 'rapallo-south']
   .map((slug) => buildings.find((b) => b.slug === slug))
   .filter((b) => b !== undefined);
 

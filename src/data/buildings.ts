@@ -69,7 +69,9 @@ export const areaNeighborhood: Record<string, string> = {
 /** True for towers that are under construction or not yet started. */
 /** Short attribution line, e.g. "Photo: Jane Doe / Wikimedia Commons, CC BY-SA 4.0". */
 export const photoCredit = (p: NonNullable<Building['photo']>) =>
-  `Photo: ${p.credit}${p.sourceUrl.includes('wikimedia.org') ? ' / Wikimedia Commons' : ''}, ${p.license}`;
+  p.license === 'Rendering'
+    ? `Artist's rendering (${p.credit}), not a photograph`
+    : `Photo: ${p.credit}${p.sourceUrl.includes('wikimedia.org') ? ' / Wikimedia Commons' : ''}, ${p.license}`;
 
 export const isNewConstruction = (b: Building) => b.status !== 'completed';
 

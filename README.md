@@ -35,6 +35,15 @@ Pushes to `main` deploy automatically via `.github/workflows/deploy.yml` once th
 westpalmbeachfloridarealestate.com zone) and `CLOUDFLARE_ACCOUNT_ID` are set. It can also be run by hand
 from the Actions tab (**Deploy → Run workflow**).
 
+Building images (`public/images/condos/`) are served from the R2 bucket `wpbre-images`, not bundled
+into the Worker, which keeps it under Cloudflare's size limit. `npm run deploy` uploads them, so the
+deploy token also needs **Workers R2 Storage: Edit**. Images are either free-licensed photos
+(`scripts/condos/add-photo.mjs`) or AI artist's renderings (`scripts/condos/add-rendering.mjs`), and the
+site labels each as one or the other. The **Renderings** workflow (`.github/workflows/renderings.yml`) generates
+renderings for completed buildings described in `scripts/condos/render-prompts.json`. It needs a
+`GEMINI_API_KEY` repository secret, plus **Settings → Actions → Allow GitHub Actions to create pull requests**,
+and it opens a draft PR for review. Unbuilt buildings never get AI renderings.
+
 Building pages show Google Street View when `PUBLIC_GOOGLE_MAPS_KEY` is set at build time: in `.env`
 (git-ignored) for local builds and deploys, or as a repository secret of the same name for the deploy
 workflow. It's a browser key, restricted in Google Cloud to this domain and to the Maps Embed and Street
