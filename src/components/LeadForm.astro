@@ -131,6 +131,12 @@ const id = `lead-${kind}`;
           body: new FormData(form),
         });
         if (!res.ok) throw new Error(await res.text());
+        const data = new FormData(form);
+        (window as any).gtag?.('event', 'generate_lead', {
+          form_kind: data.get('kind'),
+          building: data.get('building') || undefined,
+          page_path: location.pathname,
+        });
         form.reset();
         status.dataset.state = 'ok';
         status.textContent = 'Thank you! We’ll be in touch shortly.';
