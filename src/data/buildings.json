@@ -648,7 +648,8 @@
    "https://www.condowpb.com/buildings",
    "https://activerain.com/blogsview/198910/city-place-courtyard-west-palm-beach--fl--33401",
    "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/courtyards-in-cityplace-condo/780-s-sapodilla-avenue-206-west-palm-beach-fl-33401/B26056504-6190250",
-   "https://pbcpao.gov/Property/Details?parcelId=74434321160045150"
+   "https://pbcpao.gov/Property/Details?parcelId=74434321160045150",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343211600%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "aka": [],
   "lat": 26.708427,
@@ -679,7 +680,11 @@
   "aka": [
    "Mr. C Hotel & Residences West Palm Beach"
   ],
-  "address": "320 Lakeview Ave, West Palm Beach, FL 33401",
+  "address": "383 Okeechobee Blvd, West Palm Beach, FL 33401",
+  "altAddresses": [
+   "320 Lakeview Ave",
+   "327 Okeechobee Blvd"
+  ],
   "area": "Downtown",
   "status": "under construction",
   "yearBuilt": 2027,
@@ -700,14 +705,15 @@
   "sources": [
    "https://floridayimby.com/2026/08/construction-progresses-on-27-story-mr-c-hotel-residences-west-palm-beach.html",
    "https://www.hospitalitynet.org/announcement/41010208/terra-unveils-plans-for-mr-c-hotel-residences-in-west-palm-beach.html",
-   "https://www.hauteresidence.com/news/west-palm-beach-new-development-tracker-october-2026/"
+   "https://www.hauteresidence.com/news/west-palm-beach-new-development-tracker-october-2026/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%27383%27+AND+UPPER%28STREET_NAME%29%3D%27OKEECHOBEE%27+AND+ZIP_CODE%3D%2733401%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "lat": 26.706154,
   "lng": -80.052493,
   "bedrooms": "1–4",
   "sqftRange": "830–2,200",
   "rentalPolicy": "Owners on select floors may place units in the hotel rental program",
-  "description": "Mr. C Residences West Palm Beach is a 27-story mixed-use tower under construction at 320 Lakeview Avenue in downtown West Palm Beach, with 146 branded residences above a 110-suite Mr. C hotel. Terra and Sympatico Real Estate are developing it, with architecture by Arquitectonica, interiors by Meyer Davis with Ignazio and Maggio Cipriani, landscaping by Landscape Design Workshop, and KAST Construction as general contractor. It will be the Cipriani-founded Mr. C brand's first property in Palm Beach County. Planned amenities include a garden-level lap pool with cabanas, a fitness center with yoga and Pilates rooms, a spa with steam and sauna, a library and a rooftop pool deck with views of Palm Beach and the Atlantic.",
+  "description": "Mr. C Residences West Palm Beach is a 27-story mixed-use tower under construction at Okeechobee Boulevard and Lakeview Avenue in downtown West Palm Beach, with 146 branded residences above a 110-suite Mr. C hotel. Terra and Sympatico Real Estate are developing it, with architecture by Arquitectonica, interiors by Meyer Davis with Ignazio and Maggio Cipriani, landscaping by Landscape Design Workshop, and KAST Construction as general contractor. It will be the Cipriani-founded Mr. C brand's first property in Palm Beach County. Planned amenities include a garden-level lap pool with cabanas, a fitness center with yoga and Pilates rooms, a spa with steam and sauna, a library and a rooftop pool deck with views of Palm Beach and the Atlantic.",
   "streetView": {
    "pano": "UQ-_kImChTt5TrHBQby8yw",
    "heading": 184
@@ -997,6 +1003,14 @@
   "slug": "flagler-landing",
   "name": "Flagler Landing",
   "address": "3940 N Flagler Dr, West Palm Beach, FL 33407",
+  "altAddresses": [
+   "3900 N Flagler Dr",
+   "3910 N Flagler Dr",
+   "3920 N Flagler Dr",
+   "3930 N Flagler Dr",
+   "3950 N Flagler Dr",
+   "3960 N Flagler Dr"
+  ],
   "area": "Northwood",
   "status": "completed",
   "yearBuilt": 2007,
@@ -1019,7 +1033,8 @@
    "https://www.echofineproperties.com/communities/west-palm-beach-condos/flagler-landing/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Landing/",
    "https://subdivisions.com/west-palm-beach-fl/flagler-landing-condos-for-sale",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343103500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343103500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343103500%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "aka": [],
   "lat": 26.746989,
@@ -1366,6 +1381,9 @@
   "slug": "shorecrest",
   "name": "Shorecrest",
   "address": "1865 N Flagler Dr, West Palm Beach, FL 33407",
+  "altAddresses": [
+   "1901 N Flagler Dr"
+  ],
   "area": "North Flagler",
   "status": "under construction",
   "yearBuilt": 2027,
@@ -1389,7 +1407,8 @@
    "https://resident.com/press-releases/2026/04/11/related-ross-breaks-ground-on-shorecrest-defining-next-era-of-luxury-waterfront-living-in-west-palm-beach",
    "https://www.connectcre.com/stories/related-ross-inks-157m-construction-loan-for-west-palm-beach-condos/",
    "https://www.relatedross.com/press-releases/2026-02-18/related-ross-secures-157-million-construction-loan-shorecrest-west-palm",
-   "https://www.condoblackbook.com/blog/april-2026-fort-lauderdale-and-palm-beach-pre-construction-condo-news"
+   "https://www.condoblackbook.com/blog/april-2026-fort-lauderdale-and-palm-beach-pre-construction-condo-news",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%271865%27+AND+UPPER%28STREET_NAME%29%3D%27FLAGLER%27+AND+ZIP_CODE%3D%2733407%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "aka": [],
   "lat": 26.729471,
@@ -1677,7 +1696,10 @@
    "Forté",
    "Forte on Flagler"
   ],
-  "address": "1309 S Flagler Dr, West Palm Beach, FL 33401",
+  "address": "1333 S Flagler Dr, West Palm Beach, FL 33401",
+  "altAddresses": [
+   "1309 S Flagler Dr"
+  ],
   "area": "South Flagler",
   "status": "completed",
   "yearBuilt": 2025,
@@ -1704,7 +1726,8 @@
    "https://floridayimby.com/?p=10955",
    "https://www.manhattanmiami.com/manhattan/forte-on-flagler",
    "https://floridayimby.com/2024/04/forte-on-flagler-tops-off-at-1309-south-flagler-drive-in-west-palm-beach.html",
-   "https://fortewpb.com/residences"
+   "https://fortewpb.com/residences",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343279200%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "lat": 26.701789,
   "lng": -80.050498,
@@ -1769,7 +1792,10 @@
    "La Clara Residences",
    "La Clara Palm Beach"
   ],
-  "address": "1515 S Flagler Dr, West Palm Beach, FL 33401",
+  "address": "200 Arkona Ct, West Palm Beach, FL 33401",
+  "altAddresses": [
+   "1515 S Flagler Dr"
+  ],
   "area": "South Flagler",
   "status": "completed",
   "yearBuilt": 2023,
@@ -1795,7 +1821,8 @@
    "https://www.greatgulf.com/news/article/small-town-life-meets-big-city-amenities-in-newest-palm-beach-high-rise-invite-the-outdoors-in-or-vice-versa",
    "https://stantec.com/en/news/2023/stantec-designed-la-clara-condominiums-open-west-palm-beach-florida",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/La-Clara/",
-   "https://www.thorntontomasetti.com/project/la-clara"
+   "https://www.thorntontomasetti.com/project/la-clara",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343279100%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "lat": 26.699796,
   "lng": -80.050502,
@@ -1822,6 +1849,9 @@
   "slug": "viking-arms",
   "name": "Viking Arms",
   "address": "1527 S Flagler Dr, West Palm Beach, FL 33401",
+  "altAddresses": [
+   "1601 S Flagler Dr"
+  ],
   "area": "South Flagler",
   "status": "completed",
   "yearBuilt": 1980,
@@ -1840,7 +1870,8 @@
   ],
   "summary": "Viking Arms is a three-story condominium on South Flagler Drive near the Norton Museum of Art, built in 1980.",
   "sources": [
-   "https://compass.com/building/viking-arms-west-palm-beach-fl/757563647626138237"
+   "https://compass.com/building/viking-arms-west-palm-beach-fl/757563647626138237",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343275000%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
   ],
   "aka": [],
   "lat": 26.699704,

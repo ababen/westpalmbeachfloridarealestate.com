@@ -38,6 +38,11 @@ for (const b of buildings) {
 
   for (const f of ['name', 'address', 'area', 'status', 'summary']) if (!b[f]) err(b, `missing ${f}`);
   if (!/West Palm Beach, FL \d{5}$/.test(b.address ?? '')) err(b, 'address must end with "West Palm Beach, FL <ZIP>"');
+  if (b.altAddresses != null) {
+    if (!Array.isArray(b.altAddresses) || !b.altAddresses.every((a) => typeof a === 'string' && /^\d+ \S/.test(a) && !a.includes(',')))
+      err(b, 'altAddresses must be street-only strings like "1309 S Flagler Dr"');
+    else if (b.altAddresses.includes(b.address.split(',')[0])) err(b, 'altAddresses repeats the primary address');
+  }
   if (!AREAS.includes(b.area)) err(b, `area "${b.area}" is not in buildingAreas (src/data/buildings.ts)`);
   if (!STATUSES.includes(b.status)) err(b, `status must be one of: ${STATUSES.join(', ')}`);
   if (!Array.isArray(b.amenities)) err(b, 'amenities must be an array');
