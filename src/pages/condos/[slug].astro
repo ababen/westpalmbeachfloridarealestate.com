@@ -3,6 +3,7 @@ import Base from '../../layouts/Base.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
+import BuildingArt from '../../components/BuildingArt.astro';
 import { buildings, areaNeighborhood, areaSlug, photoCredit, type Building } from '../../data/buildings';
 import { neighborhoods } from '../../data/neighborhoods';
 import { landmarks, milesBetween } from '../../data/landmarks';
@@ -143,7 +144,7 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   ]}
 >
   <section class="page-hero">
-    <div class={b.photo ? 'container hero-grid' : 'container'}>
+    <div class="container hero-grid">
       <div>
       <nav class="crumbs" aria-label="Breadcrumb">
         <a href="/condos">Condos</a> / <a href={`/condos#${areaSlug(b.area)}`}>{b.area}</a> / {b.name}
@@ -159,6 +160,12 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
         {b.waterfront && <li><strong>Waterfront</strong></li>}
       </ul>
       </div>
+      {!b.photo && (
+        <figure class="hero-photo">
+          <BuildingArt b={b} class="hero-art" />
+          <figcaption>Illustration</figcaption>
+        </figure>
+      )}
       {
         b.photo && (
           <figure class="hero-photo">
@@ -457,6 +464,13 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    border-radius: var(--radius);
+    display: block;
+  }
+  .hero-photo :global(.hero-art) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     border-radius: var(--radius);
     display: block;
   }

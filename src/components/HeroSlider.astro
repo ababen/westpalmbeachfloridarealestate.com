@@ -1,20 +1,36 @@
 ---
 import { photoCredit, type Building } from '../data/buildings';
+import { site } from '../config/site';
+import BuildingArt from './BuildingArt.astro';
 
 interface Props {
   items: Building[];
+  /** Use Street View photos when there's no own photo; otherwise show the illustration. */
+  streetView?: boolean;
 }
 
-const { items } = Astro.props;
+const { items, streetView = false } = Astro.props;
 
-// Sky colours per area, so slides differ at a glance.
-const SKIES: Record<string, [string, string]> = {
-  Downtown: ['#16384f', '#e39a78'],
-  'South Flagler': ['#123247', '#7fc3c9'],
-  'North Flagler': ['#1b3d5a', '#f0b48d'],
-  Northwood: ['#183a4e', '#c9a2c8'],
-  'Lands of the President': ['#173a4a', '#9fd0b4'],
-};
+// Real image for each slide: an own/licensed photo first, else the building's Street View image
+// (loaded live from Google, as its terms require, and credited). Given only a location, Google picks
+// the nearest outdoor panorama and points the camera at the building.
+const image = (b: Building) =>
+  b.photo
+    ? { src: b.photo.src, width: b.photo.width, height: b.photo.height, credit: photoCredit(b.photo) }
+    : streetView && site.googleMapsKey
+      ? {
+          src: `https://maps.googleapis.com/maps/api/streetview?${new URLSearchParams({
+            size: '640x480',
+            ...(b.streetView ? { pano: b.streetView.pano, heading: String(b.streetView.heading) } : { location: `${b.lat},${b.lng}`, source: 'outdoor' }),
+            pitch: '20',
+            fov: '80',
+            key: site.googleMapsKey,
+          })}`,
+          width: 640,
+          height: 480,
+          credit: 'Street View © Google',
+        }
+      : null;
 
 const facts = (b: Building) =>
   [
@@ -25,19 +41,12 @@ const facts = (b: Building) =>
     .filter(Boolean)
     .join(' · ');
 
-// Tower height follows the floor count; small neighbours fill out the skyline.
-const art = (b: Building) => {
-  const h = Math.min(300, 90 + (b.floors ?? 12) * 7);
-  const [top, bottom] = SKIES[b.area] ?? SKIES.Downtown;
-  return { h, top, bottom };
-};
 ---
 
 <div class="slider" role="region" aria-roledescription="carousel" aria-label="Featured condo buildings" data-slider>
   <div class="slides">
     {
       items.map((b, i) => {
-        const a = art(b);
         return (
           <div
             class="slide"
@@ -48,50 +57,26 @@ const art = (b: Building) => {
             data-active={i === 0 ? '' : undefined}
           >
             <a class="slide__link" href={`/condos/${b.slug}`} tabindex={i === 0 ? undefined : -1}>
-            {b.photo && (
+            <span class="media">
+            {image(b) && (
               <img
-                src={b.photo.src}
-                width={b.photo.width}
-                height={b.photo.height}
+                src={image(b)!.src}
+                width={image(b)!.width}
+                height={image(b)!.height}
                 alt=""
                 decoding="async"
                 loading={i === 0 ? 'eager' : 'lazy'}
                 fetchpriority={i === 0 ? 'high' : undefined}
               />
             )}
-            <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-              <defs>
-                <linearGradient id={`sky-${b.slug}`} x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0" stop-color={a.top} />
-                  <stop offset="1" stop-color={a.bottom} />
-                </linearGradient>
-              </defs>
-              <rect width="400" height="400" fill={`url(#sky-${b.slug})`} />
-              <circle cx="310" cy="90" r="34" fill="rgb(255 255 255 / 0.35)" />
-              <rect x="70" y={340 - a.h * 0.42} width="48" height={a.h * 0.42} rx="3" fill="rgb(15 42 61 / 0.35)" />
-              <rect x="150" y={340 - a.h} width="96" height={a.h} rx="4" fill="rgb(15 42 61 / 0.7)" />
-              <rect x="254" y={340 - a.h * 0.58} width="58" height={a.h * 0.58} rx="3" fill="rgb(15 42 61 / 0.45)" />
-              <g fill="rgb(255 240 220 / 0.45)">
-                {Array.from({ length: Math.floor((a.h - 30) / 26) }, (_, r) => (
-                  <>
-                    <rect x="166" y={340 - a.h + 18 + r * 26} width="14" height="8" />
-                    <rect x="191" y={340 - a.h + 18 + r * 26} width="14" height="8" />
-                    <rect x="216" y={340 - a.h + 18 + r * 26} width="14" height="8" />
-                  </>
-                ))}
-              </g>
-              {b.waterfront ? (
-                <path d="M0 330c70-12 130-12 200 0s130 12 200 0v70H0z" fill="#0f6f8f" />
-              ) : (
-                <rect y="338" width="400" height="62" fill="#1d3b4c" />
-              )}
-            </svg>
+            <BuildingArt b={b} class="art" />
+            </span>
             <span class="caption">
               <span class="caption__area">{b.area}{b.status !== 'completed' && ` · ${b.status}`}</span>
               <span class="caption__name">{b.name}</span>
               {facts(b) && <span class="caption__facts">{facts(b)}</span>}
               <span class="caption__cta">View building →</span>
-              {b.photo && <span class="caption__credit">{photoCredit(b.photo)}</span>}
+              {image(b) && <span class="caption__credit">{image(b)!.credit}</span>}
             </span>
             </a>
           </div>
@@ -169,13 +154,12 @@ const art = (b: Building) => {
     box-shadow: 0 24px 60px -20px rgb(0 0 0 / 0.5);
     background: var(--ink);
   }
+  /* All slides share one grid cell, so the slider is as tall as its tallest slide. */
   .slides {
-    position: relative;
-    aspect-ratio: 1 / 1;
+    display: grid;
   }
   .slide {
-    position: absolute;
-    inset: 0;
+    grid-area: 1 / 1;
     opacity: 0;
     visibility: hidden;
     transition:
@@ -192,6 +176,11 @@ const art = (b: Building) => {
     color: var(--white);
     text-decoration: none;
   }
+  .media {
+    position: relative;
+    display: block;
+    aspect-ratio: 4 / 3;
+  }
   .slide img {
     position: absolute;
     inset: 0;
@@ -203,24 +192,23 @@ const art = (b: Building) => {
     font-size: 0.7rem;
     color: rgb(255 255 255 / 0.75);
   }
-  .slide img + svg {
+  .slide img + :global(.art) {
     display: none;
   }
-  .slide svg {
+  .slide :global(.art) {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     display: block;
   }
   /* Solid panel (not a fade over artwork) keeps the text at full contrast. */
+  /* Caption sits below the image (not over it), so text stays crisp and Google's logo stays visible. */
   .caption {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: grid;
     gap: 0.2rem;
-    padding: 1rem 1.25rem 3.4rem;
-    background: rgb(11 31 45 / 0.92);
+    padding: 0.9rem 1.1rem 3.3rem;
+    background: var(--ink);
   }
   .caption__area {
     font-size: 0.75rem;
@@ -237,6 +225,7 @@ const art = (b: Building) => {
     color: rgb(255 255 255 / 0.9);
   }
   .caption__cta {
+    display: none;
     margin-top: 0.3rem;
     font-weight: 600;
     font-size: 0.95rem;
@@ -292,11 +281,6 @@ const art = (b: Building) => {
     background: var(--white);
     width: 22px;
     border-radius: 5px;
-  }
-  @media (max-width: 960px) {
-    .slides {
-      aspect-ratio: 1 / 1;
-    }
   }
   @media (prefers-reduced-motion: reduce) {
     .slide {

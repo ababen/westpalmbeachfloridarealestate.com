@@ -1,14 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import HeroArt from '../components/HeroArt.astro';
 import HeroSlider from '../components/HeroSlider.astro';
 import { buildings } from '../data/buildings';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { neighborhoods } from '../data/neighborhoods';
 
-// Hero slider: a mix of established and new waterfront towers.
-const featured = ['bristol', 'ritz-carlton-residences-west-palm-beach', 'la-clara', 'olara', 'plaza-of-the-palm-beaches', 'forte-on-flagler', 'shorecrest', 'placido-mar']
+// Hero slider: a mix of building styles (curved glass, white slabs, twin towers, Mediterranean).
+const featured = ['bristol', 'trianon', 'placido-mar', 'olara', 'two-city-plaza', 'la-clara', 'plaza-of-the-palm-beaches', 'ritz-carlton-residences-west-palm-beach']
   .map((slug) => buildings.find((b) => b.slug === slug))
   .filter((b) => b !== undefined);
 
@@ -41,15 +40,11 @@ const reasons = [
 
 <Base>
   <section class="hero">
-    <HeroArt />
     <div class="container hero__inner">
       <div class="hero__text">
       <span class="eyebrow">West Palm Beach, Florida</span>
       <h1>Find your place in the Palm Beaches.</h1>
-      <p class="hero__lede">
-        Local expertise for buying and selling homes in West Palm Beach — from historic El Cid and Flamingo Park to
-        downtown waterfront condos.
-      </p>
+      <p class="hero__lede">Waterfront condos, historic neighborhoods and local know-how.</p>
 
       </div>
       {featured.length > 0 && <HeroSlider items={featured} />}
@@ -174,11 +169,10 @@ const reasons = [
     display: flex;
     align-items: center;
   }
-  .hero::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgb(15 42 61 / 0.75) 0%, rgb(15 42 61 / 0.15) 70%);
+  .hero {
+    background:
+      radial-gradient(1200px 500px at 85% 110%, rgb(15 111 143 / 0.55), transparent 60%),
+      linear-gradient(160deg, #0f2a3d 0%, #123a52 100%);
   }
   .hero__inner {
     position: relative;
