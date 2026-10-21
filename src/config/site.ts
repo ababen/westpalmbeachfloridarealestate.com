@@ -41,6 +41,7 @@ export const nav = [
   { href: '/listings', label: 'Search Homes' },
   { href: '/buy', label: 'Buy' },
   { href: '/sell', label: 'Sell' },
+  { href: '/condos', label: 'Condos' },
   { href: '/neighborhoods', label: 'Neighborhoods' },
   { href: '/about', label: 'About' },
 ];

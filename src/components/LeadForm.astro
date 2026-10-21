@@ -1,21 +1,24 @@
 ---
 import { neighborhoods } from '../data/neighborhoods';
 
-type Kind = 'contact' | 'buy' | 'sell' | 'search';
+type Kind = 'contact' | 'buy' | 'sell' | 'search' | 'building';
 
 interface Props {
   kind?: Kind;
   submitLabel?: string;
   /** Neighborhood name to preselect in the area dropdown. */
   area?: string;
+  /** Condo building the inquiry is about (kind="building"). */
+  building?: string;
 }
 
-const { kind = 'contact', submitLabel = 'Send Message', area } = Astro.props;
+const { kind = 'contact', submitLabel = 'Send Message', area, building } = Astro.props;
 const id = `lead-${kind}`;
 ---
 
 <form class="lead-form" method="post" action="/api/lead" data-lead-form>
   <input type="hidden" name="kind" value={kind} />
+  {building && <input type="hidden" name="building" value={building} />}
   <!-- Honeypot: hidden from people, filled in by bots. -->
   <div class="hp" aria-hidden="true">
     <label>Leave this empty <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
@@ -70,6 +73,20 @@ const id = `lead-${kind}`;
           </select>
         </label>
       </div>
+    )
+  }
+
+  {
+    kind === 'building' && (
+      <label for={`${id}-interest`}>
+        I’m interested in
+        <select id={`${id}-interest`} name="interest">
+          <option>Buying in this building</option>
+          <option>Selling my unit here</option>
+          <option>Renting in this building</option>
+          <option>Just researching</option>
+        </select>
+      </label>
     )
   }
 

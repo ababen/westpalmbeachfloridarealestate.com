@@ -5,12 +5,13 @@
 //   LEAD_TO_EMAIL    – where leads are delivered (comma-separated for several)
 //   LEAD_FROM_EMAIL  – verified sender, e.g. "Website <leads@westpalmbeachfloridarealestate.com>"
 
-const FIELDS = ['name', 'email', 'phone', 'address', 'area', 'budget', 'timeline', 'message'];
+const FIELDS = ['name', 'email', 'phone', 'building', 'interest', 'address', 'area', 'budget', 'timeline', 'message'];
 const SUBJECTS = {
   contact: 'New contact message',
   buy: 'New buyer inquiry',
   sell: 'New home valuation request',
   search: 'New listing alert request',
+  building: 'New condo building inquiry',
 };
 
 const escape = (s) =>
@@ -48,7 +49,7 @@ export async function onRequestPost({ request, env }) {
       from: env.LEAD_FROM_EMAIL,
       to: env.LEAD_TO_EMAIL.split(',').map((s) => s.trim()),
       reply_to: data.email,
-      subject: `${SUBJECTS[kind]}: ${data.name}`,
+      subject: `${SUBJECTS[kind]}${data.building ? ` (${data.building})` : ''}: ${data.name}`,
       html: `<h2>${SUBJECTS[kind]}</h2><table>${rows}</table>`,
     }),
   });

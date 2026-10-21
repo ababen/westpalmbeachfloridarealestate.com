@@ -4,6 +4,8 @@ import LeadForm from '../../components/LeadForm.astro';
 import NeighborhoodCard from '../../components/NeighborhoodCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { neighborhoods, type Neighborhood } from '../../data/neighborhoods';
+import BuildingCard from '../../components/BuildingCard.astro';
+import { buildings, areaNeighborhood } from '../../data/buildings';
 
 export function getStaticPaths() {
   return neighborhoods.map((n) => ({ params: { slug: n.slug }, props: { n } }));
@@ -11,6 +13,7 @@ export function getStaticPaths() {
 
 const { n } = Astro.props as { n: Neighborhood };
 const others = neighborhoods.filter((o) => o.slug !== n.slug).slice(0, 3);
+const condos = buildings.filter((b) => areaNeighborhood[b.area] === n.slug);
 const [from, to] = n.palette;
 ---
 
@@ -59,7 +62,22 @@ const [from, to] = n.palette;
     </div>
   </section>
 
-  <section class="section section--white">
+  {
+    condos.length > 0 && (
+      <section class="section section--white">
+        <div class="container">
+          <h2>Condo buildings in {n.name}</h2>
+          <div class="grid grid--3">
+            {condos.map((b) => (
+              <BuildingCard b={b} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <section class:list={['section', { 'section--white': condos.length === 0 }]}>
     <div class="container">
       <h2>Explore nearby neighborhoods</h2>
       <div class="grid grid--3">{others.map((o) => <NeighborhoodCard n={o} />)}</div>
@@ -110,7 +128,7 @@ const [from, to] = n.palette;
     position: sticky;
     top: 100px;
   }
-  .section--white h2 {
+  .section h2 {
     margin-bottom: 1.5rem;
   }
 </style>
