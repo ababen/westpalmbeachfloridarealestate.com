@@ -1,0 +1,85 @@
+---
+import Base from '../../layouts/Base.astro';
+import BuildingCard from '../../components/BuildingCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { buildings, buildingAreas, areaSlug } from '../../data/buildings';
+---
+
+<Base
+  title="West Palm Beach Condo Buildings Guide"
+  description={`Explore ${buildings.length} condo buildings in West Palm Beach — downtown high-rises, Flagler Drive waterfront towers, and new construction — with building facts and amenities.`}
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Condo Buildings</span>
+      <h1>West Palm Beach condo guide</h1>
+      <p class="lede">
+        Building-by-building facts on {buildings.length} condominiums, from waterfront towers on Flagler Drive to
+        new construction downtown. Ask about any building to get current listings and recent sales.
+      </p>
+      <nav class="jump" aria-label="Areas">
+        {buildingAreas.map((area) => <a href={`#${areaSlug(area)}`}>{area}</a>)}
+      </nav>
+    </div>
+  </section>
+
+  {
+    buildingAreas.map((area, i) => (
+      <section id={areaSlug(area)} class:list={['section', { 'section--white': i % 2 === 1 }]}>
+        <div class="container">
+          <h2>{area}</h2>
+          <div class="grid grid--3">
+            {buildings
+              .filter((b) => b.area === area)
+              .map((b) => (
+                <BuildingCard b={b} />
+              ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <section class="section">
+    <div class="container">
+      <p class="note">
+        Building details are compiled from public sources and may change. Verify all information independently.
+        Listing availability and pricing are not shown here — ask for current units for sale in any building.
+      </p>
+    </div>
+  </section>
+
+  <CtaBand heading="Looking for a specific building?" text="Tell me which building you’re interested in and I’ll send current listings and recent sale prices." />
+</Base>
+
+<style>
+  .jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .jump a {
+    color: var(--sand);
+    border: 1px solid rgb(247 241 232 / 0.4);
+    border-radius: 999px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+  .jump a:hover {
+    background: rgb(247 241 232 / 0.12);
+  }
+  section[id] {
+    scroll-margin-top: 80px;
+  }
+  .section h2 {
+    margin-bottom: 1.5rem;
+  }
+  .note {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    max-width: 46rem;
+    margin: 0;
+  }
+</style>

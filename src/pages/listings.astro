@@ -16,40 +16,54 @@ import { site } from '../config/site';
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      {
-        site.idxEmbedUrl ? (
-          <iframe class="idx" src={site.idxEmbedUrl} title="Property search" loading="lazy" />
-        ) : (
-          <div class="grid grid--2">
-            <div>
-              <h2>Tell us what you’re looking for.</h2>
-              <p class="lede">
-                Share your wish list and we’ll send matching listings — including homes that are coming soon and
-                haven’t hit the major portals yet.
-              </p>
-              <ul class="check-list">
-                <li>Personalized listing alerts the moment homes hit the market</li>
-                <li>Off-market and coming-soon opportunities</li>
-                <li>Recent sale prices so you know what’s a fair offer</li>
-                <li>Flood zone, insurance, and HOA details up front</li>
-              </ul>
-            </div>
-            <div class="card">
-              <LeadForm kind="search" submitLabel="Send Me Listings" />
-            </div>
-          </div>
-        )
-      }
+  {
+    site.idxEmbedUrl && (
+      <section class="section section--search">
+        <div class="container">
+          <p class="idx-tip">
+            <strong>Tip:</strong> type <em>West Palm Beach</em>, a neighborhood, or an address into the Location box,
+            then press <em>View Results</em>.
+          </p>
+          <iframe class="idx" src={site.idxEmbedUrl} title="West Palm Beach MLS property search" />
+        </div>
+      </section>
+    )
+  }
+
+  <section class:list={['section', { 'section--white': site.idxEmbedUrl }]}>
+    <div class="container grid grid--2">
+      <div>
+        <h2>{site.idxEmbedUrl ? 'Want listings sent to you?' : 'Tell us what you’re looking for.'}</h2>
+        <p class="lede">
+          Share your wish list and we’ll send matching listings — including homes that are coming soon and haven’t
+          hit the major portals yet.
+        </p>
+        <ul class="check-list">
+          <li>Personalized listing alerts the moment homes hit the market</li>
+          <li>Off-market and coming-soon opportunities</li>
+          <li>Recent sale prices so you know what’s a fair offer</li>
+          <li>Flood zone, insurance, and HOA details up front</li>
+        </ul>
+      </div>
+      <div class="card">
+        <LeadForm kind="search" submitLabel="Send Me Listings" />
+      </div>
     </div>
   </section>
 </Base>
 
 <style>
+  .section--search {
+    padding-block: 32px;
+  }
+  .idx-tip {
+    margin: 0 0 0.9rem;
+    color: var(--ink-soft);
+  }
   .idx {
+    display: block;
     width: 100%;
-    min-height: 80vh;
+    height: max(85vh, 720px);
     border: 0;
     border-radius: var(--radius);
     background: var(--white);

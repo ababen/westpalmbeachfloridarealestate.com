@@ -1,0 +1,98 @@
+---
+import type { Building } from '../data/buildings';
+
+interface Props {
+  b: Building;
+}
+
+const { b } = Astro.props;
+// Tower height in the artwork loosely follows the floor count.
+const towerHeight = Math.min(150, 40 + (b.floors ?? 10) * 3);
+const facts = [
+  b.floors && `${b.floors} floors`,
+  b.units && `${b.units} residences`,
+  b.yearBuilt && (b.status === 'completed' ? `Built ${b.yearBuilt}` : `Est. ${b.yearBuilt}`),
+].filter(Boolean);
+---
+
+<a class="bcard" href={`/condos/${b.slug}`}>
+  <div class="bcard__art" aria-hidden="true">
+    <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMax slice">
+      <circle cx="320" cy="50" r="26" fill="rgb(255 255 255 / 0.3)"></circle>
+      <rect x="150" y={170 - towerHeight} width="70" height={towerHeight} rx="3" fill="rgb(15 42 61 / 0.55)"></rect>
+      <rect x="226" y={170 - towerHeight * 0.6} width="44" height={towerHeight * 0.6} rx="3" fill="rgb(15 42 61 / 0.35)"></rect>
+      <rect x="104" y={170 - towerHeight * 0.45} width="40" height={towerHeight * 0.45} rx="3" fill="rgb(15 42 61 / 0.3)"></rect>
+      {b.waterfront && <path d="M0 160c60-10 110-10 200 0s140 10 200 0v20H0z" fill="rgb(255 255 255 / 0.35)" />}
+    </svg>
+    {b.status !== 'completed' && <span class="bcard__badge">{b.status}</span>}
+  </div>
+  <div class="bcard__body">
+    <h3>{b.name}</h3>
+    <p class="bcard__addr">{b.address.replace(/,?\s*West Palm Beach.*$/i, '')}</p>
+    {facts.length > 0 && <p class="bcard__facts">{facts.join(' · ')}</p>}
+  </div>
+</a>
+
+<style>
+  .bcard {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--ink);
+    transition:
+      transform 0.25s,
+      box-shadow 0.25s;
+  }
+  .bcard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+  }
+  .bcard__art {
+    position: relative;
+    aspect-ratio: 20 / 9;
+    background: linear-gradient(135deg, #2b5a73, #7fd1d6);
+  }
+  .bcard__art svg {
+    width: 100%;
+    height: 100%;
+  }
+  .bcard__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--coral);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+  }
+  .bcard__body {
+    padding: 1.2rem 1.4rem 1.4rem;
+  }
+  .bcard__body h3 {
+    margin-bottom: 0.25rem;
+  }
+  .bcard__addr {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+  .bcard__facts {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--sea);
+    margin: 0.6rem 0 0;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bcard {
+      transition: none;
+    }
+  }
+</style>

@@ -1,0 +1,211 @@
+---
+import Base from '../../layouts/Base.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import BuildingCard from '../../components/BuildingCard.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { buildings, areaNeighborhood, areaSlug, type Building } from '../../data/buildings';
+import { neighborhoods } from '../../data/neighborhoods';
+
+export function getStaticPaths() {
+  return buildings.map((b) => ({ params: { slug: b.slug }, props: { b } }));
+}
+
+const { b } = Astro.props as { b: Building };
+const nearby = buildings.filter((o) => o.area === b.area && o.slug !== b.slug).slice(0, 3);
+const hood = neighborhoods.find((n) => n.slug === areaNeighborhood[b.area]);
+const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${b.name}, ${b.address}`)}`;
+
+const facts: [string, string][] = [
+  ['Address', b.address],
+  ['Area', b.area],
+  ['Status', b.status[0].toUpperCase() + b.status.slice(1)],
+  b.yearBuilt ? [b.status === 'completed' ? 'Year built' : 'Expected completion', String(b.yearBuilt)] : null,
+  b.floors ? ['Floors', String(b.floors)] : null,
+  b.units ? ['Residences', String(b.units)] : null,
+  b.developer ? ['Developer', b.developer] : null,
+  b.architect ? ['Architect', b.architect] : null,
+  b.waterfront ? ['Waterfront', 'Yes — on the Intracoastal'] : null,
+].filter((f): f is [string, string] => f !== null);
+
+const descParts = [
+  b.floors && `${b.floors}-story`,
+  b.status === 'completed' ? 'condominium' : `${b.status} condominium`,
+  `at ${b.address}`,
+];
+const description = `${b.name}: ${descParts.filter(Boolean).join(' ')}. Building facts, amenities, and current units for sale.`;
+---
+
+<Base
+  title={`${b.name} Condos for Sale | ${b.address.split(',')[0]}`}
+  description={description}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ApartmentComplex',
+      name: b.name,
+      ...(b.aka?.length && { alternateName: b.aka }),
+      address: { '@type': 'PostalAddress', streetAddress: b.address, addressLocality: 'West Palm Beach', addressRegion: 'FL' },
+      ...(b.units && { numberOfAccommodationUnits: b.units }),
+      ...(b.amenities.length && {
+        amenityFeature: b.amenities.map((a) => ({ '@type': 'LocationFeatureSpecification', name: a, value: true })),
+      }),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Condos', item: `${Astro.site}condos` },
+        { '@type': 'ListItem', position: 2, name: b.name },
+      ],
+    },
+  ]}
+>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="/condos">Condos</a> / <a href={`/condos#${areaSlug(b.area)}`}>{b.area}</a> / {b.name}
+      </nav>
+      <h1>{b.name}</h1>
+      <p class="lede">{b.address}</p>
+      {b.aka?.length ? <p class="aka">Also known as {b.aka.join(', ')}</p> : null}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid--2">
+      <article>
+        <p class="lede">{b.summary}</p>
+
+        <h2 class="sub">Building facts</h2>
+        <dl class="facts">
+          {
+            facts.map(([k, v]) => (
+              <div>
+                <dt>{k}</dt>
+                <dd>{v}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <p><a href={mapUrl} rel="noopener" target="_blank">View on Google Maps →</a></p>
+
+        {
+          b.amenities.length > 0 && (
+            <>
+              <h2 class="sub">Amenities</h2>
+              <ul class="check-list amenities">
+                {b.amenities.map((a) => (
+                  <li>{a[0].toUpperCase() + a.slice(1)}</li>
+                ))}
+              </ul>
+            </>
+          )
+        }
+
+        {
+          hood && (
+            <p class="hood">
+              <strong>Neighborhood:</strong> {b.name} is in <a href={`/neighborhoods/${hood.slug}`}>{hood.name}</a>.{' '}
+              {hood.summary}
+            </p>
+          )
+        }
+
+        <p class="note">
+          Building details are compiled from public sources and may change. Verify all information independently.
+        </p>
+      </article>
+
+      <aside class="card sticky">
+        <h3>Units at {b.name}</h3>
+        <p>Get current listings, recent sale prices, and building insights for {b.name}.</p>
+        <LeadForm kind="building" building={b.name} submitLabel="Send Me Details" />
+      </aside>
+    </div>
+  </section>
+
+  {
+    nearby.length > 0 && (
+      <section class="section section--white">
+        <div class="container">
+          <h2>More condos in {b.area}</h2>
+          <div class="grid grid--3">
+            {nearby.map((o) => (
+              <BuildingCard b={o} />
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  <CtaBand heading={`Buying or selling at ${b.name}?`} />
+</Base>
+
+<style>
+  .crumbs {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: rgb(247 241 232 / 0.75);
+  }
+  .crumbs a {
+    color: inherit;
+  }
+  .aka {
+    color: rgb(247 241 232 / 0.7);
+    margin: 0;
+  }
+  .sub {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 1rem;
+  }
+  .facts div {
+    background: var(--white);
+    padding: 0.8rem 1rem;
+  }
+  .facts dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+  .facts dd {
+    margin: 0.2rem 0 0;
+    font-weight: 500;
+  }
+  .amenities {
+    columns: 2 220px;
+  }
+  .amenities li {
+    break-inside: avoid;
+  }
+  .hood {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--sand-deep);
+    border-radius: 10px;
+  }
+  .note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 2rem;
+  }
+  .sticky {
+    position: sticky;
+    top: 100px;
+  }
+  .section--white h2 {
+    margin-bottom: 1.5rem;
+  }
+</style>

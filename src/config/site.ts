@@ -27,7 +27,9 @@ export const site = {
   email: 'hello@westpalmbeachfloridarealestate.com',
   // Paste your IDX/MLS search embed URL (e.g. from iHomefinder, IDX Broker, Showcase IDX).
   // While empty, the listings page shows a "tell us what you're looking for" form instead.
-  idxEmbedUrl: '',
+  idxEmbedUrl: 'https://link.flexmls.com/1z80v7evrh7o,15',
+  // Google Analytics 4 measurement ID.
+  gaId: 'G-LHGSP4Y2FY',
   social: {
     instagram: '',
     facebook: '',
@@ -39,6 +41,7 @@ export const nav = [
   { href: '/listings', label: 'Search Homes' },
   { href: '/buy', label: 'Buy' },
   { href: '/sell', label: 'Sell' },
+  { href: '/condos', label: 'Condos' },
   { href: '/neighborhoods', label: 'Neighborhoods' },
   { href: '/about', label: 'About' },
 ];
