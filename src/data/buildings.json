@@ -50,7 +50,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "esplanade-grande",
@@ -99,6 +100,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "krJRUaFNDE6GTLMmWgodog",
+   "heading": 281
   }
  },
  {
@@ -140,6 +145,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "Gc9YzZu-gsEHwNt8FW3NUQ",
+   "heading": 306
   }
  },
  {
@@ -189,6 +198,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "e7rBWxyMGFyLIyE-6AJexA",
+   "heading": 36
   }
  },
  {
@@ -238,6 +251,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "ENX74XtcQFZUbywYbkftEg",
+   "heading": 283
   }
  },
  {
@@ -290,7 +307,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "prado",
@@ -337,7 +355,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "metropolitan",
@@ -385,6 +404,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "vKl1nv3jb1WsiuaaN0kYYA",
+   "heading": 270
   }
  },
  {
@@ -434,6 +457,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "Lhqk1pPDd-Yuc-WezERIWQ",
+   "heading": 241
   }
  },
  {
@@ -485,6 +512,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "LhN_nXsFx7yjQ0UNriCZug",
+   "heading": 290
   }
  },
  {
@@ -534,6 +565,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "bv_EEFYan3xiZGKk5PSwTA",
+   "heading": 3
   }
  },
  {
@@ -581,6 +616,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "V40iZIGTit3_gE4_eOll_Q",
+   "heading": 20
   }
  },
  {
@@ -628,6 +667,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "p0cXqYBvlUP2mx0orynFqA",
+   "heading": 69
   }
  },
  {
@@ -664,7 +707,11 @@
   "bedrooms": "1–4",
   "sqftRange": "830–2,200",
   "rentalPolicy": "Owners on select floors may place units in the hotel rental program",
-  "description": "Mr. C Residences West Palm Beach is a 27-story mixed-use tower under construction at 320 Lakeview Avenue in downtown West Palm Beach, with 146 branded residences above a 110-suite Mr. C hotel. Terra and Sympatico Real Estate are developing it, with architecture by Arquitectonica, interiors by Meyer Davis with Ignazio and Maggio Cipriani, landscaping by Landscape Design Workshop, and KAST Construction as general contractor. It will be the Cipriani-founded Mr. C brand's first property in Palm Beach County. Planned amenities include a garden-level lap pool with cabanas, a fitness center with yoga and Pilates rooms, a spa with steam and sauna, a library and a rooftop pool deck with views of Palm Beach and the Atlantic."
+  "description": "Mr. C Residences West Palm Beach is a 27-story mixed-use tower under construction at 320 Lakeview Avenue in downtown West Palm Beach, with 146 branded residences above a 110-suite Mr. C hotel. Terra and Sympatico Real Estate are developing it, with architecture by Arquitectonica, interiors by Meyer Davis with Ignazio and Maggio Cipriani, landscaping by Landscape Design Workshop, and KAST Construction as general contractor. It will be the Cipriani-founded Mr. C brand's first property in Palm Beach County. Planned amenities include a garden-level lap pool with cabanas, a fitness center with yoga and Pilates rooms, a spa with steam and sauna, a library and a rooftop pool deck with views of Palm Beach and the Atlantic.",
+  "streetView": {
+   "pano": "UQ-_kImChTt5TrHBQby8yw",
+   "heading": 184
+  }
  },
  {
   "slug": "banyan-tree-residences-west-palm-beach",
@@ -699,7 +746,11 @@
   "lng": -80.053797,
   "bedrooms": "1–4",
   "parking": "Four-level garage in the podium with valet",
-  "description": "Banyan Tree Residences West Palm Beach is a planned condominium tower with 88 residences and penthouses at 400 Hibiscus Street, on the southeast corner of Hibiscus Street and S Dixie Highway, one block east of Rosemary Square (formerly CityPlace) and several blocks west of the Intracoastal Waterway. Designed by OMA as two interlocking residential volumes above a multi-level podium, it has interiors by Yabu Pushelberg and landscape architecture by Enea. It is the first U.S. residential project under Banyan Group's flagship Banyan Tree brand and replaces the low-rise former home of the Arthritis Foundation. Plans include a full-floor wellness and spa level, a resort-style pool with cabanas, an open-air cinema and about 11,000 square feet of ground-floor commercial space."
+  "description": "Banyan Tree Residences West Palm Beach is a planned condominium tower with 88 residences and penthouses at 400 Hibiscus Street, on the southeast corner of Hibiscus Street and S Dixie Highway, one block east of Rosemary Square (formerly CityPlace) and several blocks west of the Intracoastal Waterway. Designed by OMA as two interlocking residential volumes above a multi-level podium, it has interiors by Yabu Pushelberg and landscape architecture by Enea. It is the first U.S. residential project under Banyan Group's flagship Banyan Tree brand and replaces the low-rise former home of the Arthritis Foundation. Plans include a full-floor wellness and spa level, a resort-style pool with cabanas, an open-air cinema and about 11,000 square feet of ground-floor commercial space.",
+  "streetView": {
+   "pano": "AbeSGk_qZJwLj_KgrJ0Fhw",
+   "heading": 204
+  }
  },
  {
   "slug": "residences-at-464-fern-street",
@@ -731,7 +782,8 @@
   "lng": -80.054505,
   "bedrooms": "2–4",
   "parking": "Multi-level podium garage (486 spaces, some in mechanical parking systems)",
-  "description": "The Residences at 464 Fern Street is a proposed 25-story, roughly 316-foot tower by Related Ross on a 2.64-acre site in downtown West Palm Beach near S Dixie Highway. Designed by Roger Ferris + Partners, the plan calls for 194 residences in two- to four-bedroom layouts and about 4,343 square feet of ground-floor commercial space. Amenities would be concentrated on the fifth floor, including a pool, outdoor bar, fitness center and game room, with a landscaped ground-level garden plaza with public art facing S Dixie Highway."
+  "description": "The Residences at 464 Fern Street is a proposed 25-story, roughly 316-foot tower by Related Ross on a 2.64-acre site in downtown West Palm Beach near S Dixie Highway. Designed by Roger Ferris + Partners, the plan calls for 194 residences in two- to four-bedroom layouts and about 4,343 square feet of ground-floor commercial space. Amenities would be concentrated on the fifth floor, including a pool, outdoor bar, fitness center and game room, with a landscaped ground-level garden plaza with public art facing S Dixie Highway.",
+  "streetView": null
  },
  {
   "slug": "waterview-towers",
@@ -780,6 +832,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "40RTQboGchUZz6Y5lXlBKA",
+   "heading": 88
   }
  },
  {
@@ -830,6 +886,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "YKFi_oEhdMwBHtP_U5Nwbg",
+   "heading": 244
   }
  },
  {
@@ -876,6 +936,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "Y0eATAJIgrMiLoYE_XhCfw",
+   "heading": 276
   }
  },
  {
@@ -923,6 +987,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "Z66JS9E2xgAXlh9MbtRl0Q",
+   "heading": 104
   }
  },
  {
@@ -969,6 +1037,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "WqDMvwBjRzz1uJ3hLFnCHg",
+   "heading": 113
   }
  },
  {
@@ -1015,6 +1087,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "l1J_8QX0Hw769Zonq6EgJQ",
+   "heading": 98
   }
  },
  {
@@ -1065,6 +1141,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "nQvVorBD5g0yJTO3ThTlBw",
+   "heading": 90
   }
  },
  {
@@ -1102,7 +1182,8 @@
   "lat": 26.753672,
   "lng": -80.052574,
   "bedrooms": "2–4",
-  "description": "Alba Palm Beach is a 22-story, 55-residence waterfront condominium at 4714 N Flagler Drive in Northwood, on the Intracoastal Waterway. Florida YIMBY described it as the first newly completed waterfront residential tower on this stretch of North Flagler. BGI Companies and Blue Road developed it, Spina O'Rourke + Partners designed both the building and the interiors, and Moss Construction built it. The residences include condominiums, townhomes and a six-unit penthouse collection on floors 19–21 with 11-foot ceilings. There is more than 25,000 sq ft of amenity space, including sunrise and sunset pools, a Technogym fitness center, a private dining room with wine storage and private day docks on the Intracoastal."
+  "description": "Alba Palm Beach is a 22-story, 55-residence waterfront condominium at 4714 N Flagler Drive in Northwood, on the Intracoastal Waterway. Florida YIMBY described it as the first newly completed waterfront residential tower on this stretch of North Flagler. BGI Companies and Blue Road developed it, Spina O'Rourke + Partners designed both the building and the interiors, and Moss Construction built it. The residences include condominiums, townhomes and a six-unit penthouse collection on floors 19–21 with 11-foot ceilings. There is more than 25,000 sq ft of amenity space, including sunrise and sunset pools, a Technogym fitness center, a private dining room with wine storage and private day docks on the Intracoastal.",
+  "streetView": null
  },
  {
   "slug": "alba-reserve",
@@ -1132,7 +1213,8 @@
   "lng": -80.05257,
   "sqftRange": "1,440–3,505",
   "parking": "226 spaces planned (original proposal)",
-  "description": "Alba Reserve is a proposed condominium tower at 4720 N Flagler Drive (site spanning roughly 4700–4806 N Flagler) in the Northwood Harbor area, next to the completed Alba Palm Beach. The developer is 4700 N. Flagler LLC, a partnership of BGI Cos. and Blue Road Group. The design is by Carlos Ott with Spina O'Rourke + Partners. The original 2025 filing called for townhomes, penthouses and three-bedroom condominiums of 1,440 to 3,505 sq ft, with an eighth-floor amenity deck holding two pools and guest suites. The project needs a rezoning and waivers, and in May 2026 the city planning board voted 6–1 to recommend denial."
+  "description": "Alba Reserve is a proposed condominium tower at 4720 N Flagler Drive (site spanning roughly 4700–4806 N Flagler) in the Northwood Harbor area, next to the completed Alba Palm Beach. The developer is 4700 N. Flagler LLC, a partnership of BGI Cos. and Blue Road Group. The design is by Carlos Ott with Spina O'Rourke + Partners. The original 2025 filing called for townhomes, penthouses and three-bedroom condominiums of 1,440 to 3,505 sq ft, with an eighth-floor amenity deck holding two pools and guest suites. The project needs a rezoning and waivers, and in May 2026 the city planning board voted 6–1 to recommend denial.",
+  "streetView": null
  },
  {
   "slug": "apogee",
@@ -1160,7 +1242,8 @@
   ],
   "lat": 26.755212,
   "lng": -80.052486,
-  "description": "Apogee is a planned condominium tower from Miami-based Related Group on a waterfront parcel of about 1.5 acres at 4906 N Flagler Drive, north of Currie Park and near the Northwood Harbor Historic District. The first proposal was a 25-story, 46-unit tower, and the planning board recommended rejecting it in December 2023. The developer then scaled it down to a 21-story tower with 39 residences. The planning board recommended the rezoning in January 2025, and the City Commission later rezoned the site to a Residential Planned Development. Related Group is not affiliated with Related Cos., the New York firm led by Stephen Ross."
+  "description": "Apogee is a planned condominium tower from Miami-based Related Group on a waterfront parcel of about 1.5 acres at 4906 N Flagler Drive, north of Currie Park and near the Northwood Harbor Historic District. The first proposal was a 25-story, 46-unit tower, and the planning board recommended rejecting it in December 2023. The developer then scaled it down to a 21-story tower with 39 residences. The planning board recommended the rezoning in January 2025, and the City Commission later rezoned the site to a Residential Planned Development. Related Group is not affiliated with Related Cos., the New York firm led by Stephen Ross.",
+  "streetView": null
  },
  {
   "slug": "residences-at-mandarin-oriental-west-palm-beach",
@@ -1194,7 +1277,8 @@
   "lng": -80.052339,
   "bedrooms": "2–4",
   "sqftRange": "2,151–6,339",
-  "description": "The Residences at Mandarin Oriental, West Palm Beach is a planned 31-story, 87-residence tower at 5400 N Flagler Drive, with direct frontage on the Intracoastal Waterway and every residence overlooking the water. Great Gulf is developing it, Safdie Architects (led by Moshe Safdie) is the architect, Studio Munge is doing the interiors, and ENEA Landscape Architecture is doing the landscape. Each residence will have private elevator access and a wraparound balcony. The residences include two- to four-bedroom units, two multi-level villas and a full-floor penthouse. Planned amenities include a rooftop pool and spa with a fitness center, a ground-level pool with a bar, a pickleball court and a garden lounge. The roughly three-acre site was previously the Poinsettia Apartments, a 1966 complex."
+  "description": "The Residences at Mandarin Oriental, West Palm Beach is a planned 31-story, 87-residence tower at 5400 N Flagler Drive, with direct frontage on the Intracoastal Waterway and every residence overlooking the water. Great Gulf is developing it, Safdie Architects (led by Moshe Safdie) is the architect, Studio Munge is doing the interiors, and ENEA Landscape Architecture is doing the landscape. Each residence will have private elevator access and a wraparound balcony. The residences include two- to four-bedroom units, two multi-level villas and a full-floor penthouse. Planned amenities include a rooftop pool and spa with a fitness center, a ground-level pool with a bar, a pickleball court and a garden lounge. The roughly three-acre site was previously the Poinsettia Apartments, a 1966 complex.",
+  "streetView": null
  },
  {
   "slug": "ritz-carlton-residences-west-palm-beach",
@@ -1230,7 +1314,8 @@
   "lng": -80.050366,
   "bedrooms": "2–4",
   "sqftRange": "1,532–6,097",
-  "description": "The Ritz-Carlton Residences, West Palm Beach is a 27-story, 138-residence condominium tower under construction at 1717 N Flagler Drive on the Intracoastal Waterway. Every residence faces east toward Palm Beach and the Atlantic. Related Group and BH Group are developing it in partnership with Marriott International. Arquitectonica designed the building, Rockwell Group the interiors and Naturalficial the landscape. Residences will have private elevator access, floor-to-ceiling glass and large terraces. Planned amenities include a bayfront pool deck with cabanas, a spa, a fitness center, coworking spaces, a gaming lounge with a golf simulator and Cove Club membership access, with services provided by Ritz-Carlton staff."
+  "description": "The Ritz-Carlton Residences, West Palm Beach is a 27-story, 138-residence condominium tower under construction at 1717 N Flagler Drive on the Intracoastal Waterway. Every residence faces east toward Palm Beach and the Atlantic. Related Group and BH Group are developing it in partnership with Marriott International. Arquitectonica designed the building, Rockwell Group the interiors and Naturalficial the landscape. Residences will have private elevator access, floor-to-ceiling glass and large terraces. Planned amenities include a bayfront pool deck with cabanas, a spa, a fitness center, coworking spaces, a gaming lounge with a golf simulator and Cove Club membership access, with services provided by Ritz-Carlton staff.",
+  "streetView": null
  },
  {
   "slug": "olara",
@@ -1271,7 +1356,11 @@
   "bedrooms": "2–4",
   "sqftRange": "1,500–4,200+",
   "parking": "Garage parking with EV chargers",
-  "description": "Olara is a 275-residence waterfront condominium under construction at 1919 N Flagler Drive, with views of the Intracoastal Waterway, Palm Beach island and the Atlantic. New York-based Savanna is the developer, Arquitectonica the architect, and Gabellini Sheppard Associates is designing the interiors and amenities. More than 80,000 sq ft of amenity space is planned, including a spa managed by Arch Amenities, an Olympic-size lap pool, a 192-foot private marina reaching into the Intracoastal with dedicated slips, and a restaurant from José Andrés Group. Residents will also have access to Sollis Health medical services."
+  "description": "Olara is a 275-residence waterfront condominium under construction at 1919 N Flagler Drive, with views of the Intracoastal Waterway, Palm Beach island and the Atlantic. New York-based Savanna is the developer, Arquitectonica the architect, and Gabellini Sheppard Associates is designing the interiors and amenities. More than 80,000 sq ft of amenity space is planned, including a spa managed by Arch Amenities, an Olympic-size lap pool, a 192-foot private marina reaching into the Intracoastal with dedicated slips, and a restaurant from José Andrés Group. Residents will also have access to Sollis Health medical services.",
+  "streetView": {
+   "pano": "CazNUODnPsk7G4WO-amMGQ",
+   "heading": 237
+  }
  },
  {
   "slug": "shorecrest",
@@ -1308,7 +1397,11 @@
   "bedrooms": "2–3",
   "sqftRange": "2,015–4,760",
   "parking": "204 spaces in a five-story podium",
-  "description": "Shorecrest is a 28-story, 98-residence condominium tower under construction on North Flagler Drive, across the Intracoastal Waterway from Palm Beach island. Related Ross is the developer, Roger Ferris + Partners the architect and Rottet Studio the interior designer. With no more than four residences per floor, units will have views of the Intracoastal, the Atlantic and Palm Beach island. About 18,355 sq ft of amenities are planned with Equinox, including a rooftop pool deck with a 75-foot lap pool, cold plunge, saunas and steam rooms, a golf simulator and a private dining room. Downtown West Palm Beach, CityPlace, Brightline and the redeveloped Currie Park are all nearby."
+  "description": "Shorecrest is a 28-story, 98-residence condominium tower under construction on North Flagler Drive, across the Intracoastal Waterway from Palm Beach island. Related Ross is the developer, Roger Ferris + Partners the architect and Rottet Studio the interior designer. With no more than four residences per floor, units will have views of the Intracoastal, the Atlantic and Palm Beach island. About 18,355 sq ft of amenities are planned with Equinox, including a rooftop pool deck with a 75-foot lap pool, cold plunge, saunas and steam rooms, a golf simulator and a private dining room. Downtown West Palm Beach, CityPlace, Brightline and the redeveloped Currie Park are all nearby.",
+  "streetView": {
+   "pano": "fkSB1_2Ig2EKuw52V3fxZA",
+   "heading": 292
+  }
  },
  {
   "slug": "rosewood-residences-west-palm-beach",
@@ -1338,7 +1431,8 @@
   "lat": 26.731095,
   "lng": -80.049581,
   "parking": "185 spaces planned",
-  "description": "Rosewood Residences West Palm Beach is a planned 27-story, 90-residence branded condominium at 2001 N Flagler Drive, on a waterfront site that now holds a medical office building completed in 2001. Related Group and BH Group are developing it, and Arquitectonica is the architect. Residences are planned to average about 3,400 sq ft. Planned amenities include more than 13,000 sq ft of indoor space and a fifth-floor pool deck. It will be Rosewood's fourth branded residential address in South Florida."
+  "description": "Rosewood Residences West Palm Beach is a planned 27-story, 90-residence branded condominium at 2001 N Flagler Drive, on a waterfront site that now holds a medical office building completed in 2001. Related Group and BH Group are developing it, and Arquitectonica is the architect. Residences are planned to average about 3,400 sq ft. Planned amenities include more than 13,000 sq ft of indoor space and a fifth-floor pool deck. It will be Rosewood's fourth branded residential address in South Florida.",
+  "streetView": null
  },
  {
   "slug": "washington-tower",
@@ -1385,7 +1479,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "envoy-tower",
@@ -1436,7 +1531,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "bristol",
@@ -1489,6 +1585,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "QNQ3qgYUmfL4pl4D5iAHug",
+   "heading": 117
   }
  },
  {
@@ -1518,7 +1618,8 @@
   "aka": [],
   "lat": 26.703421,
   "lng": -80.05043,
-  "description": "Edgeworth is a planned waterfront condominium by Related Ross at 1155 South Flagler Drive, next to the developer's South Flagler House. Kohn Pedersen Fox designed it as two curved 28-story towers, with residential interiors by MAWD | March and White Design. Each residence will have a private elevator and private balconies facing the ocean and the Intracoastal. Plans include more than 90,000 square feet of amenities centered on spa, fitness and social spaces."
+  "description": "Edgeworth is a planned waterfront condominium by Related Ross at 1155 South Flagler Drive, next to the developer's South Flagler House. Kohn Pedersen Fox designed it as two curved 28-story towers, with residential interiors by MAWD | March and White Design. Each residence will have a private elevator and private balconies facing the ocean and the Intracoastal. Plans include more than 90,000 square feet of amenities centered on spa, fitness and social spaces.",
+  "streetView": null
  },
  {
   "slug": "trianon",
@@ -1563,6 +1664,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "dxR-gLGgHevqto1w_euIyg",
+   "heading": 90
   }
  },
  {
@@ -1615,6 +1720,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "xFKdL0TK_-UQS-6mZaujdw",
+   "heading": 289
   }
  },
  {
@@ -1647,7 +1756,11 @@
   "lat": 26.701319,
   "lng": -80.050513,
   "bedrooms": "2–5",
-  "description": "South Flagler House is Related Ross's two-tower condominium on a 3-acre Intracoastal site just east of the Norton Museum of Art, overlooking Palm Beach Island and the Atlantic Ocean. Robert A.M. Stern Architects designed two identical 28-story towers rising from a base lined with stepped gardens, with interiors by Pembrooke & Ives. Plans call for about 50,000 square feet of amenities, including a resort-style pool deck, fitness and wellness facilities, private dining rooms, an indoor pickleball court, a theater, and a library and card room. The project broke ground in April 2024 and topped out in November 2025."
+  "description": "South Flagler House is Related Ross's two-tower condominium on a 3-acre Intracoastal site just east of the Norton Museum of Art, overlooking Palm Beach Island and the Atlantic Ocean. Robert A.M. Stern Architects designed two identical 28-story towers rising from a base lined with stepped gardens, with interiors by Pembrooke & Ives. Plans call for about 50,000 square feet of amenities, including a resort-style pool deck, fitness and wellness facilities, private dining rooms, an indoor pickleball court, a theater, and a library and card room. The project broke ground in April 2024 and topped out in November 2025.",
+  "streetView": {
+   "pano": "i7W3toGQdKKzp0Xhm1zbDw",
+   "heading": 292
+  }
  },
  {
   "slug": "la-clara",
@@ -1699,6 +1812,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "pMQuHEJT0PHMaHbX2_frbg",
+   "heading": 235
   }
  },
  {
@@ -1739,7 +1856,8 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
-  }
+  },
+  "streetView": null
  },
  {
   "slug": "rapallo-north",
@@ -1789,6 +1907,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "IVDasBRRA5oRU8gnmQeHMQ",
+   "heading": 282
   }
  },
  {
@@ -1834,6 +1956,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "mkyvSNsCUU4ZMWXh1e5Cmg",
+   "heading": 268
   }
  },
  {
@@ -1878,6 +2004,10 @@
    "license": "Rendering",
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
+  },
+  "streetView": {
+   "pano": "m6IEEhaBenZXv1NLuyoM-w",
+   "heading": 282
   }
  },
  {
@@ -1913,6 +2043,10 @@
   "lng": -80.048757,
   "bedrooms": "2–4",
   "sqftRange": "About 3,000–10,000+",
-  "description": "Maison d'Or is a planned 19-story, 39-residence condominium by Kolter Urban and Perko Development Partners at 3705 South Flagler Drive, overlooking the Intracoastal Waterway and Palm Beach Island. 10 Design is the architect, Hirsch Bedner Associates the interior designer and EDSA the landscape architect. Two- and three-bedroom residences fill the middle floors, four-bedroom residences the upper floors, and a full-floor penthouse of more than 10,000 square feet crowns the tower, with east- and west-facing terraces on every home. Delivery is targeted for late 2028."
+  "description": "Maison d'Or is a planned 19-story, 39-residence condominium by Kolter Urban and Perko Development Partners at 3705 South Flagler Drive, overlooking the Intracoastal Waterway and Palm Beach Island. 10 Design is the architect, Hirsch Bedner Associates the interior designer and EDSA the landscape architect. Two- and three-bedroom residences fill the middle floors, four-bedroom residences the upper floors, and a full-floor penthouse of more than 10,000 square feet crowns the tower, with east- and west-facing terraces on every home. Delivery is targeted for late 2028.",
+  "streetView": {
+   "pano": "m6IEEhaBenZXv1NLuyoM-w",
+   "heading": 249
+  }
  }
 ]
