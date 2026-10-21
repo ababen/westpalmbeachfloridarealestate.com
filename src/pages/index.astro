@@ -6,8 +6,8 @@ import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { neighborhoods } from '../data/neighborhoods';
 
-// Hero slider: buildings whose Street View image clearly shows the tower (checked by eye).
-const featured = ['bristol', 'la-clara', 'trianon', 'palm-beach-house', 'placido-mar', 'rapallo-south', 'two-city-plaza']
+// Hero slider: a mix of building styles (curved glass, white slabs, twin towers, Mediterranean).
+const featured = ['bristol', 'trianon', 'placido-mar', 'olara', 'two-city-plaza', 'la-clara', 'plaza-of-the-palm-beaches', 'ritz-carlton-residences-west-palm-beach']
   .map((slug) => buildings.find((b) => b.slug === slug))
   .filter((b) => b !== undefined);
 

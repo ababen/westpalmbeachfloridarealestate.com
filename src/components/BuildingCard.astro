@@ -1,13 +1,12 @@
 ---
 import { photoCredit, type Building } from '../data/buildings';
+import BuildingArt from './BuildingArt.astro';
 
 interface Props {
   b: Building;
 }
 
 const { b } = Astro.props;
-// Tower height in the artwork loosely follows the floor count.
-const towerHeight = Math.min(150, 40 + (b.floors ?? 10) * 3);
 const facts = [
   b.floors && `${b.floors} floors`,
   b.units && `${b.units} residences`,
@@ -25,13 +24,7 @@ const facts = [
         </>
       )
     }
-    <svg viewBox="0 0 400 180" preserveAspectRatio="xMidYMax slice">
-      <circle cx="320" cy="50" r="26" fill="rgb(255 255 255 / 0.3)"></circle>
-      <rect x="150" y={170 - towerHeight} width="70" height={towerHeight} rx="3" fill="rgb(15 42 61 / 0.55)"></rect>
-      <rect x="226" y={170 - towerHeight * 0.6} width="44" height={towerHeight * 0.6} rx="3" fill="rgb(15 42 61 / 0.35)"></rect>
-      <rect x="104" y={170 - towerHeight * 0.45} width="40" height={towerHeight * 0.45} rx="3" fill="rgb(15 42 61 / 0.3)"></rect>
-      {b.waterfront && <path d="M0 160c60-10 110-10 200 0s140 10 200 0v20H0z" fill="rgb(255 255 255 / 0.35)" />}
-    </svg>
+    <BuildingArt b={b} class="bcard__svg" />
     {b.status !== 'completed' && <span class="bcard__badge">{b.status}</span>}
   </div>
   <div class="bcard__body">
@@ -61,10 +54,12 @@ const facts = [
   }
   .bcard__art {
     position: relative;
-    aspect-ratio: 20 / 9;
-    background: linear-gradient(135deg, #2b5a73, #7fd1d6);
+    aspect-ratio: 16 / 10;
+    background: #1a0b3d;
   }
-  .bcard__art svg {
+  .bcard__art :global(.bcard__svg) {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
   }
