@@ -1,9 +1,9 @@
-// Cloudflare Pages Function: POST /api/lead
-// Emails each form submission via Resend. Required environment variables
-// (set in Cloudflare Pages → Settings → Environment variables):
-//   RESEND_API_KEY   – Resend API key
+// POST /api/lead: emails each form submission (routed by worker/index.js).
 //   LEAD_TO_EMAIL    – where leads are delivered (comma-separated for several)
-//   LEAD_FROM_EMAIL  – verified sender, e.g. "Website <leads@westpalmbeachfloridarealestate.com>"
+// Sending, in order of preference:
+//   EMAIL            – Cloudflare send_email binding (wrangler.toml). Sends from LEAD_SENDER on
+//                      this domain; free because LEAD_TO_EMAIL is a verified Email Routing address.
+//   RESEND_API_KEY + LEAD_FROM_EMAIL – Resend, used when the binding is missing or fails.
 // Spam protection (optional; each check is skipped when its setting is missing):
 //   TURNSTILE_SECRET – Cloudflare Turnstile secret; the site key is in src/config/site.ts
 //   LEAD_LIMITER     – Workers rate-limit binding keyed by client IP (wrangler.toml)
@@ -37,8 +37,9 @@ export async function onRequestPost({ request, env }) {
       : Response.redirect(new URL(ok ? '/thank-you' : '/contact', request.url), 303);
   const ip = request.headers.get('CF-Connecting-IP') || '';
 
-  if (!env.RESEND_API_KEY || !env.LEAD_TO_EMAIL || !env.LEAD_FROM_EMAIL) {
-    console.error('Lead form is not configured: set RESEND_API_KEY, LEAD_TO_EMAIL, and LEAD_FROM_EMAIL');
+  const canResend = env.RESEND_API_KEY && env.LEAD_FROM_EMAIL;
+  if (!env.LEAD_TO_EMAIL || !((env.EMAIL && env.LEAD_SENDER) || canResend)) {
+    console.error('Lead form is not configured: set LEAD_TO_EMAIL and the EMAIL binding or Resend settings');
     return reply(false, 503);
   }
 
@@ -67,15 +68,36 @@ export async function onRequestPost({ request, env }) {
     .map((f) => `<tr><th align="left" style="padding:4px 12px 4px 0">${f}</th><td>${escape(data[f])}</td></tr>`)
     .join('');
 
+  const message = {
+    to: env.LEAD_TO_EMAIL.split(',').map((s) => s.trim()),
+    replyTo: data.email,
+    subject: `${SUBJECTS[kind]}${data.building ? ` (${data.building})` : ''}: ${data.name}`,
+    html: `<h2>${SUBJECTS[kind]}</h2><table>${rows}</table>`,
+    text: FIELDS.filter((f) => data[f])
+      .map((f) => `${f}: ${data[f]}`)
+      .join('\n'),
+  };
+
+  if (env.EMAIL && env.LEAD_SENDER) {
+    try {
+      await env.EMAIL.send({ ...message, from: { email: env.LEAD_SENDER, name: 'West Palm Beach Real Estate' } });
+      return reply(true);
+    } catch (err) {
+      console.error('Cloudflare email error', err.code, err.message);
+      if (!canResend) return reply(false, 502);
+    }
+  }
+
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       from: env.LEAD_FROM_EMAIL,
-      to: env.LEAD_TO_EMAIL.split(',').map((s) => s.trim()),
-      reply_to: data.email,
-      subject: `${SUBJECTS[kind]}${data.building ? ` (${data.building})` : ''}: ${data.name}`,
-      html: `<h2>${SUBJECTS[kind]}</h2><table>${rows}</table>`,
+      to: message.to,
+      reply_to: message.replyTo,
+      subject: message.subject,
+      html: message.html,
+      text: message.text,
     }),
   });
 
