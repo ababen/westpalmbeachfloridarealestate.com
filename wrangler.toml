@@ -14,7 +14,16 @@ name = "LEAD_LIMITER"
 namespace_id = "1001"
 simple = { limit = 3, period = 60 }
 
-# Lead form email settings (see functions/api/lead.js):
+# Lead emails go out through Cloudflare from LEAD_SENDER. Free, because the only recipient
+# (the LEAD_TO_EMAIL secret) is a verified Email Routing destination address.
+[[send_email]]
+name = "EMAIL"
+allowed_destination_addresses = ["homesbychuk@gmail.com"]
+
+[vars]
+LEAD_SENDER = "leads@westpalmbeachfloridarealestate.com"
+
+# Resend fallback and spam-protection secrets (see functions/api/lead.js):
 #   npx wrangler secret put RESEND_API_KEY
 #   npx wrangler secret put LEAD_TO_EMAIL
 #   npx wrangler secret put LEAD_FROM_EMAIL

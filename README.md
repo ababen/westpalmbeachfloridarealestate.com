@@ -1,7 +1,7 @@
 # westpalmbeachfloridarealestate.com
 
 Real estate website built with [Astro](https://astro.build) and served by a Cloudflare Worker.
-Lead forms email submissions through [Resend](https://resend.com).
+Lead forms email submissions through Cloudflare's `send_email` binding, from leads@westpalmbeachfloridarealestate.com, with [Resend](https://resend.com) as a fallback.
 
 ## Develop
 
@@ -38,10 +38,16 @@ from the Actions tab (**Deploy → Run workflow**).
 Lead form settings (set once as Worker secrets):
 
 ```sh
-npx wrangler secret put RESEND_API_KEY
 npx wrangler secret put LEAD_TO_EMAIL     # where leads go (comma-separated for several)
+npx wrangler secret put TURNSTILE_SECRET  # Cloudflare Turnstile (spam protection)
+# Resend fallback, used only if Cloudflare sending fails:
+npx wrangler secret put RESEND_API_KEY
 npx wrangler secret put LEAD_FROM_EMAIL   # a sender on a domain verified in Resend
 ```
+
+Cloudflare sending is free only to verified Email Routing destination addresses. To add a new lead
+recipient, verify it under Email Routing → Destination addresses, then add it to
+`allowed_destination_addresses` in `wrangler.toml`.
 
 Until these are set, forms show an error asking visitors to call or email.
 
