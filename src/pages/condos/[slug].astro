@@ -152,6 +152,7 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
       {!isDone && <span class="badge">{statusLabel}</span>}
       <h1>{b.name}</h1>
       <p class="lede">{b.address}</p>
+      {b.altAddresses?.length ? <p class="aka">Also listed at {b.altAddresses.join('; ')}</p> : null}
       {b.aka?.length ? <p class="aka">Also known as {b.aka.join(', ')}</p> : null}
       <ul class="quick">
         {b.floors && <li><strong>{b.floors}</strong> floors</li>}

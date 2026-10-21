@@ -7,6 +7,8 @@ export interface Building {
   name: string;
   aka?: string[];
   address: string;
+  /** Other street addresses the building is recorded or listed under (street part only), shown under the address. */
+  altAddresses?: string[];
   area: string;
   status: BuildingStatus;
   yearBuilt?: number | null;
