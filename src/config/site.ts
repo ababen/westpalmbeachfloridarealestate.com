@@ -8,11 +8,12 @@ export const site = {
     'Buy or sell a home in West Palm Beach, Florida. Local guidance on neighborhoods from El Cid to Northwood, home valuations, and property search.',
   agent: {
     name: 'Alexander Babenchuk',
+    email: 'homesbychuk@gmail.com',
     title: 'REALTOR®',
     license: 'FL License #SL3596634',
     licenseUrl:
       'https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=DDFABB0C721DCA8BCD909FDE963713A5',
-    photo: '', // TODO: e.g. '/images/agent.jpg'
+    photo: '/images/alex-babenchuk.jpg',
   },
   brokerage: {
     name: 'LoKation® Real Estate',
@@ -22,6 +23,7 @@ export const site = {
     address: '',
   },
   phone: '(561) 317-8424',
+  // Official business address (privacy policy, structured data); forwarded via Cloudflare Email Routing.
   email: 'hello@westpalmbeachfloridarealestate.com',
   // Paste your IDX/MLS search embed URL (e.g. from iHomefinder, IDX Broker, Showcase IDX).
   // While empty, the listings page shows a "tell us what you're looking for" form instead.

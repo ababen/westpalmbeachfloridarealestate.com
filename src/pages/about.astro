@@ -27,7 +27,7 @@ const values = [
       <div class="portrait">
         {
           site.agent.photo ? (
-            <img src={site.agent.photo} alt={site.agent.name} width="560" height="680" />
+            <img src={site.agent.photo} alt={`${site.agent.name}, ${site.agent.title}`} width="886" height="886" />
           ) : (
             <div class="portrait__placeholder" aria-hidden="true">
               <span>Agent photo</span>
@@ -88,6 +88,9 @@ const values = [
     aspect-ratio: 4 / 5;
     object-fit: cover;
     border-radius: calc(var(--radius) * 1.5);
+  }
+  .portrait img {
+    aspect-ratio: 1;
   }
   .portrait__placeholder {
     display: grid;

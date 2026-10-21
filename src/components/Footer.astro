@@ -27,7 +27,7 @@ const socials = Object.entries(site.social).filter(([, href]) => href);
       </div>
       <p>
         <a href={telHref}>{site.phone}</a><br />
-        <a href={`mailto:${site.email}`}>{site.email}</a>
+        <a href={`mailto:${site.agent.email}`}>{site.agent.email}</a>
       </p>
       {
         socials.length > 0 && (

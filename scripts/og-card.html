@@ -1,0 +1,153 @@
+<!doctype html>
+<!-- Social share card (1200×630). Rendered to public/og-card.png by scripts/render-og-card.mjs. -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      @font-face {
+        font-family: 'Fraunces';
+        src: url('../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2') format('woff2');
+        font-weight: 100 900;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url('../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2') format('woff2');
+        font-weight: 100 900;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        width: 1200px;
+        height: 630px;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f2a3d 0%, #0b5470 100%);
+        color: #f7f1e8;
+        overflow: hidden;
+        position: relative;
+      }
+      .sun {
+        position: absolute;
+        right: -90px;
+        top: -90px;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        background: #e0735a;
+        opacity: 0.18;
+      }
+      .waves {
+        position: absolute;
+        inset: auto 0 0 0;
+      }
+      .card {
+        position: absolute;
+        inset: 56px;
+        background: #f7f1e8;
+        color: #0f2a3d;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        gap: 52px;
+        padding: 0 56px 0 48px;
+        box-shadow: 0 30px 60px -20px rgb(0 0 0 / 0.45);
+      }
+      .photo {
+        flex: none;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 8px solid #fff;
+        box-shadow: 0 0 0 3px #e0735a;
+      }
+      .body {
+        flex: 1;
+        min-width: 0;
+      }
+      .eyebrow {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #e0735a;
+      }
+      h1 {
+        font-family: 'Fraunces', serif;
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 1.05;
+        margin: 8px 0 6px;
+      }
+      .title {
+        font-size: 24px;
+        color: #3d5566;
+        margin-bottom: 26px;
+      }
+      .rows {
+        display: grid;
+        gap: 12px;
+        font-size: 26px;
+        font-weight: 500;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .row svg {
+        flex: none;
+        width: 28px;
+        height: 28px;
+        color: #0f6f8f;
+      }
+      .foot {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 2px solid #e3d9ca;
+        font-size: 17px;
+        color: #3d5566;
+      }
+      .foot img {
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sun"></div>
+    <svg class="waves" viewBox="0 0 1200 120" preserveAspectRatio="none" height="120" width="1200">
+      <path d="M0 60c150-30 300-30 450 0s300 30 450 0 300-30 300-30v90H0z" fill="#0f6f8f" opacity="0.5" />
+    </svg>
+
+    <div class="card">
+      <img class="photo" src="../public/images/alex-babenchuk.jpg" alt="" />
+      <div class="body">
+        <div class="eyebrow">West Palm Beach Real Estate</div>
+        <h1>Alexander Babenchuk</h1>
+        <div class="title">REALTOR® · LoKation Real Estate</div>
+        <div class="rows">
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" /></svg>
+            (561) 317-8424
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 6-10 7L2 6" /></svg>
+            homesbychuk@gmail.com
+          </div>
+          <div class="row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20" /></svg>
+            westpalmbeachfloridarealestate.com
+          </div>
+        </div>
+        <div class="foot">
+          <img src="../public/images/lokation-logo.svg" alt="" />
+          <span>K Company Realty LLC dba LoKation · FL Lic. SL3596634</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
