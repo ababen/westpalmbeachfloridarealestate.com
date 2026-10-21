@@ -3,6 +3,7 @@
 // Shape and finish come from src/data/buildingLooks.ts; height follows the floor count.
 import type { Building } from '../data/buildings';
 import { lookFor } from '../data/buildingLooks';
+import { CUSTOM } from './art/custom';
 
 interface Props {
   b: Building;
@@ -12,6 +13,8 @@ interface Props {
 const { b, class: className } = Astro.props;
 const look = lookFor(b);
 const id = `art-${b.slug}-${Math.random().toString(36).slice(2, 7)}`;
+// Hand-drawn buildings (art/custom.ts) replace the generic shapes; the neon glow goes on their outline only.
+const custom = CUSTOM[b.slug]?.(id);
 
 const GROUND = 252;
 // Unknown floor counts: towers default to a mid-height, low-rise styles stay low.
@@ -95,9 +98,17 @@ const fronds = (x: number, y: number, s: number) =>
   </g>
   <circle cx="300" cy="140" r="64" fill={`url(#${id}-sun)`} mask={`url(#${id}-stripes)`}></circle>
 
-  <g filter={`url(#${id}-glow)`}>
+  {
+    custom && (
+      <>
+        <g set:html={custom.body} />
+        <path d={custom.outline} fill="none" stroke={FINISH.neon} stroke-width="2" filter={`url(#${id}-glow)`} />
+      </>
+    )
+  }
+  <g filter={`url(#${id}-glow)`} style={custom ? 'display:none' : undefined}>
     {
-      boxes.map((box) => (
+      !custom && boxes.map((box) => (
         <>
           <path d={outline(box)} fill={FINISH.fill} />
           {bands(box).map((r) => (
@@ -108,7 +119,7 @@ const fronds = (x: number, y: number, s: number) =>
       ))
     }
     {
-      arches.map((x) => (
+      !custom && arches.map((x) => (
         <path d={`M${x} ${GROUND}v-16a9 9 0 0 1 18 0v16z`} fill="#5b1a6e" opacity="0.75" />
       ))
     }
@@ -129,6 +140,12 @@ const fronds = (x: number, y: number, s: number) =>
     )
   }
 
+  <!-- Street-level hedges along waterfront drives (city-street buildings keep their arcades visible) -->
+  {b.waterfront && <path
+    d={`M0 ${GROUND}V${GROUND - 8}q10 -9 20 -2q8 -10 18 -1q10 -8 20 0q9 -9 18 -1q10 -10 22 0q8 -8 18 0q10 -9 20 -1q9 -8 18 0q10 -10 22 -1q9 -8 18 0q10 -9 20 0q8 -8 18 -1q10 -9 22 0q9 -8 18 0q10 -9 20 -1q8 -9 18 0q10 -8 20 0q9 -9 18 -1q10 -8 20 0q8 -9 18 0q9 -8 18 0V${GROUND}Z`}
+    fill="#24103a"
+    opacity="0.92"
+  />}
   <g fill="#1a0b2e">
     <path d={palm(42, 1)}></path>
     {fronds(40, GROUND - 110, 1).map((d) => <path d={d} />)}
