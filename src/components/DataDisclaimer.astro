@@ -1,0 +1,68 @@
+---
+// Disclaimer shown under building facts. The guide is compiled from public sources that
+// sometimes disagree (county records, developer and association documents, news, listings),
+// so this says what the numbers mean and how to verify them.
+interface Props {
+  /** Building name, for the long version on a building page. Omit for the short version on the index. */
+  name?: string;
+}
+
+const { name } = Astro.props;
+---
+
+{
+  name ? (
+    <aside class="disclaimer" aria-label="About this information">
+      <h3>About this information</h3>
+      <p>
+        The facts on this page are compiled from public sources: Palm Beach County property records, developer and
+        condominium association documents, news coverage and real estate listings. Those sources don't always agree. A
+        building's unit count, floor count, residence sizes, year built and pet or rental rules can differ between them,
+        and association rules change. Where sources conflict, we leave the field blank rather than guess.
+      </p>
+      <p>
+        Nothing here is an offer or a representation about any specific residence. Before you buy, sell or lease at
+        {name}, confirm the details with the condominium association's current documents, the Palm Beach County
+        Property Appraiser and the listing itself. Images marked “artist's rendering” or “illustration” are
+        AI-generated, not photographs. Found an error? Email
+        <a href="mailto:hello@westpalmbeachfloridarealestate.com">hello@westpalmbeachfloridarealestate.com</a>.
+      </p>
+    </aside>
+  ) : (
+    <p class="note">
+      Building facts are compiled from public records, association documents, news and listings, which don't always
+      agree: unit counts, floors, sizes and rules can differ between sources, and rules change. Where sources conflict
+      we leave the field blank. Verify details with the association and the Palm Beach County Property Appraiser before
+      you act on them. Listing availability and prices aren't shown here.
+    </p>
+  )
+}
+
+<style>
+  .disclaimer {
+    margin-top: 2rem;
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--sea);
+    border-radius: var(--radius);
+    background: var(--white);
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+  .disclaimer h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--ink);
+  }
+  .disclaimer p {
+    margin: 0 0 0.6rem;
+  }
+  .disclaimer p:last-child {
+    margin-bottom: 0;
+  }
+  .note {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin-top: 2rem;
+  }
+</style>

@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import DataDisclaimer from '../../components/DataDisclaimer.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
@@ -265,9 +266,7 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
           ))
         }
 
-        <p class="note">
-          Building details are compiled from public sources and may change. Verify all information independently.
-        </p>
+        <DataDisclaimer name={b.name} />
       </article>
 
       <aside class="card sticky">
@@ -429,11 +428,6 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   .faq p {
     margin: 0.6rem 0 0;
     color: var(--ink-soft);
-  }
-  .note {
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    margin-top: 2rem;
   }
   .sticky {
     position: sticky;
