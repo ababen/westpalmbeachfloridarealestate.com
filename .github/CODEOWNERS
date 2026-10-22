@@ -1,0 +1,16 @@
+# Default owner for everything in the repository.
+*                       @ababen
+
+# CI/CD, Dependabot and repository security config
+/.github/               @ababen
+/SECURITY.md            @ababen
+/.gitignore             @ababen
+
+# Cloudflare Worker, its config and the lead-form API (handles visitor data and secrets)
+/worker/                @ababen
+/wrangler.toml          @ababen
+/functions/             @ababen
+
+# Deploy and image-upload scripts (run with Cloudflare credentials)
+/scripts/embed-assets.mjs   @ababen
+/scripts/upload-images.mjs  @ababen
