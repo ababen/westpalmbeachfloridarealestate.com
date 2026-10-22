@@ -1695,7 +1695,9 @@
    "https://www.squarefoothomes.com/real-estate/west-palm-beach/trianon-condominiums/",
    "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343273700%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
    "https://skyscraperpage.com/b66948/west-palm-beach/trianon-condominium",
-   "https://pbcpao.gov/Property/Details?parcelId=74434327370011606"
+   "https://pbcpao.gov/Property/Details?parcelId=74434327370011606",
+   "https://mycondoplans.com/condos/us/fl/palm%20beach/west%20palm%20beach/trianon",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Trianon/"
   ],
   "aka": [],
   "lat": 26.702765,
@@ -1715,7 +1717,9 @@
   "streetView": {
    "pano": "dxR-gLGgHevqto1w_euIyg",
    "heading": 90
-  }
+  },
+  "bedrooms": "2",
+  "sqftRange": "1,247–2,494"
  },
  {
   "slug": "forte-on-flagler",
@@ -1759,7 +1763,7 @@
   ],
   "lat": 26.701789,
   "lng": -80.050498,
-  "sqftRange": "4,200–8,900",
+  "sqftRange": null,
   "parking": "Valet service, house cars and EV charging",
   "description": "Forté on Flagler is a cylinder-shaped tower about 300 feet tall on the Intracoastal Waterway on South Flagler Drive, designed by Bernardo Fort-Brescia of Arquitectonica with interiors by Jean-Louis Deniot. Most floors have two flow-through residences, which can be combined into a full-floor home, and ceilings are at least 10 feet. The amenity levels include a pool deck with a 75-foot lap pool and heated spa, a wellness suite with steam room and sauna, a fitness center, yoga studio, theater, private dining room and guest suites. The building topped out in April 2024, and closings began in July 2025.",
   "photo": {
@@ -1844,20 +1848,22 @@
    "wine cellar and tasting room",
    "valet parking"
   ],
-  "summary": "La Clara is a 25-story condominium on the Intracoastal Waterway with one- to four-bedroom residences. Its facade combines stucco, Roman travertine, coral stone and granite.",
+  "summary": "La Clara is a 25-story condominium on the Intracoastal Waterway with residences from one-bedroom plans to full-floor penthouses. Its facade combines stucco, Roman travertine, coral stone and granite.",
   "sources": [
    "https://www.greatgulf.com/news/article/small-town-life-meets-big-city-amenities-in-newest-palm-beach-high-rise-invite-the-outdoors-in-or-vice-versa",
    "https://stantec.com/en/news/2023/stantec-designed-la-clara-condominiums-open-west-palm-beach-florida",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/La-Clara/",
    "https://www.thorntontomasetti.com/project/la-clara",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343279100%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343279100%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html",
+   "https://www.laclararesales.com/floor-plans",
+   "https://www.fsresidential.com/florida/news-events/press-releases/firstservice-residential-selected-by-la-clara/"
   ],
   "lat": 26.699796,
   "lng": -80.050502,
-  "bedrooms": "1–4",
+  "bedrooms": null,
   "petPolicy": "Pets allowed with breed, number and size restrictions",
   "parking": "Valet service; private garages",
-  "description": "La Clara is a 25-story, 83-residence condominium by Great Gulf on the Intracoastal Waterway on South Flagler Drive, with views of the Intracoastal and Palm Beach Island. Siamak Hariri of Hariri Pontarini Architects was the design architect, with Stantec as architect of record, and the building was designed to capture sky and water exposures. Residences have one to three bedrooms, and the full-floor penthouse has four bedrooms and more than 3,500 square feet of terraces. Unit addresses in many records use 200 Arkona Court.",
+  "description": "La Clara is a 25-story, 83-residence condominium by Great Gulf on the Intracoastal Waterway on South Flagler Drive, with views of the Intracoastal and Palm Beach Island. Siamak Hariri of Hariri Pontarini Architects was the design architect, with Stantec as architect of record, and the building was designed to capture sky and water exposures. Residences range from one-bedroom plans of about 1,200 square feet to a full-floor penthouse with more than 3,500 square feet of terraces. Unit addresses in many records use 200 Arkona Court.",
   "photo": {
    "src": "/images/condos/la-clara.webp",
    "width": 800,
@@ -1871,7 +1877,8 @@
   "streetView": {
    "pano": "pMQuHEJT0PHMaHbX2_frbg",
    "heading": 235
-  }
+  },
+  "sqftRange": "1,203–3,834"
  },
  {
   "slug": "viking-arms",
@@ -1900,7 +1907,9 @@
   "sources": [
    "https://compass.com/building/viking-arms-west-palm-beach-fl/757563647626138237",
    "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343275000%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html",
-   "https://movewithmomentum.com/listings/idx-beaches/1527-s-flagler-drive-116f-west-palm-beach"
+   "https://movewithmomentum.com/listings/idx-beaches/1527-s-flagler-drive-116f-west-palm-beach",
+   "https://mycondoplans.com/condos/us/fl/palm%20beach/west%20palm%20beach/viking+arms",
+   "https://vikingarmscondo.com/"
   ],
   "aka": [],
   "lat": 26.699704,
@@ -1918,7 +1927,8 @@
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
   },
   "streetView": null,
-  "bedrooms": "1–2"
+  "bedrooms": "1–2",
+  "sqftRange": "756–1,026"
  },
  {
   "slug": "rapallo-north",
@@ -2001,7 +2011,9 @@
    "https://www.waterfront-properties.com/listing/rx-10995072-1801-s-flagler-dr-1804-west-palm-beach-fl-33401",
    "https://skyscraperpage.com/b66943/west-palm-beach/rapallo-condominiums-south",
    "https://pbcpao.gov/Property/Details?parcelId=74434327410011101",
-   "https://www.propertypanorama.com/1801-S-Flagler-Drive-202-West-Palm-Beach-FL-33401"
+   "https://www.propertypanorama.com/1801-S-Flagler-Drive-202-West-Palm-Beach-FL-33401",
+   "https://www.condoblackbook.com/palm-beach/rapallo-south",
+   "https://mycondoplans.com/condos/us/fl/palm%20beach/west%20palm%20beach/rapallo+south"
   ],
   "aka": [],
   "lat": 26.697622,
@@ -2023,7 +2035,8 @@
    "pano": "mkyvSNsCUU4ZMWXh1e5Cmg",
    "heading": 268
   },
-  "bedrooms": "1–3"
+  "bedrooms": "1–3",
+  "sqftRange": "950–1,730"
  },
  {
   "slug": "flagler-yacht-club",
@@ -2048,7 +2061,8 @@
   "sources": [
    "https://www.compass.com/building/flagler-yacht-club-west-palm-beach-fl/756622546966645661/",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Yacht-Club/",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343342000%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343342000%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://www.bocaratontribune.com/bocaratonnews/2026/09/two-more-waterfront-west-palm-condos-weigh-buyouts/"
   ],
   "aka": [],
   "lat": 26.678507,
@@ -2057,7 +2071,7 @@
   "sqftRange": "1,037–1,692",
   "petPolicy": "Pets allowed",
   "parking": "Assigned and guest parking",
-  "description": "Flagler Yacht Club is a low-rise waterfront condominium built in 1981 on the Intracoastal Waterway at 3701 S Flagler Drive, in the Central Park area of West Palm Beach, made up of North and South buildings. Some residences come with private boat slips maintained by the association. Amenities include a clubhouse, pool, fitness center, sauna, waterfront pier, bike room and storage.",
+  "description": "Flagler Yacht Club is a low-rise waterfront condominium built in 1981 on the Intracoastal Waterway at 3701 S Flagler Drive, in the Central Park area of West Palm Beach, made up of North and South buildings. Some residences come with private boat slips maintained by the association. Amenities include a clubhouse, pool, fitness center, sauna, waterfront pier, bike room and storage. In 2026, press reports said the association was weighing buyout offers from several developers for the building and its site; no sale had been reported as of October 2026.",
   "photo": {
    "src": "/images/condos/flagler-yacht-club.webp",
    "width": 800,
