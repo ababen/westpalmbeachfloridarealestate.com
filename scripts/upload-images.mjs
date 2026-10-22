@@ -1,10 +1,10 @@
-// Uploads public/images/{condos,neighborhoods}/* to the R2 bucket the Worker serves them from (wrangler.toml IMAGES).
+// Uploads public/images/{condos,neighborhoods,hero}/* to the R2 bucket the Worker serves them from (wrangler.toml IMAGES).
 // Small enough to re-upload every deploy.
 import { readdir, stat } from 'node:fs/promises';
 import { execFileSync } from 'node:child_process';
 
 const BUCKET = 'wpbre-images';
-const FOLDERS = ['condos', 'neighborhoods'];
+const FOLDERS = ['condos', 'neighborhoods', 'hero'];
 const wrangler = (args) => execFileSync('npx', ['wrangler', ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
 
 let count = 0;

@@ -213,7 +213,7 @@
   "yearBuilt": 2006,
   "floors": 8,
   "units": 244,
-  "developer": null,
+  "developer": "BAP Development",
   "architect": null,
   "waterfront": false,
   "amenities": [
@@ -232,7 +232,8 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/610-Clematis/",
    "https://downtownwpb.com/live/housing/",
    "https://globest.com/2002/12/16/610-clematis-opens-sales-center/?amp=1",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343212300%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343212300%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://globest.com/2003/03/05/610-clematis-adds-3-bedroom-units/?amp=1"
   ],
   "aka": [],
   "lat": 26.712937,
@@ -548,7 +549,8 @@
    "https://skyscraperpage.com/b66964",
    "https://globest.com/2009/01/30/420-unit-luxury-condo-delivered/?amp=1",
    "https://pbcpao.gov/Property/Details?parcelId=74434328340001822",
-   "https://skyscraperpage.com/b66964/west-palm-beach/cityplace-south-tower"
+   "https://skyscraperpage.com/b66964/west-palm-beach/cityplace-south-tower",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Cityplace-South-Tower/"
   ],
   "aka": [],
   "lat": 26.704984,
@@ -569,7 +571,8 @@
   "streetView": {
    "pano": "bv_EEFYan3xiZGKk5PSwTA",
    "heading": 3
-  }
+  },
+  "bedrooms": "1–3"
  },
  {
   "slug": "tower-condominium-at-cityplace",
@@ -1871,7 +1874,8 @@
   "summary": "Viking Arms is a three-story condominium on South Flagler Drive near the Norton Museum of Art, built in 1980.",
   "sources": [
    "https://compass.com/building/viking-arms-west-palm-beach-fl/757563647626138237",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343275000%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343275000%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html",
+   "https://movewithmomentum.com/listings/idx-beaches/1527-s-flagler-drive-116f-west-palm-beach"
   ],
   "aka": [],
   "lat": 26.699704,
@@ -1888,7 +1892,8 @@
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
   },
-  "streetView": null
+  "streetView": null,
+  "bedrooms": "1–2"
  },
  {
   "slug": "rapallo-north",
@@ -1970,7 +1975,8 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Rapallo/",
    "https://www.waterfront-properties.com/listing/rx-10995072-1801-s-flagler-dr-1804-west-palm-beach-fl-33401",
    "https://skyscraperpage.com/b66943/west-palm-beach/rapallo-condominiums-south",
-   "https://pbcpao.gov/Property/Details?parcelId=74434327410011101"
+   "https://pbcpao.gov/Property/Details?parcelId=74434327410011101",
+   "https://www.propertypanorama.com/1801-S-Flagler-Drive-202-West-Palm-Beach-FL-33401"
   ],
   "aka": [],
   "lat": 26.697622,
@@ -1991,7 +1997,8 @@
   "streetView": {
    "pano": "mkyvSNsCUU4ZMWXh1e5Cmg",
    "heading": 268
-  }
+  },
+  "bedrooms": "1–3"
  },
  {
   "slug": "flagler-yacht-club",
