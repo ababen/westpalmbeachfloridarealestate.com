@@ -2,8 +2,16 @@ node_modules/
 dist/
 .astro/
 .env
+.env.*
+!.env.example
 .dev.vars
 .wrangler/
 .DS_Store
 worker/assets.js
 dist-worker/
+
+# Keys and credential files
+*.pem
+*.key
+*credentials*.json
+service-account*.json
