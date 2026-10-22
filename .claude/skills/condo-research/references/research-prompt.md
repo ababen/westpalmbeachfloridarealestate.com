@@ -19,7 +19,7 @@ Fill in the placeholders in `<angle brackets>` and launch one general-purpose ag
 > - The current date is `<today>`. For towers not yet completed, report the latest status (approved, denied, groundbreaking, topped out, completed) and the expected completion year if one is published.
 > - No prices, HOA fees or availability.
 > - Use neutral fair-housing language. Never say who a building suits. Mention 55+/HOPA only if a source confirms it.
-> - `waterfront` is `true` only if the building sits directly on the Intracoastal. Water views alone don't count.
+> - `waterfront` is `true` if the building faces the Intracoastal: on the water itself, or on Flagler Drive with only the road (and the waterfront path) between it and the water. Buildings a block or more inland with water views only are `false`.
 > - If you rewrite `summary` (1–2 sentences) or `description` (3–5 sentences), keep them factual and consistent with the numbers you report. No unsourced superlatives.
 >
 > Return ONLY a JSON array of updates in this format, one entry per building you changed:

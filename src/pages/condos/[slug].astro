@@ -55,7 +55,7 @@ const facts: [string, string][] = [
   b.sqftRange ? ['Residence sizes', `${b.sqftRange} sq ft`] : null,
   b.developer ? ['Developer', b.developer] : null,
   b.architect ? ['Architect', b.architect] : null,
-  b.waterfront ? ['Waterfront', 'Yes, on the Intracoastal'] : null,
+  b.waterfront ? ['Waterfront', 'Yes, facing the Intracoastal'] : null,
   b.parking ? ['Parking', b.parking] : null,
   b.petPolicy ? ['Pets', b.petPolicy] : null,
   b.rentalPolicy ? ['Rentals', b.rentalPolicy] : null,
@@ -89,7 +89,7 @@ if (b.bedrooms || b.sqftRange)
           ? `Residences have ${b.bedrooms} bedrooms.`
           : `Residences are about ${b.sqftRange} square feet.`,
   });
-if (b.waterfront) faqs.push({ q: `Is ${b.name} on the water?`, a: `Yes. ${b.name} is on the Intracoastal Waterway along Flagler Drive.` });
+if (b.waterfront) faqs.push({ q: `Is ${b.name} on the water?`, a: `Yes. ${b.name} faces the Intracoastal Waterway along Flagler Drive.` });
 if (b.petPolicy) faqs.push({ q: `Does ${b.name} allow pets?`, a: `${b.petPolicy}. Confirm current rules with the association before you buy.` });
 if (b.amenities.length)
   faqs.push({ q: `What amenities does ${b.name} have?`, a: `Amenities include ${b.amenities.slice(0, 6).join(', ')}.` });

@@ -861,7 +861,7 @@
   "units": 200,
   "developer": null,
   "architect": "Arquitectonica",
-  "waterfront": false,
+  "waterfront": true,
   "amenities": [
    "two heated pools (sunrise and sunset decks)",
    "outdoor spa",
@@ -1214,7 +1214,7 @@
   "units": null,
   "developer": "BGI Companies with Blue Road Group",
   "architect": "Carlos Ott with Spina O'Rourke + Partners",
-  "waterfront": null,
+  "waterfront": true,
   "amenities": [
    "eighth-floor amenity deck with two pools",
    "guest suites"
@@ -1862,7 +1862,7 @@
   "units": 87,
   "developer": null,
   "architect": null,
-  "waterfront": null,
+  "waterfront": true,
   "amenities": [
    "elevator",
    "garage",
