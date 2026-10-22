@@ -69,6 +69,8 @@ for (const b of buildings) {
     if (!Number.isInteger(p.width) || !Number.isInteger(p.height)) err(b, 'photo needs integer width and height');
   }
 
+  if (b.listingsUrl != null && !/^https:\/\/link\.flexmls\.com\/[A-Za-z0-9]+,\d+$/.test(b.listingsUrl))
+    err(b, 'listingsUrl must be a Flexmls IDX Lite link like https://link.flexmls.com/xxxxxxxxxxx,7');
   if (b.streetView != null) {
     const { pano, heading } = b.streetView;
     if (typeof pano !== 'string' || !pano || !Number.isInteger(heading) || heading < 0 || heading >= 360)

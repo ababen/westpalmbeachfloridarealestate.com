@@ -271,7 +271,21 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
 
       <aside class="card sticky">
         <h3>Units at {b.name}</h3>
-        <p>Get current listings, recent sale prices, and building insights for {b.name}.</p>
+        {
+          b.listingsUrl ? (
+            <>
+              <p>Live MLS listings for this building, straight from Beaches MLS.</p>
+              <p class="listings-cta">
+                <a class="btn btn--primary" href={b.listingsUrl} target="_blank" rel="noopener">
+                  See units for sale ↗
+                </a>
+              </p>
+              <p class="listings-or">Or let us send you listings, recent sale prices and building insights:</p>
+            </>
+          ) : (
+            <p>Get current listings, recent sale prices, and building insights for {b.name}.</p>
+          )
+        }
         <LeadForm kind="building" building={b.name} submitLabel="Send Me Details" />
       </aside>
     </div>
@@ -427,6 +441,16 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
   }
   .faq p {
     margin: 0.6rem 0 0;
+    color: var(--ink-soft);
+  }
+  .listings-cta {
+    margin: 0.25rem 0 1rem;
+  }
+  .listings-cta .btn {
+    width: 100%;
+  }
+  .listings-or {
+    font-size: 0.9rem;
     color: var(--ink-soft);
   }
   .sticky {
