@@ -62,7 +62,7 @@
   "yearBuilt": 2004,
   "floors": 15,
   "units": 63,
-  "developer": null,
+  "developer": "Royal Palm Beach Holdings, Inc.",
   "architect": null,
   "waterfront": false,
   "amenities": [
@@ -82,7 +82,8 @@
    "https://downtownwpb.com/live/housing/",
    "https://premierestateproperties.com/neighborhoods/esplanade-grande-condo/",
    "https://skyscraperpage.com/b17816/west-palm-beach/esplanade-grande",
-   "https://pbcpao.gov/Property/Details?parcelId=74434322350077040"
+   "https://pbcpao.gov/Property/Details?parcelId=74434322350077040",
+   "https://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR1%5C2003%5C1014%5CH0293824.Tif&documentNumber=N03000008844"
   ],
   "aka": [],
   "lat": 26.712118,
@@ -115,7 +116,7 @@
   "yearBuilt": 2002,
   "floors": 5,
   "units": 60,
-  "developer": null,
+  "developer": "Waterfront Clematis Property, L.L.C.",
   "architect": null,
   "waterfront": false,
   "amenities": [
@@ -127,7 +128,8 @@
    "https://www.condoblackbook.com/west-palm-beach/101-lofts",
    "https://compass.com/building/101-lofts-west-palm-beach-fl/756264981183023853",
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/101-Lofts/",
-   "https://downtownwpb.com/live/housing/"
+   "https://downtownwpb.com/live/housing/",
+   "https://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR%5C2005%5C0225%5CH0047279.Tif&documentNumber=N05000001941"
   ],
   "aka": [],
   "lat": 26.713757,
@@ -586,7 +588,7 @@
   "yearBuilt": 2004,
   "floors": 12,
   "units": 126,
-  "developer": null,
+  "developer": "CityPlace Residential, L.L.C. (The Related Group)",
   "architect": null,
   "waterfront": false,
   "amenities": [
@@ -601,7 +603,8 @@
    "https://www.condoblackbook.com/west-palm-beach/the-tower-condominium-at-cityplace",
    "https://www.condowpb.com/buildings",
    "https://www.apartments.com/listing/5k9n5wm",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343211500%25%27+OR+PCN+LIKE+%27744343211501%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343211500%25%27+OR+PCN+LIKE+%27744343211501%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
+   "https://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR%5C2000%5C0823%5CH0043836.TIF&documentNumber=N00000005468"
   ],
   "lat": 26.705853,
   "lng": -80.05808,
@@ -634,7 +637,7 @@
   "yearBuilt": 2001,
   "floors": 5,
   "units": 264,
-  "developer": null,
+  "developer": "CityPlace Residential, L.L.C. (The Related Group)",
   "architect": null,
   "waterfront": false,
   "amenities": [
@@ -652,7 +655,9 @@
    "https://activerain.com/blogsview/198910/city-place-courtyard-west-palm-beach--fl--33401",
    "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5420/pb20/courtyards-in-cityplace-condo/780-s-sapodilla-avenue-206-west-palm-beach-fl-33401/B26056504-6190250",
    "https://pbcpao.gov/Property/Details?parcelId=74434321160045150",
-   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343211600%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html"
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343211600%25%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CSTREET_SUFFIX%2CZIP_CODE%2CPROP_USE&returnGeometry=false&f=html",
+   "https://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR%5C2000%5C0823%5CH0043840.TIF&documentNumber=N00000005469",
+   "https://search.sunbiz.org/Inquiry/CorporationSearch/ConvertTiffToPDF?storagePath=COR%5C2005%5C0209%5CH0028169.Tif&documentNumber=N00000005469"
   ],
   "aka": [],
   "lat": 26.708427,
@@ -803,7 +808,7 @@
   "yearBuilt": 1981,
   "floors": null,
   "units": 132,
-  "developer": null,
+  "developer": "Leisure Resorts, Inc.",
   "architect": null,
   "waterfront": true,
   "amenities": [
@@ -823,7 +828,8 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Waterview-Towers/",
    "https://downtownwpb.com/live/housing/",
    "https://skyscraperpage.com/b17811/west-palm-beach/the-waterview-towers",
-   "https://pbcpao.gov/Property/Details?parcelId=74434322170000604"
+   "https://pbcpao.gov/Property/Details?parcelId=74434322170000604",
+   "https://www.carltonfields.com/files/uploads/Documents/2017/realprop/waterview-towers-condo-assoc.-inc-v-city-of-west-palm-beach.pdf"
   ],
   "aka": [],
   "lat": 26.716153,
@@ -831,7 +837,7 @@
   "bedrooms": "2–4",
   "sqftRange": "1,700–2,600+",
   "parking": "Underground assigned garage parking with valet",
-  "description": "Waterview Towers is a high-rise with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security.",
+  "description": "Waterview Towers is a high-rise with 132 residences at 400 N Flagler Drive, completed in 1981 and set between Flagler Drive and the Intracoastal Waterway next to Palm Harbor Marina, just north of the Clematis Street area. Residences look across the Intracoastal toward Palm Beach and The Breakers, the Flagler Memorial Bridge and the Atlantic Ocean. Amenities include a heated pool with sundeck, tennis courts, a fitness center and a clubhouse lounge, with a door attendant, concierge, valet and 24-hour security. The condominium is a leasehold: the Declaration of Condominium was recorded in 1981 on land the building leases from the City of West Palm Beach, so buyers should review the ground lease and its term along with the condominium documents.",
   "photo": {
    "src": "/images/condos/waterview-towers.webp",
    "width": 800,
@@ -927,14 +933,16 @@
   "summary": "Flagler Pointe is a roughly 400-unit condominium complex on North Flagler Drive, made up of a nine-story U-shaped main building and two three-story courtyard buildings. It offers one- to three-bedroom floor plans.",
   "sources": [
    "https://www.compass.com/building/flagler-pointe-west-palm-beach-fl/756497344970584989/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Pointe/?by=ASC"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Flagler-Pointe/?by=ASC",
+   "https://images1.showcase.com/d2/8CQ9oLnUtmsjW23RQFzNisOvRvEe3Ghi7_iYm5mGKrI/document.pdf",
+   "https://www.florida-condo-associations.com/cdetail_list.php?mastertable=ctitle&masterkey1=N03000003938"
   ],
   "aka": [],
   "lat": 26.729184,
   "lng": -80.05102,
   "bedrooms": "1–3",
   "sqftRange": "662–1,575",
-  "parking": "Covered, assigned garage parking",
+  "parking": "Assigned, numbered garage spaces; no trucks, commercial vehicles, boats or RVs",
   "description": "Flagler Pointe is a waterfront condominium community of about 400 residences at 1801 N Flagler Drive, about 1.5 miles from The Square and Clematis Street, with the bridge to Palm Beach island a short drive away. It is laid out as a nine-floor U-shaped building plus two three-story courtyard buildings. Amenities include an Olympic-size heated pool with sundeck and hot tub, a fountained garden, a putting green, a fitness center with saunas, and a clubhouse with a media room, business center and game room. Concierge and security are staffed 24 hours a day.",
   "photo": {
    "src": "/images/condos/flagler-pointe.webp",
@@ -949,7 +957,9 @@
   "streetView": {
    "pano": "Y0eATAJIgrMiLoYE_XhCfw",
    "heading": 276
-  }
+  },
+  "petPolicy": "Up to two pets per unit, 25 lb maximum at maturity; breeds the board deems dangerous are not allowed; pets must be registered; no pets for guests",
+  "rentalPolicy": "Rentals no more than twice per calendar year, 90-day minimum term; association application and approval required; no subletting"
  },
  {
   "slug": "portofino",
@@ -962,8 +972,8 @@
   "status": "completed",
   "yearBuilt": 1969,
   "floors": 10,
-  "units": 126,
-  "developer": null,
+  "units": 125,
+  "developer": "Portofino Development Corp.",
   "architect": null,
   "waterfront": true,
   "amenities": [
@@ -973,20 +983,25 @@
    "fitness center",
    "underground assigned parking"
   ],
-  "summary": "Portofino is a 10-story, 126-unit condominium tower from 1969 in the Northwood area. It stands on the east side of Flagler Drive, directly on the Intracoastal Waterway.",
+  "summary": "Portofino is a 10-story, 125-unit condominium tower from 1969 in the Northwood area. It stands on the east side of Flagler Drive, directly on the Intracoastal Waterway.",
   "sources": [
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Portofino/",
    "https://www.compass.com/homedetails/2600-N-Flagler-Dr-West-Palm-Beach-FL-33407/1CU7HR_pid/",
-   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Portofino/?by=DESC"
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Portofino/?by=DESC",
+   "https://portofinowestpalm.com/buy-lease-sell/",
+   "https://portofinowestpalm.com/wp-content/uploads/2026/04/Frequently-Asked-Questions-and-Answers-2026.pdf",
+   "https://portofinowestpalm.com/wp-content/uploads/2025/08/HouseRulesrevised7.3.25-1.pdf",
+   "https://portofinowestpalm.com/wp-content/uploads/2025/06/Governing-Documents-with-Amendments.pdf",
+   "https://www.florida-condo-associations.com/cdetail_list.php?mastertable=ctitle&masterkey1=713811"
   ],
   "lat": 26.736561,
   "lng": -80.05053,
-  "bedrooms": "1–3",
+  "bedrooms": "Studio–2",
   "sqftRange": "760–2,500",
-  "petPolicy": "Pets allowed with restrictions (breed, number and size limits)",
-  "parking": "Underground assigned parking",
-  "rentalPolicy": "Maximum of one lease per year",
-  "description": "Portofino is a ten-story, 126-residence condominium built in 1969 on the east side of Flagler Drive in the Northwood area, directly on the Intracoastal Waterway. It is sometimes called Portofino North to tell it apart from Portofino South. Amenities include a heated pool facing the Intracoastal, a clubhouse, a spa, a sauna, a fitness center, a library and a game room. A full-time door attendant and 24/7 security staff the building.",
+  "petPolicy": "One dog or cat per unit (25 lb maximum) and up to two quiet birds; pet deposit required; no visitor pets",
+  "parking": "One assigned space per unit; guest parking by registration; no overnight trucks, boats, RVs or motorcycles",
+  "rentalPolicy": "One lease per 12-month period, 3-month minimum and 12-month maximum; no leasing in the first 12 months after purchase; board approval and interview required",
+  "description": "Portofino is a ten-story, 125-residence condominium built in 1969 on the east side of Flagler Drive in the Northwood area, directly on the Intracoastal Waterway. It is sometimes called Portofino North to tell it apart from Portofino South. Amenities include a heated pool facing the Intracoastal, a clubhouse, a spa, a sauna, a fitness center, a library and a game room. A full-time door attendant and 24/7 security staff the building.",
   "photo": {
    "src": "/images/condos/portofino.webp",
    "width": 800,
@@ -1143,7 +1158,9 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Palm-Beach-House/",
    "https://www.skydb.net/building/99179966/palm-beach-house-west-palm-beach",
    "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=%28PCN+LIKE+%27744343042500%25%27%29+AND+PROP_USE%3D%27CONDOMINIUM%27&returnCountOnly=true&f=html",
-   "https://pbcpao.gov/Property/Details?parcelId=74434304250011703"
+   "https://pbcpao.gov/Property/Details?parcelId=74434304250011703",
+   "https://www.ourpbh.com/editor_upload/File/08%20Notice%20of%20Intent%20to%20Sell%20or%20Lease%20(for%20owners%20and%20realtors).pdf",
+   "https://www.ourpbh.com/info.php?pnum=9636d659d13c2d"
   ],
   "lat": 26.759844,
   "lng": -80.052304,
@@ -1163,7 +1180,8 @@
   "streetView": {
    "pano": "nQvVorBD5g0yJTO3ThTlBw",
    "heading": 90
-  }
+  },
+  "rentalPolicy": "Leases of 3 to 12 months, one rental per 12-month period; board approval, orientation, a city rental license and HO-6 insurance required; tenants may not keep pets"
  },
  {
   "slug": "alba-palm-beach",
@@ -1514,10 +1532,10 @@
   "area": "Lands of the President",
   "status": "completed",
   "yearBuilt": 1984,
-  "floors": 20,
+  "floors": 19,
   "units": 148,
-  "developer": null,
-  "architect": null,
+  "developer": "Coastal Properties, Inc.",
+  "architect": "Norman H. Ziegelman Architects",
   "waterfront": false,
   "amenities": [
    "pool",
@@ -1529,7 +1547,7 @@
    "attended lobby",
    "covered parking"
   ],
-  "summary": "Envoy Tower is a 20-story, 148-unit condominium completed in 1984, part of the gated Lands of the President complex on Presidential Way.",
+  "summary": "Envoy Tower is a 19-story, 148-unit condominium completed in 1984, part of the gated Lands of the President complex on Presidential Way.",
   "sources": [
    "https://www.compass.com/homedetails/2480-Presidential-Way-Unit-101-West-Palm-Beach-FL-33401/1DXGCK_pid/",
    "https://compass.com/building/envoy-west-palm-beach-fl/757059781491026029",
@@ -1537,12 +1555,16 @@
    "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Envoy/",
    "https://www.waterfront-properties.com/listing/rx-11122207-2480-presidential-way-603-west-palm-beach-fl-33401",
    "https://skyscraperpage.com/b66954/west-palm-beach/the-envoy-condominium",
-   "https://pbcpao.gov/Property/Details?parcelId=74434318100001010"
+   "https://pbcpao.gov/Property/Details?parcelId=74434318100001010",
+   "https://envoycondo.com/rules%2Fforms",
+   "https://img1.wsimg.com/blobby/go/dbe51c82-b0a9-43a0-8199-837196920493/downloads/Envoy%20-%20Declaration%20of%20Condominium.pdf?ver=1787762416709",
+   "https://img1.wsimg.com/blobby/go/dbe51c82-b0a9-43a0-8199-837196920493/downloads/f49f1cb9-67fd-406f-b761-41a095012e47/Certificate%20of%20Amendment%20033126.pdf?ver=1787762416710",
+   "https://envoycondo.com/living-at-the-envoy"
   ],
   "lat": 26.734161,
   "lng": -80.086253,
   "bedrooms": "2–3",
-  "parking": "Assigned parking",
+  "parking": "One assigned open or covered space per unit; additional covered spaces are sold separately; no trucks, commercial vehicles, boats or trailers overnight",
   "description": "Envoy Tower is a 148-residence high-rise condominium built in 1984 at 2480 Presidential Way in the gated Lands of the President community. Its residences are mostly two- and three-bedroom layouts. The community borders Lake Mangonia and the Banyan Cay resort's Jack Nicklaus-designed golf course, and it is a few miles from downtown West Palm Beach and President Donald J. Trump International Airport (PBI). Building amenities include a doorman, a clubhouse, a sauna, a hot tub and a tennis court.",
   "photo": {
    "src": "/images/condos/envoy-tower.webp",
@@ -1554,7 +1576,10 @@
    "licenseUrl": null,
    "sourceUrl": "https://westpalmbeachfloridarealestate.com/photo-credits"
   },
-  "streetView": null
+  "streetView": null,
+  "petPolicy": "Owners may keep up to two household pets, each under 15 lb; pets must be carried in hallways; tenants and guests may not keep pets",
+  "rentalPolicy": "No leasing in the first 24 months of ownership; leases of 3 to 12 months, one per 12-month period; rentals capped at 10% of units building-wide; no corporate buyers or tenants; board approval required",
+  "sqftRange": "1,855–2,584"
  },
  {
   "slug": "bristol",
@@ -2085,6 +2110,597 @@
   "streetView": {
    "pano": "m6IEEhaBenZXv1NLuyoM-w",
    "heading": 249
+  }
+ },
+ {
+  "amenities": [
+   "Pool",
+   "Fitness center",
+   "Clubhouse",
+   "Library",
+   "Bike storage",
+   "Storage",
+   "Doorman",
+   "On-site management",
+   "Guarded community gate"
+  ],
+  "sources": [
+   "https://subdivisions.com/west-palm-beach-fl/lincoln-tower-condos-for-sale",
+   "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/5410/lands-of-the-president-condo-3/2400-presidential-way-1105-west-palm-beach-fl-33401/B26065173-6232820",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Lincoln/",
+   "https://www.waterfront-properties.com/listing/rx-11082550-2400-presidential-way-1204-west-palm-beach-fl-33401",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%272400%27+AND+UPPER%28STREET_NAME%29%3D%27PRESIDENTIAL%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "Lincoln Tower",
+  "aka": [
+   "Lincoln",
+   "Lands of the President Condo 3"
+  ],
+  "address": "2400 Presidential Way, West Palm Beach, FL 33401",
+  "area": "Lands of the President",
+  "status": "completed",
+  "yearBuilt": 1972,
+  "floors": null,
+  "units": 114,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "Lincoln Tower is a 20-story condominium built in 1972 inside the gated Lands of the President community, overlooking the community's golf course.",
+  "description": "Lincoln Tower stands at 2400 Presidential Way within Lands of the President, the gated golf community north of downtown West Palm Beach. Listing sources date the building to 1972 and describe it as 20 stories, with one- to three-bedroom residences of roughly 894 to 1,884 square feet. Building amenities cited in listings include a pool, fitness center, clubhouse, library, storage and a doorman, and listings report recent work including a new roof, cooling tower, lobby, elevators and generator and concrete restoration. The county property appraiser lists the condominium as Lands of the President Condo 3.",
+  "lat": 26.73449,
+  "lng": -80.08504,
+  "slug": "lincoln-tower",
+  "streetView": null
+ },
+ {
+  "amenities": [
+   "Pool",
+   "Fitness center",
+   "Clubhouse / social room",
+   "Library",
+   "Sauna",
+   "Business center",
+   "Storage",
+   "Doorman",
+   "On-site management",
+   "Tennis courts (community)",
+   "Golf course access"
+  ],
+  "sources": [
+   "https://subdivisions.com/west-palm-beach-fl/jefferson-tower-condos-for-sale",
+   "https://www.waterfront-properties.com/listing/rx-11113252-2425-presidential-way-1006-west-palm-beach-fl-33401",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Jefferson/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%272425%27+AND+UPPER%28STREET_NAME%29%3D%27PRESIDENTIAL%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "Jefferson Tower",
+  "aka": [
+   "Jefferson"
+  ],
+  "address": "2425 Presidential Way, West Palm Beach, FL 33401",
+  "area": "Lands of the President",
+  "status": "completed",
+  "yearBuilt": 1974,
+  "floors": null,
+  "units": 114,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "Jefferson Tower is a 1974 high-rise condominium at 2425 Presidential Way in the gated Lands of the President community.",
+  "description": "Jefferson Tower is one of the high-rise condominiums of Lands of the President, the gated golf community off Congress Avenue in West Palm Beach. Listing sources give a 1974 completion date and residences of about 894 to 1,499 square feet with one and two bedrooms. Amenities reported in listings include a secure lobby with doorman, pool, fitness center, social room, library, sauna and storage, and one listing notes the building completed its 40-year recertification. Views cited include the golf course, lake and city.",
+  "lat": 26.7337,
+  "lng": -80.08641,
+  "slug": "jefferson-tower",
+  "streetView": null
+ },
+ {
+  "amenities": [
+   "Pool",
+   "Spa / hot tub",
+   "Fitness center",
+   "Clubhouse",
+   "Concierge",
+   "Elevators",
+   "Bike storage",
+   "Storage",
+   "Tennis courts (community)",
+   "Golf course access"
+  ],
+  "sources": [
+   "https://subdivisions.com/west-palm-beach-fl/parliament-east-condos-for-sale",
+   "https://www.waterfront-properties.com/listing/rx-11128970-2427-presidential-way-701-west-palm-beach-fl-33401",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Parliament/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%272427%27+AND+UPPER%28STREET_NAME%29%3D%27PRESIDENTIAL%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "Parliament East",
+  "aka": [
+   "Parliament",
+   "The Parliament"
+  ],
+  "address": "2427 Presidential Way, West Palm Beach, FL 33401",
+  "area": "Lands of the President",
+  "status": "completed",
+  "yearBuilt": 1982,
+  "floors": 12,
+  "units": 44,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "Parliament East is a 12-story, 1982 condominium in Lands of the President with larger residences of roughly 2,000 to 3,200 square feet.",
+  "description": "Parliament East sits at 2427 Presidential Way next to Jefferson Tower inside the gated Lands of the President community. Listing sources date it to 1982 and describe a 12-story mid-rise with only four residences per floor, with two- and three-bedroom units of about 2,028 to 2,588 square feet (one source cites up to 3,209). Reported amenities include a pool, spa, fitness center and concierge service, with golf, lake and city views.",
+  "lat": 26.73303,
+  "lng": -80.08726,
+  "slug": "parliament-east",
+  "streetView": null
+ },
+ {
+  "amenities": [
+   "Elevator",
+   "Clubhouse",
+   "Gym",
+   "Cabana",
+   "Tennis court",
+   "Bike room",
+   "Laundry in building",
+   "Picnic area",
+   "Parking"
+  ],
+  "sources": [
+   "https://compass.com/building/yorktown-west-palm-beach-fl/756059255084948869",
+   "https://www.waterfront-properties.com/listing/rx-11133070-1500-presidential-way-306-west-palm-beach-fl-33401",
+   "https://subdivisions.com/west-palm-beach-fl/yorktown-condos-for-sale",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%271500%27+AND+UPPER%28STREET_NAME%29%3D%27PRESIDENTIAL%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "Yorktown",
+  "aka": [
+   "Yorktown Condominium"
+  ],
+  "address": "1500 Presidential Way, West Palm Beach, FL 33401",
+  "area": "Lands of the President",
+  "status": "completed",
+  "yearBuilt": 1972,
+  "floors": 8,
+  "units": 48,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "Yorktown is an eight-story, 48-unit condominium built in 1972 at the east end of Presidential Way.",
+  "description": "Yorktown is a mid-rise condominium at 1500 Presidential Way, near the Lands of the President community in West Palm Beach. Compass lists it as an eight-story building with 48 residences completed in 1972, with two-bedroom, two-bath units of roughly 996 to 1,194 square feet common in listings. Amenities listed include an elevator, clubhouse, gym, cabana, tennis court and on-site laundry, and some listings say the building has passed its 50-year recertification.",
+  "lat": 26.72795,
+  "lng": -80.08339,
+  "slug": "yorktown",
+  "streetView": {
+   "pano": "8XrzMDu8Dj1mnkMsK8Y3gg",
+   "heading": 113
+  }
+ },
+ {
+  "amenities": [
+   "Pool",
+   "Fitness center",
+   "Clubhouse",
+   "Elevators",
+   "Key-card entry",
+   "On-site property manager"
+  ],
+  "sources": [
+   "https://www.bexrealty.com/FL/West-Palm-Beach/1830-embassy-drive/condo/R10522880",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Lands-Of-The-President/Lakeshore-Club/",
+   "https://estately.com/listings/info/1830-embassy-drive--70",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%271830%27+AND+UPPER%28STREET_NAME%29%3D%27EMBASSY%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "Lakeshore Club",
+  "aka": [
+   "Lakeshore Club Condo"
+  ],
+  "address": "1830 Embassy Dr, West Palm Beach, FL 33401",
+  "area": "Lands of the President",
+  "status": "completed",
+  "yearBuilt": 1974,
+  "floors": 6,
+  "units": 80,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "Lakeshore Club is a 1974 elevator condominium on Lake Mangonia within the gated Lands of the President community.",
+  "description": "Lakeshore Club occupies 1830 Embassy Drive inside Lands of the President, with listings describing a gated setting on Lake Mangonia. Sources give a 1974 construction date and block construction, with units on at least the sixth floor, and amenities including a pool, fitness center, clubhouse, elevators and an on-site property manager. The legal name in listings is Lakeshore Club Condo.",
+  "lat": 26.73011,
+  "lng": -80.07829,
+  "slug": "lakeshore-club",
+  "streetView": {
+   "pano": "UUZtAQRFOAa3kaMMhMKCNg",
+   "heading": 105
+  }
+ },
+ {
+  "amenities": [
+   "Rooftop resort-style pool",
+   "Seventh-floor resort pool and spa",
+   "Fitness center",
+   "Wellness spaces",
+   "Private dining with chef's kitchen",
+   "Lounge and club spaces"
+  ],
+  "sources": [
+   "https://floridayimby.com/?p=40894",
+   "https://hoodline.com/2026/07/lakefront-berkeley-tower-muscles-into-west-palm-beach-skyline/",
+   "https://www.multihousingnews.com/construction-starts-on-west-palm-beach-condo-tower/",
+   "https://therealdeal.com/miami/2025/11/25/elliman-taking-over-sales-at-berkeley-west-palm-beach/",
+   "https://commercialobserver.com/2025/05/florida-west-palm-beach-al-adelson-bristol-berkeley"
+  ],
+  "name": "The Berkeley Palm Beach",
+  "aka": [
+   "The Berkeley",
+   "Berkeley West Palm Beach"
+  ],
+  "address": "550 S Australian Ave, West Palm Beach, FL 33401",
+  "area": "Clear Lake",
+  "status": "under construction",
+  "yearBuilt": 2029,
+  "floors": 25,
+  "units": 193,
+  "developer": "Al Adelson",
+  "architect": "Arquitectonica",
+  "waterfront": false,
+  "summary": "The Berkeley Palm Beach is a 25-story, 193-residence condominium tower under construction on the Clear Lake edge of downtown West Palm Beach, by the developer of The Bristol.",
+  "description": "The Berkeley Palm Beach is rising at 550 South Australian Avenue on the western, Clear Lake side of downtown West Palm Beach. Developed by Al Adelson, who also built The Bristol, and designed by Arquitectonica with John Moriarty & Associates as general contractor, the 25-story tower will hold 193 two- to five-bedroom residences with flow-through layouts and large terraces. Planned amenities include a seventh-floor resort pool and spa, a rooftop pool, fitness and wellness spaces and private dining. Construction broke ground and concrete pours were under way by mid-2026, with completion targeted for 2029; Douglas Elliman handles sales.",
+  "lat": 26.70867,
+  "lng": -80.06386,
+  "slug": "berkeley-palm-beach",
+  "streetView": null
+ },
+ {
+  "amenities": [
+   "Heated lakeside pool and spa",
+   "Indoor pool",
+   "Sauna",
+   "Clubhouse with fitness center",
+   "Business center",
+   "Billiards room",
+   "Game room",
+   "Library",
+   "Tennis courts",
+   "Bocce",
+   "24/7 security and lobby attendant",
+   "Dog park"
+  ],
+  "sources": [
+   "https://www.condoblackbook.com/west-palm-beach/the-edge",
+   "https://compass.com/building/edge-west-palm-beach-fl/757784541099097109",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/The-Edge/?by=DESC",
+   "https://www.globest.com/2014/11/07/32-units-sold-at-west-palm-beach-condo/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%27300%27+AND+UPPER%28STREET_NAME%29%3D%27AUSTRALIAN%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "The Edge",
+  "aka": [
+   "Edge Condo",
+   "The Edge Condominium"
+  ],
+  "address": "300 S Australian Ave, West Palm Beach, FL 33401",
+  "area": "Clear Lake",
+  "status": "completed",
+  "yearBuilt": 2007,
+  "floors": null,
+  "units": 307,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "The Edge is a 2007 condominium of 307 residences on Clear Lake at Australian Avenue, west of downtown West Palm Beach.",
+  "description": "The Edge occupies 300 South Australian Avenue along Clear Lake, on the western edge of downtown West Palm Beach. Completed in 2007, the building contains 307 residences and offers a large amenity package including a lakeside heated pool and spa, an indoor pool, a clubhouse with fitness center, business center, billiards and game rooms, tennis and bocce courts and 24-hour security. Units feature 10-foot ceilings and in-unit laundry, and a 2014 bulk sale of 32 units to an investment fund was reported in the trade press.",
+  "lat": 26.712109,
+  "lng": -80.06428,
+  "slug": "edge",
+  "streetView": {
+   "pano": "bMKoEX75gJCL1MCw1Dg52g",
+   "heading": 79
+  }
+ },
+ {
+  "amenities": [
+   "Heated pool",
+   "Spa / hot tub",
+   "Sauna",
+   "Fitness center",
+   "Billiards room",
+   "Business center",
+   "Community room",
+   "Library",
+   "Garage parking",
+   "Bike storage",
+   "24-hour concierge (per listings)",
+   "Gated"
+  ],
+  "sources": [
+   "https://www.condoblackbook.com/west-palm-beach/the-montecito",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Montecito/",
+   "https://www.bhsusa.com/for-rent/florida/palm-beach-county/west-palm-beach/5420/montecito-palm-beach-condo/616-clearwater-park-road-1107-west-palm-beach-fl-33401/B26054385-6179441",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%27616%27+AND+UPPER%28STREET_NAME%29%3D%27CLEARWATER+PARK%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CSTREET_NO%2CSTREET_NAME%2CFLOOR%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "The Montecito",
+  "aka": [
+   "Montecito Palm Beach",
+   "Montecito Palm Beach Condominium"
+  ],
+  "address": "616 Clearwater Park Rd, West Palm Beach, FL 33401",
+  "area": "Clear Lake",
+  "status": "completed",
+  "yearBuilt": 2003,
+  "floors": 16,
+  "units": 186,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "summary": "The Montecito is a 16-story, 186-unit gated condominium completed in 2003 on Clearwater Park Road near Clear Lake.",
+  "description": "The Montecito stands at 616 Clearwater Park Road, just west of downtown West Palm Beach between Australian Avenue and Clear Lake. CondoBlackBook lists it as a 16-story building of 186 residences completed in 2003, and listings describe a gated property with a heated pool and spa, sauna, fitness center, billiards and business rooms, a community room and garage parking, with floor plans marketed under the Aruba, Cayman and Montecito names. Listings describe pets as permitted subject to restrictions.",
+  "lat": 26.7087,
+  "lng": -80.06317,
+  "slug": "montecito",
+  "streetView": {
+   "pano": "y8OxbzIJM1s5YCevUTsVlA",
+   "heading": 92
+  }
+ },
+ {
+  "amenities": [
+   "24-hour guarded entry and concierge",
+   "Valet",
+   "Heated waterfront pool and spa",
+   "Fitness center with saunas",
+   "Movie theater",
+   "Private marina with 22 slips",
+   "Private elevator lobbies",
+   "Underground parking",
+   "Pet run"
+  ],
+  "sources": [
+   "https://www.condoblackbook.com/west-palm-beach/one-watermark-place",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/One-Watermark-Place/?by=ASC",
+   "https://estately.com/listings/info/622-n-flagler-dr--1",
+   "https://www.waterfront-properties.com/listing/rx-11047607-622-n-flagler-drive-604-west-palm-beach-fl-33401",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%27622%27+AND+UPPER%28STREET_NAME%29%3D%27FLAGLER%27+AND+ZIP_CODE%3D%2733401%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "One Watermark Place",
+  "aka": [
+   "Watermark"
+  ],
+  "address": "622 N Flagler Dr, West Palm Beach, FL 33401",
+  "area": "Downtown",
+  "status": "completed",
+  "yearBuilt": 2003,
+  "floors": 15,
+  "units": 48,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.71907,
+  "lng": -80.04903,
+  "summary": "One Watermark Place is a 15-story, 48-residence waterfront condominium at the foot of the Flagler Memorial Bridge, completed in 2003.",
+  "description": "One Watermark Place is a 15-story condominium of 48 residences on North Flagler Drive where the Flagler Memorial Bridge meets the Intracoastal Waterway. Listing sources give a 2003 completion and describe open-plan residences with private elevator lobbies and large terraces. Amenities reported include a guarded entry with concierge and valet, a heated waterfront pool and spa, a fitness center with saunas, a movie theater and a 22-slip marina for vessels up to about 100 feet. Palm Beach County records show the 48 residences across two condominium phases at the address.",
+  "slug": "one-watermark-place",
+  "streetView": {
+   "pano": "87zPBeTxCNnReuWmwLj4rg",
+   "heading": 115
+  }
+ },
+ {
+  "amenities": [
+   "Rooftop pool",
+   "Fitness center",
+   "24-hour concierge",
+   "Business center",
+   "Clubhouse",
+   "Hot tub",
+   "Garage parking",
+   "Bike room"
+  ],
+  "sources": [
+   "https://compass.com/building/whitney-west-palm-beach-fl/757193212820260853",
+   "https://www.condoblackbook.com/west-palm-beach/the-whitney",
+   "https://www.bhsusa.com/for-rent/florida/palm-beach-county/west-palm-beach/5420/whitney-condo/410-evernia-street-502-west-palm-beach-fl-33401/B26017452-4687265",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343212500%25%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "The Whitney",
+  "aka": [
+   "Whitney Condo"
+  ],
+  "address": "410 Evernia St, West Palm Beach, FL 33401",
+  "altAddresses": [
+   "320 Quadrille Blvd"
+  ],
+  "area": "Downtown",
+  "status": "completed",
+  "yearBuilt": 2007,
+  "floors": 8,
+  "units": 190,
+  "developer": null,
+  "architect": null,
+  "waterfront": false,
+  "lat": 26.71114,
+  "lng": -80.05395,
+  "summary": "The Whitney is an eight-story condominium on Evernia Street at Quadrille Boulevard in downtown West Palm Beach, completed in 2007, with 190 residences over ground-floor shops.",
+  "description": "The Whitney is an eight-story condominium at 410 Evernia Street in downtown West Palm Beach, completed in 2007, a block from Rosemary Square. Palm Beach County records show 190 residential condominium units plus commercial units at street level. Listings describe one- to three-bedroom residences, with the largest around 2,000 square feet. Reported amenities include a rooftop pool, fitness center, 24-hour concierge and garage parking.",
+  "slug": "whitney",
+  "streetView": {
+   "pano": "QAsilMyl7WiGpEyaRf0Riw",
+   "heading": 178
+  }
+ },
+ {
+  "amenities": [
+   "Two swimming pools",
+   "Spa",
+   "Sauna",
+   "Fitness center",
+   "Clubhouse",
+   "Elevators"
+  ],
+  "sources": [
+   "https://www.condoblackbook.com/west-palm-beach/villa-lofts",
+   "https://www.bexrealty.com/FL/West-Palm-Beach/1617-flagler-drive/condo/R10395963",
+   "https://www.nvrealtygroup.com/fl/west-palm-beach/villa-lofts.php",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%2774434315430%25%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "Villa Lofts",
+  "aka": [
+   "Villa Lofts Condo"
+  ],
+  "address": "1617 N Flagler Dr, West Palm Beach, FL 33407",
+  "area": "North Flagler",
+  "status": "completed",
+  "yearBuilt": 2006,
+  "floors": null,
+  "units": 36,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.72778,
+  "lng": -80.05138,
+  "summary": "Villa Lofts is a boutique 36-residence condominium on North Flagler Drive between The Slade and the Ritz-Carlton Residences site, completed in 2006.",
+  "description": "Villa Lofts is a boutique condominium at 1617 North Flagler Drive, between The Slade and the Ritz-Carlton Residences site, facing the Intracoastal across Flagler Drive. Listing sources give a 2006 build year and describe loft-style one- to three-bedroom residences with glass-railed balconies and only a few homes per floor. Palm Beach County records show 36 condominium units in the building; a smaller sister condominium, Villa Del Lago, shares the address. Reported amenities include two pools, a spa, a sauna and a fitness center.",
+  "slug": "villa-lofts",
+  "streetView": {
+   "pano": "MG_Z1fjhheDiSpcc1pv7Gg",
+   "heading": 0
+  }
+ },
+ {
+  "amenities": [
+   "Heated saltwater pool on the Intracoastal",
+   "Fitness center",
+   "Recreation room",
+   "24/7 security with lobby attendant",
+   "Underground parking",
+   "Bike storage"
+  ],
+  "sources": [
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/La-Fontana/",
+   "https://www.nvrealtygroup.com/fl/west-palm-beach/la-fontana.php",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%272800%27+AND+UPPER%28STREET_NAME%29%3D%27FLAGLER%27+AND+ZIP_CODE%3D%2733407%27&outFields=PCN%2CPROP_USE&returnGeometry=false&f=html"
+  ],
+  "name": "La Fontana",
+  "aka": [
+   "La Fontana Apartments"
+  ],
+  "address": "2800 N Flagler Dr, West Palm Beach, FL 33407",
+  "area": "Northwood",
+  "status": "completed",
+  "yearBuilt": 1961,
+  "floors": 10,
+  "units": null,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.73769,
+  "lng": -80.04955,
+  "summary": "La Fontana is a 10-story waterfront cooperative built in 1961 on North Flagler Drive in Northwood Shores.",
+  "description": "La Fontana is a ten-story building at 2800 North Flagler Drive in the Northwood Shores area, built in 1961 on the Intracoastal Waterway. Palm Beach County records it as a cooperative rather than a condominium, so buyers purchase shares in the corporation that owns the building with a proprietary lease on their apartment; lenders and association approval rules can differ from a condo. Bex describes one- to three-bedroom units of roughly 650 to 1,470 square feet, with east-facing units looking over the water. Reported amenities include a heated pool and lawns on the Intracoastal, a fitness center, a recreation room, 24/7 security with a lobby attendant and underground parking.",
+  "slug": "la-fontana",
+  "streetView": {
+   "pano": "F-kn-8qQrWNxzmoCnPC-kg",
+   "heading": 90
+  }
+ },
+ {
+  "amenities": [],
+  "sources": [
+   "https://www.echofineproperties.com/communities/west-palm-beach-homes/northwood-harbor/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343042600%25%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "Regency Surf & Racquet Club",
+  "aka": [
+   "Regency Surf and Racquet Club"
+  ],
+  "address": "4500 N Flagler Dr, West Palm Beach, FL 33407",
+  "area": "Northwood",
+  "status": "completed",
+  "yearBuilt": null,
+  "floors": 4,
+  "units": 95,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.75227,
+  "lng": -80.05235,
+  "summary": "Regency Surf & Racquet Club is a four-story, 95-unit condominium on North Flagler Drive in Northwood Harbor, between Flagler Landing and Alba Palm Beach.",
+  "description": "Regency Surf & Racquet Club is an established low-rise condominium at 4500 North Flagler Drive in the Northwood Harbor area of West Palm Beach, facing the Intracoastal across Flagler Drive. Palm Beach County records show 95 condominium units on four floors. Building-level details such as the year built and amenities were not confirmed in a published source.",
+  "slug": "regency-surf-racquet-club",
+  "streetView": {
+   "pano": "sCqlYn1aJXuTYe14gmV0uQ",
+   "heading": 81
+  }
+ },
+ {
+  "amenities": [
+   "Heated pool",
+   "Clubhouse",
+   "Fitness center",
+   "Library",
+   "Laundry facilities"
+  ],
+  "sources": [
+   "https://www.nvrealtygroup.com/fl/west-palm-beach/norton-park-place.php",
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Norton-Park-Place/",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=PCN+LIKE+%27744343275700%25%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "Norton Park Place",
+  "aka": [],
+  "address": "1501 S Flagler Dr, West Palm Beach, FL 33401",
+  "area": "South Flagler",
+  "status": "completed",
+  "yearBuilt": null,
+  "floors": null,
+  "units": 64,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.70027,
+  "lng": -80.05116,
+  "summary": "Norton Park Place is a 64-unit condominium on South Flagler Drive beside La Clara, with two-bedroom residences of roughly 1,000 to 1,125 square feet.",
+  "description": "Norton Park Place is a condominium at 1501 South Flagler Drive, between La Clara and Viking Arms, facing the Intracoastal across Flagler Drive. Palm Beach County records show 64 condominium units, and listings show two-bedroom residences of about 1,000 to 1,125 square feet on floors three through eight. Reported amenities include a heated pool, clubhouse and fitness center. The year built was not confirmed in a published source.",
+  "slug": "norton-park-place",
+  "streetView": {
+   "pano": "13RUjyzWj_IVKkXGMN2Zow",
+   "heading": 182
+  }
+ },
+ {
+  "amenities": [
+   "24-hour door attendant",
+   "Heated pool and sundeck",
+   "Fitness center",
+   "Sauna",
+   "Clubhouse",
+   "Boat dock",
+   "Covered parking",
+   "Library",
+   "Outdoor grill area"
+  ],
+  "sources": [
+   "https://www.bexrealty.com/real-estate/West-Palm-Beach/Portofino-South/",
+   "https://www.bhsusa.com/for-sale/florida/palm-beach-county/west-palm-beach/portofino-south-condo-estates-of-south-palm-bea/3800-washington-road-606-west-palm-beach-fl-33405/RX-11106273-2221301",
+   "https://www.waterfront-properties.com/listing/rx-11042750-3800-washington-road-712-west-palm-beach-fl-33405",
+   "https://maps.co.palm-beach.fl.us/arcgis/rest/services/OpenData/open_data_v2/MapServer/0/query?where=STREET_NO%3D%273800%27+AND+UPPER%28STREET_NAME%29%3D%27WASHINGTON%27+AND+PROP_USE%3D%27CONDOMINIUM%27&outFields=PCN%2CFLOOR&returnGeometry=false&f=html"
+  ],
+  "name": "Portofino South",
+  "aka": [
+   "Portofino South Condo Estates"
+  ],
+  "address": "3800 Washington Rd, West Palm Beach, FL 33405",
+  "area": "South Flagler",
+  "status": "completed",
+  "yearBuilt": 1971,
+  "floors": 12,
+  "units": 140,
+  "developer": null,
+  "architect": null,
+  "waterfront": true,
+  "lat": 26.67723,
+  "lng": -80.04944,
+  "summary": "Portofino South is a 12-story, 140-unit waterfront condominium built in 1971 at 3800 Washington Road, one block north of Southern Boulevard.",
+  "description": "Portofino South is a twelve-story condominium of 140 units at 3800 Washington Road, where South Flagler Drive meets Washington Road one block north of Southern Boulevard. Built in 1971, it offers one- to three-bedroom units, many with Intracoastal views, and Palm Beach County records show the 140 units across two condominium phases. Listings report a 24-hour door attendant, heated pool, fitness center, sauna, boat dock and covered parking, and Bex notes a recently completed concrete restoration. It is a different building from Portofino at 2600 N Flagler Drive.",
+  "slug": "portofino-south",
+  "streetView": {
+   "pano": "EYZFRy5AsjMuoeLHNM8-Yg",
+   "heading": 86
   }
  }
 ]

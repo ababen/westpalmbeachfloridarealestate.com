@@ -59,6 +59,7 @@ export const buildingAreas = [
   'North Flagler',
   'Northwood',
   'Lands of the President',
+  'Clear Lake',
 ].filter((area) => buildings.some((b) => b.area === area));
 
 /** Building areas that have a matching neighborhood guide. */
@@ -68,6 +69,7 @@ export const areaNeighborhood: Record<string, string> = {
   'North Flagler': 'north-flagler',
   Northwood: 'north-flagler',
   'Lands of the President': 'lands-of-the-president',
+  'Clear Lake': 'downtown',
 };
 
 /** True for towers that are under construction or not yet started. */

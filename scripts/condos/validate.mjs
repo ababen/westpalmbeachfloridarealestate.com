@@ -7,7 +7,7 @@ const file = new URL('../../src/data/buildings.json', import.meta.url);
 const buildings = JSON.parse(await readFile(file, 'utf8'));
 
 const STATUSES = ['completed', 'under construction', 'pre-construction'];
-const AREAS = ['Downtown', 'South Flagler', 'North Flagler', 'Northwood', 'Lands of the President'];
+const AREAS = ['Downtown', 'South Flagler', 'North Flagler', 'Northwood', 'Lands of the President', 'Clear Lake'];
 // Rough bounding box for the City of West Palm Beach.
 const BOUNDS = { latMin: 26.64, latMax: 26.78, lngMin: -80.2, lngMax: -80.03 };
 // Prices and fees go stale; fair-housing-sensitive phrases describe who a building "suits".
