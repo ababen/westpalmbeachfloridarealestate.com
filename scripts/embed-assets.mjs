@@ -13,9 +13,9 @@ async function* walk(dir) {
   }
 }
 
-// Building and neighborhood images are served from the R2 bucket instead (scripts/upload-images.mjs), keeping the
+// Building, neighborhood and hero images are served from the R2 bucket instead (scripts/upload-images.mjs), keeping the
 // Worker under its size limit.
-const R2_PREFIXES = ['images/condos/', 'images/neighborhoods/'];
+const R2_PREFIXES = ['images/condos/', 'images/neighborhoods/', 'images/hero/'];
 
 const assets = {};
 for await (const file of walk(root)) {

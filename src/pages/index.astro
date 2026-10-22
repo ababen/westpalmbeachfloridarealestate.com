@@ -5,8 +5,9 @@ import { buildings } from '../data/buildings';
 import NeighborhoodCard from '../components/NeighborhoodCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { neighborhoods } from '../data/neighborhoods';
+import { site, telHref } from '../config/site';
 
-// Hero slider: buildings with hand-drawn illustrations (src/components/art/custom.ts).
+// Featured-buildings slider below the hero.
 const featured = ['bristol', 'trianon', 'placido-mar', 'la-clara', 'two-city-plaza', 'palm-beach-house', 'rapallo-south']
   .map((slug) => buildings.find((b) => b.slug === slug))
   .filter((b) => b !== undefined);
@@ -40,15 +41,24 @@ const reasons = [
 
 <Base>
   <section class="hero">
+    <picture class="hero__bg">
+      <source media="(max-width: 760px)" srcset="/images/hero/terrace-portrait-768.webp" width="768" height="1376" />
+      <img
+        src="/images/hero/terrace-1440.webp"
+        srcset="/images/hero/terrace-960.webp 960w, /images/hero/terrace-1440.webp 1440w, /images/hero/terrace-1920.webp 1920w"
+        sizes="100vw"
+        width="1920"
+        height="1072"
+        alt=""
+        fetchpriority="high"
+        decoding="async"
+      />
+    </picture>
     <div class="container hero__inner">
-      <div class="hero__text">
-      <span class="eyebrow">West Palm Beach, Florida</span>
-      <h1>Find your place in the Palm Beaches.</h1>
-      <p class="hero__lede">Waterfront condos, historic neighborhoods and local know-how.</p>
-
-      </div>
-      {featured.length > 0 && <HeroSlider items={featured} />}
-      <form class="search" action="/listings" method="get" role="search">
+      <span class="eyebrow hero__eyebrow">West Palm Beach, Florida</span>
+      <h1>Life on the water, <em>West Palm Beach.</em></h1>
+      <p class="hero__lede">Intracoastal condos, historic neighborhoods and a local REALTOR® who knows the buildings.</p>
+      <form class="search hero__search" action="/listings" method="get" role="search">
         <label>
           <span class="visually-hidden">Neighborhood</span>
           <select name="area">
@@ -78,8 +88,30 @@ const reasons = [
         </label>
         <button class="btn btn--primary" type="submit">Search Homes</button>
       </form>
+      <ul class="hero__facts">
+        <li><strong>{buildings.length}</strong> condo buildings profiled</li>
+        <li><strong>{neighborhoods.length}</strong> neighborhood guides</li>
+        <li><a href={telHref}>Call {site.phone}</a></li>
+      </ul>
     </div>
+    <p class="hero__credit"><a href="/photo-credits">Illustration (AI-generated), not a photograph</a></p>
   </section>
+
+  {
+    featured.length > 0 && (
+      <section class="section featured">
+        <div class="container featured__inner">
+          <div>
+            <span class="eyebrow">Featured buildings</span>
+            <h2>Know the building before you tour it.</h2>
+            <p class="lede">Floors, residences, year built and amenities for condo towers across the city.</p>
+            <p><a class="btn btn--dark" href="/condos">Browse all condos</a></p>
+          </div>
+          <HeroSlider items={featured} />
+        </div>
+      </section>
+    )
+  }
 
   <section class="section section--white">
     <div class="container">
@@ -161,60 +193,129 @@ const reasons = [
 </Base>
 
 <style>
+  /* Full-bleed hero: AI illustration behind, a dark scrim on the left and bottom keeps the text legible. */
   .hero {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     color: var(--white);
-    min-height: min(88vh, 760px);
+    min-height: min(92svh, 860px);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    background: var(--ink);
   }
-  .hero {
+  .hero__bg img {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 50%;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
     background:
-      radial-gradient(1200px 500px at 85% 110%, rgb(15 111 143 / 0.55), transparent 60%),
-      linear-gradient(160deg, #0f2a3d 0%, #123a52 100%);
+      linear-gradient(90deg, rgb(8 22 33 / 0.82) 0%, rgb(8 22 33 / 0.55) 42%, rgb(8 22 33 / 0) 75%),
+      linear-gradient(0deg, rgb(8 22 33 / 0.85) 0%, rgb(8 22 33 / 0) 55%);
   }
   .hero__inner {
-    position: relative;
-    z-index: 1;
-    padding-block: 56px 72px;
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    gap: clamp(2rem, 4vw, 3.5rem);
-    align-items: center;
+    width: 100%;
+    padding-block: 120px 88px;
+    text-shadow: 0 1px 14px rgb(8 22 33 / 0.55);
   }
-  .hero__inner > .search {
-    grid-column: 1 / -1;
-  }
-  .hero__inner > :global(.slider) {
-    max-width: 400px;
-    justify-self: end;
-  }
-  @media (max-width: 960px) {
-    .hero__inner {
-      grid-template-columns: 1fr;
-      padding-block: 64px 72px;
-    }
-    .hero__inner > :global(.slider) {
-      max-width: none;
-      justify-self: stretch;
-    }
-    /* On narrow screens the search comes right after the intro, before the slider. */
-    .hero__inner > .search {
-      order: 1;
-    }
-    .hero__inner > :global(.slider) {
-      order: 2;
-    }
+  .hero__eyebrow {
+    color: #f2b38f;
   }
   .hero h1 {
-    max-width: 14ch;
+    max-width: 13ch;
+    margin-block: 0.6rem 1rem;
+    font-size: clamp(2.8rem, 7.2vw, 6rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: #f7e3cf;
   }
   .hero__lede {
-    font-size: 1.2rem;
-    max-width: 36rem;
-    color: rgb(255 255 255 / 0.88);
-    margin-bottom: 0;
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    max-width: 34rem;
+    color: rgb(255 255 255 / 0.9);
+    margin: 0 0 2rem;
+  }
+  .hero__search {
+    background: rgb(255 255 255 / 0.9);
+    -webkit-backdrop-filter: blur(14px) saturate(1.2);
+    backdrop-filter: blur(14px) saturate(1.2);
+    border: 1px solid rgb(255 255 255 / 0.5);
+  }
+  .hero__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    font-size: 0.95rem;
+    color: rgb(255 255 255 / 0.85);
+  }
+  .hero__facts strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+  .hero__facts a {
+    color: var(--white);
+    font-weight: 600;
+  }
+  .hero__credit {
+    position: absolute;
+    right: var(--gutter);
+    bottom: 0.75rem;
+    margin: 0;
+    font-size: 0.72rem;
+  }
+  .hero__credit a {
+    color: rgb(255 255 255 / 0.75);
+    text-decoration: none;
+  }
+  .hero__credit a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 760px) {
+    .hero {
+      min-height: 0;
+    }
+    .hero__bg img {
+      object-position: 50% 0%;
+    }
+    .hero::before {
+      background: linear-gradient(0deg, rgb(8 22 33 / 0.95) 0%, rgb(8 22 33 / 0.82) 50%, rgb(8 22 33 / 0) 80%);
+    }
+    .hero__inner {
+      padding-block: 280px 56px;
+    }
+    /* The floating call button covers this spot on phones. */
+    .hero__facts li:last-child {
+      display: none;
+    }
+  }
+
+  .featured__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+  }
+  @media (max-width: 860px) {
+    .featured__inner {
+      grid-template-columns: 1fr;
+    }
   }
   .search {
     display: grid;

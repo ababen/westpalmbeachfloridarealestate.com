@@ -57,7 +57,7 @@ export default {
     }
 
     const path = decodeURIComponent(url.pathname).slice(1);
-    if ((path.startsWith('images/condos/') || path.startsWith('images/neighborhoods/')) && env.IMAGES) {
+    if (/^images\/(condos|neighborhoods|hero)\//.test(path) && env.IMAGES) {
       const object = await env.IMAGES.get(path);
       if (object) {
         return new Response(object.body, {
