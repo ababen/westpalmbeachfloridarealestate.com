@@ -7,7 +7,7 @@ const file = new URL('../../src/data/buildings.json', import.meta.url);
 const buildings = JSON.parse(await readFile(file, 'utf8'));
 
 const STATUSES = ['completed', 'under construction', 'pre-construction'];
-const AREAS = ['Downtown', 'South Flagler', 'North Flagler', 'Northwood', 'Lands of the President'];
+const AREAS = ['Downtown', 'South Flagler', 'North Flagler', 'Northwood', 'Lands of the President', 'Clear Lake'];
 // Rough bounding box for the City of West Palm Beach.
 const BOUNDS = { latMin: 26.64, latMax: 26.78, lngMin: -80.2, lngMax: -80.03 };
 // Prices and fees go stale; fair-housing-sensitive phrases describe who a building "suits".
@@ -69,6 +69,8 @@ for (const b of buildings) {
     if (!Number.isInteger(p.width) || !Number.isInteger(p.height)) err(b, 'photo needs integer width and height');
   }
 
+  if (b.listingsUrl != null && !/^https:\/\/link\.flexmls\.com\/[A-Za-z0-9]+,\d+$/.test(b.listingsUrl))
+    err(b, 'listingsUrl must be a Flexmls IDX Lite link like https://link.flexmls.com/xxxxxxxxxxx,7');
   if (b.streetView != null) {
     const { pano, heading } = b.streetView;
     if (typeof pano !== 'string' || !pano || !Number.isInteger(heading) || heading < 0 || heading >= 360)

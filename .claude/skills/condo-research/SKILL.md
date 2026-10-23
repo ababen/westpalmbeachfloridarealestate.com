@@ -28,7 +28,7 @@ The condo guide is generated from **`src/data/buildings.json`**. Every page, car
 See `Building` in `src/data/buildings.ts`. Fields:
 
 - **Required:** `slug`, `name`, `address` (must end `West Palm Beach, FL <ZIP>`), `area`, `status`, `summary`, `amenities[]`, `sources[]`, `lat`, `lng`.
-- **Optional:** `aka[]`, `altAddresses[]` (other street addresses the building is recorded or listed under, street part only; keep the county's address as `address`), `yearBuilt` (expected completion year for unfinished towers), `floors`, `units`, `developer`, `architect`, `waterfront`, `description`, `bedrooms` (e.g. `"1–3"`), `sqftRange` (e.g. `"980–1,775"`, no "sq ft" suffix), `petPolicy`, `parking`, `rentalPolicy`.
+- **Optional:** `aka[]`, `altAddresses[]` (other street addresses the building is recorded or listed under, street part only; keep the county's address as `address`), `yearBuilt` (expected completion year for unfinished towers), `floors`, `units`, `developer`, `architect`, `waterfront`, `description`, `bedrooms` (e.g. `"1–3"`), `sqftRange` (e.g. `"980–1,775"`, no "sq ft" suffix), `petPolicy`, `parking`, `rentalPolicy`, `listingsUrl` (a public Flexmls IDX Lite saved-search link, `https://link.flexmls.com/<id>,<n>`, made by the owner in Flexmls → IDX Manager → Retrieve IDX Lite Link → Saved Searches; shows the building's units for sale).
 - **`area`** must be one of `buildingAreas` in `src/data/buildings.ts`. To add a new area, add it there in display order, and map it in `areaNeighborhood` if a neighborhood guide exists.
 - **`status`** is one of `completed`, `under construction`, `pre-construction`.
 - **`summary`** is 1–2 sentences, used on cards and in meta descriptions. **`description`** is 3–5 sentences, shown on the page. They must not contradict the facts: if you blank `units`, remove the unit count from both texts.
@@ -99,6 +99,7 @@ Preview with `npm run build && node scripts/embed-assets.mjs && npx wrangler dev
 | `floors`, `units`, `yearBuilt`, `waterfront` | Hero pills, facts grid, card, comparison table, FAQ |
 | `bedrooms`, `sqftRange` | Facts grid, "What size are the residences" FAQ |
 | `petPolicy` | Facts grid, pets FAQ, `petsAllowed` in JSON-LD |
+| `listingsUrl` | "See units for sale" button in the building page sidebar |
 | `streetView` | Street view embed on the building page (hidden when null or when no Maps key is set) |
 | `lat`, `lng` | Map embed, distances (`src/data/landmarks.ts`), nearby buildings, JSON-LD `geo` |
 | `status` | Badge, filters, FAQ ("When will X be completed" / "What is the status") |

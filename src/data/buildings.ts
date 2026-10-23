@@ -42,6 +42,8 @@ export interface Building {
   } | null;
   /** Google Street View panorama aimed at the building (scripts/condos/streetview.mjs); null if none. */
   streetView?: { pano: string; heading: number } | null;
+  /** Public Flexmls IDX Lite saved-search link showing this building's units for sale (issue #20). */
+  listingsUrl?: string | null;
   /** Where each fact came from; kept for maintenance, not shown on the site. */
   sources: string[];
 }
@@ -57,6 +59,7 @@ export const buildingAreas = [
   'North Flagler',
   'Northwood',
   'Lands of the President',
+  'Clear Lake',
 ].filter((area) => buildings.some((b) => b.area === area));
 
 /** Building areas that have a matching neighborhood guide. */
@@ -66,6 +69,7 @@ export const areaNeighborhood: Record<string, string> = {
   'North Flagler': 'north-flagler',
   Northwood: 'north-flagler',
   'Lands of the President': 'lands-of-the-president',
+  'Clear Lake': 'downtown',
 };
 
 /** True for towers that are under construction or not yet started. */

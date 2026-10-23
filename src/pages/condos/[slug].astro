@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import DataDisclaimer from '../../components/DataDisclaimer.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
@@ -265,14 +266,26 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
           ))
         }
 
-        <p class="note">
-          Building details are compiled from public sources and may change. Verify all information independently.
-        </p>
+        <DataDisclaimer name={b.name} />
       </article>
 
       <aside class="card sticky">
         <h3>Units at {b.name}</h3>
-        <p>Get current listings, recent sale prices, and building insights for {b.name}.</p>
+        {
+          b.listingsUrl ? (
+            <>
+              <p>Live MLS listings for this building, straight from Beaches MLS.</p>
+              <p class="listings-cta">
+                <a class="btn btn--primary" href={b.listingsUrl} target="_blank" rel="noopener">
+                  See units for sale ↗
+                </a>
+              </p>
+              <p class="listings-or">Or let us send you listings, recent sale prices and building insights:</p>
+            </>
+          ) : (
+            <p>Get current listings, recent sale prices, and building insights for {b.name}.</p>
+          )
+        }
         <LeadForm kind="building" building={b.name} submitLabel="Send Me Details" />
       </aside>
     </div>
@@ -430,10 +443,15 @@ const description = `${b.name}${b.floors ? `, a ${b.floors}-story` : ', a'} ${is
     margin: 0.6rem 0 0;
     color: var(--ink-soft);
   }
-  .note {
-    font-size: 0.85rem;
+  .listings-cta {
+    margin: 0.25rem 0 1rem;
+  }
+  .listings-cta .btn {
+    width: 100%;
+  }
+  .listings-or {
+    font-size: 0.9rem;
     color: var(--ink-soft);
-    margin-top: 2rem;
   }
   .sticky {
     position: sticky;

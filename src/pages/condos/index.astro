@@ -1,4 +1,5 @@
 ---
+import DataDisclaimer from '../../components/DataDisclaimer.astro';
 import Base from '../../layouts/Base.astro';
 import BuildingCard from '../../components/BuildingCard.astro';
 import CtaBand from '../../components/CtaBand.astro';
@@ -115,10 +116,7 @@ const count = (key: string) =>
           </tbody>
         </table>
       </div>
-      <p class="note">
-        Building details are compiled from public sources and may change. Verify all information independently.
-        Listing availability and pricing are not shown here — ask for current units for sale in any building.
-      </p>
+      <DataDisclaimer />
     </div>
   </section>
 
@@ -295,11 +293,5 @@ const count = (key: string) =>
   }
   .compare a {
     color: var(--ink);
-  }
-  .note {
-    font-size: 0.9rem;
-    color: var(--ink-soft);
-    max-width: 46rem;
-    margin: 1.5rem 0 0;
   }
 </style>

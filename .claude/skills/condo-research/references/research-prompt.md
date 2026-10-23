@@ -41,7 +41,7 @@ Fill in the placeholders in `<angle brackets>` and launch one general-purpose ag
 > ```json
 > [{ "slug": "kebab-case-name", "new": {
 >    "name": "…", "aka": [], "address": "123 N Flagler Dr, West Palm Beach, FL 33401",
->    "area": "<one of: Downtown | South Flagler | North Flagler | Northwood | Lands of the President>",
+>    "area": "<one of: Downtown | South Flagler | North Flagler | Northwood | Lands of the President | Clear Lake>",
 >    "status": "completed | under construction | pre-construction",
 >    "yearBuilt": null, "floors": null, "units": null, "developer": null, "architect": null, "waterfront": null,
 >    "amenities": [], "summary": "1–2 sentences", "description": "3–5 sentences",
