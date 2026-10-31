@@ -24,11 +24,7 @@ import { site, telHref } from '../config/site';
           <dt>Phone</dt>
           <dd><a href={telHref}>{site.phone}</a></dd>
           <dt>Email</dt>
-          <dd><a href={`mailto:${site.agent.email}`}>{site.agent.email}</a></dd>
-          <dt>Official inquiries</dt>
           <dd><a href={`mailto:${site.email}`}>{site.email}</a></dd>
-          <dt>Brokerage</dt>
-          <dd>{site.brokerage.name}{site.brokerage.address && (<><br />{site.brokerage.address}</>)}</dd>
         </dl>
       </div>
     </div>

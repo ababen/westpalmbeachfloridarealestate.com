@@ -17,19 +17,16 @@ const fullTitle = title ? `${title} | ${site.name}` : `${site.name} | Homes for 
 const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), site.url).href;
 // Contact-card share image; regenerate with `node scripts/render-og-card.mjs`.
 const ogImage = new URL('/og-card.png', site.url).href;
-const ogImageAlt = `${site.agent.name}, ${site.agent.title} with ${site.brokerage.name} — ${site.phone}, ${site.agent.email}`;
+const ogImageAlt = `${site.name} — ${site.phone}, ${site.email}`;
 
 const agentSchema = {
   '@context': 'https://schema.org',
-  '@type': 'RealEstateAgent',
+  '@type': 'Organization',
   name: site.name,
   url: site.url,
   telephone: site.phone,
   email: site.email,
   areaServed: { '@type': 'City', name: 'West Palm Beach', containedInPlace: 'Florida' },
-  employee: { '@type': 'Person', name: site.agent.name, jobTitle: site.agent.title, email: site.agent.email },
-  parentOrganization: { '@type': 'RealEstateAgent', name: site.brokerage.legalName },
-  ...(site.brokerage.address && { address: { '@type': 'PostalAddress', streetAddress: site.brokerage.address } }),
 };
 ---
 
