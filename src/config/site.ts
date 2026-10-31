@@ -1,27 +1,10 @@
-// Central business details. Florida advertising rules (Rule 61J2-10.025) require the
-// brokerage's licensed name on all ads; it appears in the footer of every page.
+// Central site details.
 export const site = {
   name: 'West Palm Beach Florida Real Estate',
   shortName: 'WPB Real Estate',
   url: 'https://westpalmbeachfloridarealestate.com',
   description:
     'Buy or sell a home in West Palm Beach, Florida. Local guidance on neighborhoods from El Cid to Northwood, home valuations, and property search.',
-  agent: {
-    name: 'Alexander Babenchuk',
-    email: 'homesbychuk@gmail.com',
-    title: 'REALTOR®',
-    license: 'FL License #SL3596634',
-    licenseUrl:
-      'https://www.myfloridalicense.com/portalsearches/VerifyLicensee/LicenseDetail?ID=DDFABB0C721DCA8BCD909FDE963713A5',
-    photo: '/images/alex-babenchuk.jpg',
-  },
-  brokerage: {
-    name: 'LoKation® Real Estate',
-    legalName: 'K Company Realty LLC dba LoKation',
-    logo: '/images/lokation-logo.svg',
-    logoLight: '/images/lokation-logo-light.svg',
-    address: '',
-  },
   phone: '(561) 783-4553',
   // Official business address (privacy policy, structured data); forwarded via Cloudflare Email Routing.
   email: 'hello@westpalmbeachfloridarealestate.com',

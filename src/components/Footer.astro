@@ -14,20 +14,9 @@ const socials = Object.entries(site.social).filter(([, href]) => href);
         <Logo size={44} />
         <span>{site.name}</span>
       </a>
-      <p class="footer__muted">
-        {site.agent.name}, {site.agent.title}<br />
-        <a href={site.agent.licenseUrl} rel="noopener" target="_blank">{site.agent.license}</a>
-      </p>
-      <div class="footer__broker">
-        <img src={site.brokerage.logoLight} alt={site.brokerage.name} width="180" height="44" loading="lazy" />
-        <p class="footer__muted">
-          {site.brokerage.legalName}
-          {site.brokerage.address && (<><br />{site.brokerage.address}</>)}
-        </p>
-      </div>
       <p>
         <a href={telHref}>{site.phone}</a><br />
-        <a href={`mailto:${site.agent.email}`}>{site.agent.email}</a>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
       </p>
       {
         socials.length > 0 && (
@@ -113,17 +102,6 @@ const socials = Object.entries(site.social).filter(([, href]) => href);
     font-family: var(--font-display);
     font-size: 1.25rem;
     margin-bottom: 1.25rem;
-  }
-  .footer__muted {
-    color: rgb(247 241 232 / 0.65);
-  }
-  .footer__broker {
-    margin-bottom: 1rem;
-  }
-  .footer__broker img {
-    height: 44px;
-    width: auto;
-    margin-bottom: 0.5rem;
   }
   .footer__heading {
     font-family: var(--font-body);
